@@ -1,0 +1,982 @@
+[
+  {
+    "viewportWidth": 320,
+    "viewportName": "320px — minimum supported phone width",
+    "routePath": "/",
+    "routeLabel": "Landing Page",
+    "passed": true,
+    "innerW": 320,
+    "scrollW": 320,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 320,
+    "viewportName": "320px — minimum supported phone width",
+    "routePath": "/jobs",
+    "routeLabel": "Job Board",
+    "passed": true,
+    "innerW": 320,
+    "scrollW": 320,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 320,
+    "viewportName": "320px — minimum supported phone width",
+    "routePath": "/jobs/1",
+    "routeLabel": "Job Detail",
+    "passed": true,
+    "innerW": 320,
+    "scrollW": 320,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 320,
+    "viewportName": "320px — minimum supported phone width",
+    "routePath": "/login",
+    "routeLabel": "Sign In",
+    "passed": true,
+    "innerW": 320,
+    "scrollW": 320,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 320,
+    "viewportName": "320px — minimum supported phone width",
+    "routePath": "/register",
+    "routeLabel": "Register",
+    "passed": true,
+    "innerW": 320,
+    "scrollW": 320,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 320,
+    "viewportName": "320px — minimum supported phone width",
+    "routePath": "/seeker/dashboard",
+    "routeLabel": "Seeker Dashboard",
+    "passed": true,
+    "innerW": 320,
+    "scrollW": 320,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 320,
+    "viewportName": "320px — minimum supported phone width",
+    "routePath": "/seeker/applications",
+    "routeLabel": "Seeker Applications",
+    "passed": true,
+    "innerW": 320,
+    "scrollW": 320,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 320,
+    "viewportName": "320px — minimum supported phone width",
+    "routePath": "/seeker/resume",
+    "routeLabel": "Resume Hub",
+    "passed": true,
+    "innerW": 320,
+    "scrollW": 320,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 320,
+    "viewportName": "320px — minimum supported phone width",
+    "routePath": "/recruiter/dashboard",
+    "routeLabel": "Recruiter Dashboard",
+    "passed": true,
+    "innerW": 320,
+    "scrollW": 320,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 320,
+    "viewportName": "320px — minimum supported phone width",
+    "routePath": "/recruiter/applications",
+    "routeLabel": "Applications Pipeline",
+    "passed": true,
+    "innerW": 320,
+    "scrollW": 320,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 320,
+    "viewportName": "320px — minimum supported phone width",
+    "routePath": "/recruiter/candidates",
+    "routeLabel": "Candidates Talent Pool",
+    "passed": true,
+    "innerW": 320,
+    "scrollW": 320,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 320,
+    "viewportName": "320px — minimum supported phone width",
+    "routePath": "/recruiter/jobs",
+    "routeLabel": "Manage Jobs",
+    "passed": true,
+    "innerW": 320,
+    "scrollW": 320,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 320,
+    "viewportName": "320px — minimum supported phone width",
+    "routePath": "/recruiter/jobs/new",
+    "routeLabel": "Job Requisition Creator",
+    "passed": true,
+    "innerW": 320,
+    "scrollW": 320,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 320,
+    "viewportName": "320px — minimum supported phone width",
+    "routePath": "/recruiter/job-intelligence",
+    "routeLabel": "Job Intelligence",
+    "passed": true,
+    "innerW": 320,
+    "scrollW": 320,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 360,
+    "viewportName": "360px — compact Android phone",
+    "routePath": "/",
+    "routeLabel": "Landing Page",
+    "passed": true,
+    "innerW": 360,
+    "scrollW": 360,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 360,
+    "viewportName": "360px — compact Android phone",
+    "routePath": "/jobs",
+    "routeLabel": "Job Board",
+    "passed": true,
+    "innerW": 360,
+    "scrollW": 360,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 360,
+    "viewportName": "360px — compact Android phone",
+    "routePath": "/jobs/1",
+    "routeLabel": "Job Detail",
+    "passed": true,
+    "innerW": 360,
+    "scrollW": 360,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 360,
+    "viewportName": "360px — compact Android phone",
+    "routePath": "/login",
+    "routeLabel": "Sign In",
+    "passed": true,
+    "innerW": 360,
+    "scrollW": 360,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 360,
+    "viewportName": "360px — compact Android phone",
+    "routePath": "/register",
+    "routeLabel": "Register",
+    "passed": true,
+    "innerW": 360,
+    "scrollW": 360,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 360,
+    "viewportName": "360px — compact Android phone",
+    "routePath": "/seeker/dashboard",
+    "routeLabel": "Seeker Dashboard",
+    "passed": true,
+    "innerW": 360,
+    "scrollW": 360,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 360,
+    "viewportName": "360px — compact Android phone",
+    "routePath": "/seeker/applications",
+    "routeLabel": "Seeker Applications",
+    "passed": true,
+    "innerW": 360,
+    "scrollW": 360,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 360,
+    "viewportName": "360px — compact Android phone",
+    "routePath": "/seeker/resume",
+    "routeLabel": "Resume Hub",
+    "passed": true,
+    "innerW": 360,
+    "scrollW": 360,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 360,
+    "viewportName": "360px — compact Android phone",
+    "routePath": "/recruiter/dashboard",
+    "routeLabel": "Recruiter Dashboard",
+    "passed": true,
+    "innerW": 360,
+    "scrollW": 360,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 360,
+    "viewportName": "360px — compact Android phone",
+    "routePath": "/recruiter/applications",
+    "routeLabel": "Applications Pipeline",
+    "passed": true,
+    "innerW": 360,
+    "scrollW": 360,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 360,
+    "viewportName": "360px — compact Android phone",
+    "routePath": "/recruiter/candidates",
+    "routeLabel": "Candidates Talent Pool",
+    "passed": true,
+    "innerW": 360,
+    "scrollW": 360,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 360,
+    "viewportName": "360px — compact Android phone",
+    "routePath": "/recruiter/jobs",
+    "routeLabel": "Manage Jobs",
+    "passed": true,
+    "innerW": 360,
+    "scrollW": 360,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 360,
+    "viewportName": "360px — compact Android phone",
+    "routePath": "/recruiter/jobs/new",
+    "routeLabel": "Job Requisition Creator",
+    "passed": true,
+    "innerW": 360,
+    "scrollW": 360,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 360,
+    "viewportName": "360px — compact Android phone",
+    "routePath": "/recruiter/job-intelligence",
+    "routeLabel": "Job Intelligence",
+    "passed": true,
+    "innerW": 360,
+    "scrollW": 360,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 390,
+    "viewportName": "390px — standard modern phone",
+    "routePath": "/",
+    "routeLabel": "Landing Page",
+    "passed": true,
+    "innerW": 390,
+    "scrollW": 390,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 390,
+    "viewportName": "390px — standard modern phone",
+    "routePath": "/jobs",
+    "routeLabel": "Job Board",
+    "passed": true,
+    "innerW": 390,
+    "scrollW": 390,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 390,
+    "viewportName": "390px — standard modern phone",
+    "routePath": "/jobs/1",
+    "routeLabel": "Job Detail",
+    "passed": true,
+    "innerW": 390,
+    "scrollW": 390,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 390,
+    "viewportName": "390px — standard modern phone",
+    "routePath": "/login",
+    "routeLabel": "Sign In",
+    "passed": true,
+    "innerW": 390,
+    "scrollW": 390,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 390,
+    "viewportName": "390px — standard modern phone",
+    "routePath": "/register",
+    "routeLabel": "Register",
+    "passed": true,
+    "innerW": 390,
+    "scrollW": 390,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 390,
+    "viewportName": "390px — standard modern phone",
+    "routePath": "/seeker/dashboard",
+    "routeLabel": "Seeker Dashboard",
+    "passed": true,
+    "innerW": 390,
+    "scrollW": 390,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 390,
+    "viewportName": "390px — standard modern phone",
+    "routePath": "/seeker/applications",
+    "routeLabel": "Seeker Applications",
+    "passed": true,
+    "innerW": 390,
+    "scrollW": 390,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 390,
+    "viewportName": "390px — standard modern phone",
+    "routePath": "/seeker/resume",
+    "routeLabel": "Resume Hub",
+    "passed": true,
+    "innerW": 390,
+    "scrollW": 390,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 390,
+    "viewportName": "390px — standard modern phone",
+    "routePath": "/recruiter/dashboard",
+    "routeLabel": "Recruiter Dashboard",
+    "passed": true,
+    "innerW": 390,
+    "scrollW": 390,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 390,
+    "viewportName": "390px — standard modern phone",
+    "routePath": "/recruiter/applications",
+    "routeLabel": "Applications Pipeline",
+    "passed": true,
+    "innerW": 390,
+    "scrollW": 390,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 390,
+    "viewportName": "390px — standard modern phone",
+    "routePath": "/recruiter/candidates",
+    "routeLabel": "Candidates Talent Pool",
+    "passed": true,
+    "innerW": 390,
+    "scrollW": 390,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 390,
+    "viewportName": "390px — standard modern phone",
+    "routePath": "/recruiter/jobs",
+    "routeLabel": "Manage Jobs",
+    "passed": true,
+    "innerW": 390,
+    "scrollW": 390,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 390,
+    "viewportName": "390px — standard modern phone",
+    "routePath": "/recruiter/jobs/new",
+    "routeLabel": "Job Requisition Creator",
+    "passed": true,
+    "innerW": 390,
+    "scrollW": 390,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 390,
+    "viewportName": "390px — standard modern phone",
+    "routePath": "/recruiter/job-intelligence",
+    "routeLabel": "Job Intelligence",
+    "passed": true,
+    "innerW": 390,
+    "scrollW": 390,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 430,
+    "viewportName": "430px — large phone",
+    "routePath": "/",
+    "routeLabel": "Landing Page",
+    "passed": true,
+    "innerW": 430,
+    "scrollW": 430,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 430,
+    "viewportName": "430px — large phone",
+    "routePath": "/jobs",
+    "routeLabel": "Job Board",
+    "passed": true,
+    "innerW": 430,
+    "scrollW": 430,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 430,
+    "viewportName": "430px — large phone",
+    "routePath": "/jobs/1",
+    "routeLabel": "Job Detail",
+    "passed": true,
+    "innerW": 430,
+    "scrollW": 430,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 430,
+    "viewportName": "430px — large phone",
+    "routePath": "/login",
+    "routeLabel": "Sign In",
+    "passed": true,
+    "innerW": 430,
+    "scrollW": 430,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 430,
+    "viewportName": "430px — large phone",
+    "routePath": "/register",
+    "routeLabel": "Register",
+    "passed": true,
+    "innerW": 430,
+    "scrollW": 430,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 430,
+    "viewportName": "430px — large phone",
+    "routePath": "/seeker/dashboard",
+    "routeLabel": "Seeker Dashboard",
+    "passed": true,
+    "innerW": 430,
+    "scrollW": 430,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 430,
+    "viewportName": "430px — large phone",
+    "routePath": "/seeker/applications",
+    "routeLabel": "Seeker Applications",
+    "passed": true,
+    "innerW": 430,
+    "scrollW": 430,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 430,
+    "viewportName": "430px — large phone",
+    "routePath": "/seeker/resume",
+    "routeLabel": "Resume Hub",
+    "passed": true,
+    "innerW": 430,
+    "scrollW": 430,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 430,
+    "viewportName": "430px — large phone",
+    "routePath": "/recruiter/dashboard",
+    "routeLabel": "Recruiter Dashboard",
+    "passed": true,
+    "innerW": 430,
+    "scrollW": 430,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 430,
+    "viewportName": "430px — large phone",
+    "routePath": "/recruiter/applications",
+    "routeLabel": "Applications Pipeline",
+    "passed": true,
+    "innerW": 430,
+    "scrollW": 430,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 430,
+    "viewportName": "430px — large phone",
+    "routePath": "/recruiter/candidates",
+    "routeLabel": "Candidates Talent Pool",
+    "passed": true,
+    "innerW": 430,
+    "scrollW": 430,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 430,
+    "viewportName": "430px — large phone",
+    "routePath": "/recruiter/jobs",
+    "routeLabel": "Manage Jobs",
+    "passed": true,
+    "innerW": 430,
+    "scrollW": 430,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 430,
+    "viewportName": "430px — large phone",
+    "routePath": "/recruiter/jobs/new",
+    "routeLabel": "Job Requisition Creator",
+    "passed": true,
+    "innerW": 430,
+    "scrollW": 430,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 430,
+    "viewportName": "430px — large phone",
+    "routePath": "/recruiter/job-intelligence",
+    "routeLabel": "Job Intelligence",
+    "passed": true,
+    "innerW": 430,
+    "scrollW": 430,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 768,
+    "viewportName": "768px — tablet",
+    "routePath": "/",
+    "routeLabel": "Landing Page",
+    "passed": true,
+    "innerW": 768,
+    "scrollW": 768,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 768,
+    "viewportName": "768px — tablet",
+    "routePath": "/jobs",
+    "routeLabel": "Job Board",
+    "passed": true,
+    "innerW": 768,
+    "scrollW": 768,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 768,
+    "viewportName": "768px — tablet",
+    "routePath": "/jobs/1",
+    "routeLabel": "Job Detail",
+    "passed": true,
+    "innerW": 768,
+    "scrollW": 768,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 768,
+    "viewportName": "768px — tablet",
+    "routePath": "/login",
+    "routeLabel": "Sign In",
+    "passed": true,
+    "innerW": 768,
+    "scrollW": 768,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 768,
+    "viewportName": "768px — tablet",
+    "routePath": "/register",
+    "routeLabel": "Register",
+    "passed": true,
+    "innerW": 768,
+    "scrollW": 768,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 768,
+    "viewportName": "768px — tablet",
+    "routePath": "/seeker/dashboard",
+    "routeLabel": "Seeker Dashboard",
+    "passed": true,
+    "innerW": 768,
+    "scrollW": 768,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 768,
+    "viewportName": "768px — tablet",
+    "routePath": "/seeker/applications",
+    "routeLabel": "Seeker Applications",
+    "passed": true,
+    "innerW": 768,
+    "scrollW": 768,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 768,
+    "viewportName": "768px — tablet",
+    "routePath": "/seeker/resume",
+    "routeLabel": "Resume Hub",
+    "passed": true,
+    "innerW": 768,
+    "scrollW": 768,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 768,
+    "viewportName": "768px — tablet",
+    "routePath": "/recruiter/dashboard",
+    "routeLabel": "Recruiter Dashboard",
+    "passed": true,
+    "innerW": 768,
+    "scrollW": 768,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 768,
+    "viewportName": "768px — tablet",
+    "routePath": "/recruiter/applications",
+    "routeLabel": "Applications Pipeline",
+    "passed": true,
+    "innerW": 768,
+    "scrollW": 768,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 768,
+    "viewportName": "768px — tablet",
+    "routePath": "/recruiter/candidates",
+    "routeLabel": "Candidates Talent Pool",
+    "passed": true,
+    "innerW": 768,
+    "scrollW": 768,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 768,
+    "viewportName": "768px — tablet",
+    "routePath": "/recruiter/jobs",
+    "routeLabel": "Manage Jobs",
+    "passed": true,
+    "innerW": 768,
+    "scrollW": 768,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 768,
+    "viewportName": "768px — tablet",
+    "routePath": "/recruiter/jobs/new",
+    "routeLabel": "Job Requisition Creator",
+    "passed": true,
+    "innerW": 768,
+    "scrollW": 768,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 768,
+    "viewportName": "768px — tablet",
+    "routePath": "/recruiter/job-intelligence",
+    "routeLabel": "Job Intelligence",
+    "passed": true,
+    "innerW": 768,
+    "scrollW": 768,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1024,
+    "viewportName": "1024px — laptop/small desktop",
+    "routePath": "/",
+    "routeLabel": "Landing Page",
+    "passed": true,
+    "innerW": 1024,
+    "scrollW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1024,
+    "viewportName": "1024px — laptop/small desktop",
+    "routePath": "/jobs",
+    "routeLabel": "Job Board",
+    "passed": true,
+    "innerW": 1024,
+    "scrollW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1024,
+    "viewportName": "1024px — laptop/small desktop",
+    "routePath": "/jobs/1",
+    "routeLabel": "Job Detail",
+    "passed": true,
+    "innerW": 1024,
+    "scrollW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1024,
+    "viewportName": "1024px — laptop/small desktop",
+    "routePath": "/login",
+    "routeLabel": "Sign In",
+    "passed": true,
+    "innerW": 1024,
+    "scrollW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1024,
+    "viewportName": "1024px — laptop/small desktop",
+    "routePath": "/register",
+    "routeLabel": "Register",
+    "passed": true,
+    "innerW": 1024,
+    "scrollW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1024,
+    "viewportName": "1024px — laptop/small desktop",
+    "routePath": "/seeker/dashboard",
+    "routeLabel": "Seeker Dashboard",
+    "passed": true,
+    "innerW": 1024,
+    "scrollW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1024,
+    "viewportName": "1024px — laptop/small desktop",
+    "routePath": "/seeker/applications",
+    "routeLabel": "Seeker Applications",
+    "passed": true,
+    "innerW": 1024,
+    "scrollW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1024,
+    "viewportName": "1024px — laptop/small desktop",
+    "routePath": "/seeker/resume",
+    "routeLabel": "Resume Hub",
+    "passed": true,
+    "innerW": 1024,
+    "scrollW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1024,
+    "viewportName": "1024px — laptop/small desktop",
+    "routePath": "/recruiter/dashboard",
+    "routeLabel": "Recruiter Dashboard",
+    "passed": true,
+    "innerW": 1024,
+    "scrollW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1024,
+    "viewportName": "1024px — laptop/small desktop",
+    "routePath": "/recruiter/applications",
+    "routeLabel": "Applications Pipeline",
+    "passed": true,
+    "innerW": 1024,
+    "scrollW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1024,
+    "viewportName": "1024px — laptop/small desktop",
+    "routePath": "/recruiter/candidates",
+    "routeLabel": "Candidates Talent Pool",
+    "passed": true,
+    "innerW": 1024,
+    "scrollW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1024,
+    "viewportName": "1024px — laptop/small desktop",
+    "routePath": "/recruiter/jobs",
+    "routeLabel": "Manage Jobs",
+    "passed": true,
+    "innerW": 1024,
+    "scrollW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1024,
+    "viewportName": "1024px — laptop/small desktop",
+    "routePath": "/recruiter/jobs/new",
+    "routeLabel": "Job Requisition Creator",
+    "passed": true,
+    "innerW": 1024,
+    "scrollW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1024,
+    "viewportName": "1024px — laptop/small desktop",
+    "routePath": "/recruiter/job-intelligence",
+    "routeLabel": "Job Intelligence",
+    "passed": true,
+    "innerW": 1024,
+    "scrollW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1440,
+    "viewportName": "1440px — desktop",
+    "routePath": "/",
+    "routeLabel": "Landing Page",
+    "passed": true,
+    "innerW": 1440,
+    "scrollW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1440,
+    "viewportName": "1440px — desktop",
+    "routePath": "/jobs",
+    "routeLabel": "Job Board",
+    "passed": true,
+    "innerW": 1440,
+    "scrollW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1440,
+    "viewportName": "1440px — desktop",
+    "routePath": "/jobs/1",
+    "routeLabel": "Job Detail",
+    "passed": true,
+    "innerW": 1440,
+    "scrollW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1440,
+    "viewportName": "1440px — desktop",
+    "routePath": "/login",
+    "routeLabel": "Sign In",
+    "passed": true,
+    "innerW": 1440,
+    "scrollW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1440,
+    "viewportName": "1440px — desktop",
+    "routePath": "/register",
+    "routeLabel": "Register",
+    "passed": true,
+    "innerW": 1440,
+    "scrollW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1440,
+    "viewportName": "1440px — desktop",
+    "routePath": "/seeker/dashboard",
+    "routeLabel": "Seeker Dashboard",
+    "passed": true,
+    "innerW": 1440,
+    "scrollW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1440,
+    "viewportName": "1440px — desktop",
+    "routePath": "/seeker/applications",
+    "routeLabel": "Seeker Applications",
+    "passed": true,
+    "innerW": 1440,
+    "scrollW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1440,
+    "viewportName": "1440px — desktop",
+    "routePath": "/seeker/resume",
+    "routeLabel": "Resume Hub",
+    "passed": true,
+    "innerW": 1440,
+    "scrollW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1440,
+    "viewportName": "1440px — desktop",
+    "routePath": "/recruiter/dashboard",
+    "routeLabel": "Recruiter Dashboard",
+    "passed": true,
+    "innerW": 1440,
+    "scrollW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1440,
+    "viewportName": "1440px — desktop",
+    "routePath": "/recruiter/applications",
+    "routeLabel": "Applications Pipeline",
+    "passed": true,
+    "innerW": 1440,
+    "scrollW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1440,
+    "viewportName": "1440px — desktop",
+    "routePath": "/recruiter/candidates",
+    "routeLabel": "Candidates Talent Pool",
+    "passed": true,
+    "innerW": 1440,
+    "scrollW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1440,
+    "viewportName": "1440px — desktop",
+    "routePath": "/recruiter/jobs",
+    "routeLabel": "Manage Jobs",
+    "passed": true,
+    "innerW": 1440,
+    "scrollW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1440,
+    "viewportName": "1440px — desktop",
+    "routePath": "/recruiter/jobs/new",
+    "routeLabel": "Job Requisition Creator",
+    "passed": true,
+    "innerW": 1440,
+    "scrollW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewportWidth": 1440,
+    "viewportName": "1440px — desktop",
+    "routePath": "/recruiter/job-intelligence",
+    "routeLabel": "Job Intelligence",
+    "passed": true,
+    "innerW": 1440,
+    "scrollW": 1440,
+    "overflowing": []
+  }
+]

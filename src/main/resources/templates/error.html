@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoleMatch | System Notice</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0b0f19] text-[#f4f4f5] font-['Inter'] min-h-screen flex items-center justify-center p-4 overflow-x-hidden">
+    <div class="w-full max-w-md bg-[#18181b]/90 border border-neutral-700/60 rounded-2xl p-6 sm:p-8 text-center backdrop-blur-xl shadow-2xl">
+        <div class="w-12 h-12 rounded-full bg-neutral-900 border border-neutral-700 mx-auto flex items-center justify-center font-mono font-bold text-lg text-white mb-4">RM</div>
+        <h1 class="font-['Space_Grotesk'] text-xl sm:text-2xl font-bold text-white mb-2">System Notice</h1>
+        <p class="text-neutral-400 text-sm mb-6 leading-relaxed" th:text="${errorMessage != null ? errorMessage : 'An unexpected condition was encountered during processing.'}">An unexpected condition was encountered during processing.</p>
+        <a href="/" class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-full bg-white text-neutral-950 font-semibold text-sm hover:bg-neutral-200 transition-all">Return to RoleMatch Home</a>
+    </div>
+</body>
+</html>

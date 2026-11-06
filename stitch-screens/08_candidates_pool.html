@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-variant":"#3b304a","inverse-primary":"#5e5e5e","primary":"#c6c6c6","on-secondary-container":"#abaeff","surface-container":"#251b34","on-tertiary-fixed-variant":"#7c2c22","on-surface":"#eddcfe","on-primary-fixed-variant":"#474747","primary-fixed-dim":"#c6c6c6","on-error-container":"#ffdad6","secondary-fixed-dim":"#c0c1ff","outline-variant":"#4c4546","primary-container":"#000000","surface-container-lowest":"#130921","on-tertiary-container":"#b8594b","on-secondary":"#1c1e89","on-tertiary":"#5e160e","on-tertiary-fixed":"#400101","on-primary":"#303030","surface-dim":"#190e27","background":"#190e27","inverse-surface":"#eddcfe","surface-container-high":"#30253f","on-surface-variant":"#cfc4c5","on-primary-fixed":"#1b1b1b","surface-container-low":"#21162f","on-error":"#690005","surface-container-highest":"#3b304a","on-secondary-fixed-variant":"#3539a0","error-container":"#93000a","surface-tint":"#c6c6c6","secondary-container":"#3539a0","tertiary-fixed-dim":"#ffb4a8","surface-bright":"#40344f","on-background":"#eddcfe","secondary-fixed":"#e1e0ff","outline":"#988e90","on-primary-container":"#757575","secondary":"#c0c1ff","primary-fixed":"#e2e2e2","surface":"#190e27","tertiary-container":"#000000","inverse-on-surface":"#372b45","tertiary-fixed":"#ffdad4","error":"#ffb4ab","on-secondary-fixed":"#04006d","tertiary":"#ffb4a8"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{},"fontFamily":{"headline":["Inter"],"display":["Inter"],"body":["Inter"],"label":["Inter"]},"fontSize":{}}}}</script></head><body class="bg-background font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-2xl">hub</span><div class="flex flex-col"><span class="font-headline font-bold text-base tracking-wider text-on-surface">ROLEMATCH</span><span class="text-[10px] font-mono tracking-widest text-on-surface-variant uppercase">Core Telemetry</span></div></div><div class="px-4 py-2"><div class="h-px bg-surface-container-low w-full mb-4"></div></div><nav class="px-3 flex flex-col gap-1.5" data-active-classes="bg-secondary-container text-on-secondary-container font-semibold rounded-lg"><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="applications" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span>Applications</span></a><a aria-current="page" class="flex items-center gap-3 px-3.5 py-2.5 transition-colors bg-secondary-container text-on-secondary-container font-semibold rounded-lg" data-path="candidates" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span>Candidates</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="manage-jobs" href="#"><span class="material-symbols-outlined text-[20px]">work</span><span>Manage Jobs</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="job-intelligence" href="#"><span class="material-symbols-outlined text-[20px]">psychology</span><span>Job Intelligence</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="portal-switch" href="#"><span class="material-symbols-outlined text-[20px]">swap_horiz</span><span>Portal Switch</span></a></nav></div><div class="p-4"><div class="bg-surface-container-low rounded-lg p-3 flex flex-col gap-2"><div class="flex items-center justify-between text-xs font-mono text-on-surface-variant"><span>CLUSTER INSTANCE</span><span class="text-secondary">us-east-01</span></div><div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="text-[11px] font-mono text-on-surface">SYS_STATUS: NOMINAL</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 px-8 flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-4 text-xs font-mono"><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="text-on-surface-variant">Spring Boot:</span><span class="text-secondary font-semibold">Active</span></div><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="text-on-surface-variant">Gemini 1.5 Flash:</span><span class="text-secondary font-semibold">Online</span></div></div><div class="flex items-center gap-4"><div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-xs font-mono text-on-surface-variant"><span class="material-symbols-outlined text-sm text-secondary">dns</span><span>99.98% Sync</span></div><button class="relative p-2 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-8"><div class="flex flex-col w-full pb-16">
+<!-- Top Banner / Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 py-6">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-xs font-mono tracking-widest text-secondary uppercase">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+<span>INDEX // TALENT_GRAPH_V2</span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface-variant">2,418 PARSED PROFILES</span>
+</div>
+<h1 class="text-3xl lg:text-4xl font-headline font-semibold text-on-surface tracking-tight">Candidate Talent Pool</h1>
+<p class="text-sm md:text-base text-on-surface-variant max-w-2xl">
+        Searchable database of parsed candidate profiles, verified tech competencies, and neural ATS match scores.
+      </p>
+</div>
+<!-- Live Telemetry Strip -->
+<div class="flex items-center gap-3 bg-surface-container-low px-5 py-3 rounded-full self-start md:self-auto shadow-sm">
+<div class="flex flex-col">
+<span class="text-[10px] font-mono uppercase text-on-surface-variant tracking-wider">Semantic Parse Queue</span>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-xs font-mono font-medium text-on-surface">32 resumes / min</span>
+</div>
+</div>
+<div class="h-6 w-px bg-surface-container-highest mx-2"></div>
+<button class="flex items-center gap-2 bg-secondary-container hover:bg-secondary-container/80 text-on-secondary-container px-4 py-2 rounded-full text-xs font-semibold transition-all">
+<span class="material-symbols-outlined text-base">sync_alt</span>
+<span>Re-Index AST</span>
+</button>
+</div>
+</div>
+<!-- Search & Vector Filtering Deck -->
+<div class="bg-surface-container rounded-2xl p-5 mb-8 flex flex-col gap-4 shadow-md">
+<!-- Row 1: Vector Search Bar -->
+<div class="flex flex-col lg:flex-row gap-3 items-stretch lg:items-center">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl">manage_search</span>
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/60 rounded-full pl-12 pr-28 py-3 text-sm focus:outline-none focus:ring-0 transition-colors" id="vectorQuery" placeholder="Semantic Vector search: 'Distributed reactive architecture, Kafka partitioned pipelines, Spring Cloud'..." type="text"/>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5 bg-surface-container px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-xs text-secondary">model_training</span>
+<span class="text-[10px] font-mono text-secondary uppercase font-semibold">Gemini Flash</span>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-2">
+<button class="px-4 py-3 rounded-full text-xs font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" id="clearFilters">
+          Reset All
+        </button>
+<button class="flex items-center gap-2 bg-primary hover:bg-white text-on-primary px-5 py-3 rounded-full text-xs font-semibold shadow-sm transition-all">
+<span class="material-symbols-outlined text-base">tune</span>
+<span>Execute Vector Pass</span>
+</button>
+</div>
+</div>
+<!-- Row 2: Competency Pills & Sliders -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pt-2">
+<!-- Skill Matrix Tags -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="text-[11px] font-mono text-on-surface-variant uppercase tracking-wider mr-1">Stack Vector:</span>
+<button class="filter-pill active px-3.5 py-1.5 rounded-full text-xs font-medium bg-secondary text-on-secondary transition-all" data-tag="all">All Profiles</button>
+<button class="filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" data-tag="springboot">Spring Boot 3</button>
+<button class="filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" data-tag="postgres">PostgreSQL</button>
+<button class="filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" data-tag="kafka">Kafka</button>
+<button class="filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" data-tag="kubernetes">Kubernetes</button>
+<button class="filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" data-tag="docker">Docker</button>
+</div>
+<!-- Controls: Score threshold & Availability -->
+<div class="flex flex-wrap items-center gap-6 self-start lg:self-auto">
+<!-- Min Match Slider -->
+<div class="flex items-center gap-3 bg-surface-container-lowest px-4 py-2 rounded-full">
+<span class="text-xs font-mono text-on-surface-variant">Min ATS Score:</span>
+<input class="w-24 accent-secondary cursor-pointer h-1.5 bg-surface-container-high rounded-full appearance-none" id="scoreSlider" max="98" min="70" type="range" value="80"/>
+<span class="text-xs font-mono font-bold text-secondary" id="scoreValue">≥ 80%</span>
+</div>
+<!-- Availability Toggle Pills -->
+<div class="flex items-center gap-1.5 bg-surface-container-lowest p-1 rounded-full">
+<button class="avail-btn px-3 py-1 text-xs rounded-full bg-surface-container-high text-on-surface font-medium transition-all" data-avail="all">Any</button>
+<button class="avail-btn px-3 py-1 text-xs rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-avail="immediate">Immediate</button>
+<button class="avail-btn px-3 py-1 text-xs rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-avail="2weeks">2 Weeks</button>
+<button class="avail-btn px-3 py-1 text-xs rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-avail="passive">Passive</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Metric Line -->
+<div class="flex items-center justify-between px-2 mb-4">
+<div class="flex items-center gap-3">
+<span class="text-xs font-mono uppercase tracking-widest text-on-surface-variant">Matched Candidates</span>
+<span class="bg-surface-container-high text-secondary px-2.5 py-0.5 rounded-full text-xs font-mono font-bold" id="candidateCount">4 Profiles</span>
+</div>
+<div class="flex items-center gap-2 text-xs font-mono text-on-surface-variant">
+<span>SORT:</span>
+<button class="text-on-surface hover:text-secondary font-semibold flex items-center gap-1">
+<span>Resonance Score (Desc)</span>
+<span class="material-symbols-outlined text-sm">arrow_downward</span>
+</button>
+</div>
+</div>
+<!-- Candidate Directory Grid / Bespoke Stack -->
+<div class="flex flex-col gap-5" id="candidatesList">
+<!-- Candidate Card 1: 95% Match -->
+<div class="candidate-card bg-surface-container rounded-2xl p-6 transition-all duration-200 hover:bg-surface-container-high shadow-md" data-avail="immediate" data-score="95" data-skills="springboot postgres kafka docker kubernetes">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-6">
+<!-- Left: Identity & Metadata (Strictly No Human Faces) -->
+<div class="flex items-start gap-4">
+<!-- Algorithmic Hex/Neural Monogram -->
+<div class="relative w-14 h-14 rounded-2xl bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-inner">
+<span class="font-mono font-bold text-sm tracking-wider text-secondary">BE-95</span>
+<div class="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-secondary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+</div>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-mono text-xs font-semibold text-secondary">#CAND-8842-NL</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="bg-surface-container-lowest text-on-surface-variant px-2.5 py-0.5 rounded-full text-[11px] font-mono">AST Tree Parsed</span>
+<span class="bg-surface-container-low text-secondary px-2.5 py-0.5 rounded-full text-[11px] font-mono flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                Direct Applied
+              </span>
+</div>
+<h2 class="text-xl font-headline font-semibold text-on-surface">Lead Backend Engineer</h2>
+<div class="flex flex-wrap items-center gap-3 text-xs text-on-surface-variant mt-0.5">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                Available: Immediately
+              </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                Remote / EMEA-US Sync
+              </span>
+<span>•</span>
+<span class="font-mono text-on-surface">11 yrs experience</span>
+</div>
+</div>
+</div>
+<!-- Center: Neural Resonance Score Radial Gauge -->
+<div class="flex items-center gap-4 bg-surface-container-lowest px-5 py-3 rounded-2xl self-start xl:self-auto shrink-0">
+<div class="relative w-14 h-14 flex items-center justify-center">
+<!-- Mini SVG Circular Progress Ring -->
+<svg class="w-14 h-14 -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container-highest" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-secondary" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="6.28" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<span class="absolute text-xs font-mono font-bold text-on-surface">95%</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-mono uppercase text-on-surface-variant tracking-wider">ATS Resonance</span>
+<span class="text-xs font-bold text-secondary uppercase tracking-wide">Optimal Fit</span>
+<span class="text-[10px] font-mono text-on-surface-variant">Embedding Cosine: 0.948</span>
+</div>
+</div>
+</div>
+<!-- Center Skill Vectors: Verified vs Gaps -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-5 pt-5 bg-surface-container-low/40 p-4 rounded-xl">
+<!-- Verified Competencies -->
+<div class="lg:col-span-8 flex flex-col gap-2">
+<span class="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-secondary">verified</span>
+            Verified Neural Competencies
+          </span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Java 21</span>
+<span class="text-[10px] opacity-70">L5</span>
+</span>
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Spring Boot 3</span>
+<span class="text-[10px] opacity-70">L5</span>
+</span>
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>PostgreSQL / pgvector</span>
+<span class="text-[10px] opacity-70">L4</span>
+</span>
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Kafka Streams</span>
+<span class="text-[10px] opacity-70">L4</span>
+</span>
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Docker & K8s</span>
+<span class="text-[10px] opacity-70">L4</span>
+</span>
+</div>
+</div>
+<!-- Missing / Delta Gaps -->
+<div class="lg:col-span-4 flex flex-col gap-2">
+<span class="text-[10px] font-mono uppercase tracking-widest text-tertiary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-tertiary">warning</span>
+            Requisition Skill Gaps
+          </span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-lowest text-tertiary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Terraform</span>
+<span class="text-[10px] opacity-60">None</span>
+</span>
+<span class="bg-surface-container-lowest text-tertiary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>AWS DynamoDB</span>
+<span class="text-[10px] opacity-60">Delta</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Bottom Action Row -->
+<div class="flex flex-wrap items-center justify-between gap-4 mt-5 pt-3">
+<div class="flex items-center gap-2 text-xs font-mono text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-secondary">memory</span>
+<span>Matched against requisition:</span>
+<span class="text-on-surface font-semibold">REQ-9902 (Principal Core Backend)</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-surface-container-low hover:bg-surface-container-highest text-on-surface px-4 py-2 rounded-full text-xs font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">code</span>
+<span>Inspect AST Resume</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-highest text-on-surface px-4 py-2 rounded-full text-xs font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">hub</span>
+<span>Match Requisitions</span>
+</button>
+<button class="bg-secondary text-on-secondary hover:bg-secondary-fixed text-xs font-semibold px-4 py-2 rounded-full transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">bookmark_add</span>
+<span>Shortlist Candidate</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Candidate Card 2: 91% Match -->
+<div class="candidate-card bg-surface-container rounded-2xl p-6 transition-all duration-200 hover:bg-surface-container-high shadow-md" data-avail="2weeks" data-score="91" data-skills="kubernetes docker postgres kafka">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-6">
+<!-- Left: Identity & Metadata -->
+<div class="flex items-start gap-4">
+<!-- Monogram -->
+<div class="relative w-14 h-14 rounded-2xl bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-inner">
+<span class="font-mono font-bold text-sm tracking-wider text-secondary">CI-91</span>
+<div class="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-secondary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+</div>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-mono text-xs font-semibold text-secondary">#CAND-7401-EU</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="bg-surface-container-lowest text-on-surface-variant px-2.5 py-0.5 rounded-full text-[11px] font-mono">AST Tree Parsed</span>
+<span class="bg-surface-container-low text-secondary px-2.5 py-0.5 rounded-full text-[11px] font-mono flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">replay</span>
+                ATS Re-Index
+              </span>
+</div>
+<h2 class="text-xl font-headline font-semibold text-on-surface">Cloud Infrastructure Lead</h2>
+<div class="flex flex-wrap items-center gap-3 text-xs text-on-surface-variant mt-0.5">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                Available: 2 Weeks notice
+              </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                Berlin / Hybrid
+              </span>
+<span>•</span>
+<span class="font-mono text-on-surface">8 yrs experience</span>
+</div>
+</div>
+</div>
+<!-- Center: Resonance Gauge -->
+<div class="flex items-center gap-4 bg-surface-container-lowest px-5 py-3 rounded-2xl self-start xl:self-auto shrink-0">
+<div class="relative w-14 h-14 flex items-center justify-center">
+<svg class="w-14 h-14 -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container-highest" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-secondary" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="11.3" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<span class="absolute text-xs font-mono font-bold text-on-surface">91%</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-mono uppercase text-on-surface-variant tracking-wider">ATS Resonance</span>
+<span class="text-xs font-bold text-secondary uppercase tracking-wide">Strong Match</span>
+<span class="text-[10px] font-mono text-on-surface-variant">Embedding Cosine: 0.912</span>
+</div>
+</div>
+</div>
+<!-- Skills Row -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-5 pt-5 bg-surface-container-low/40 p-4 rounded-xl">
+<div class="lg:col-span-8 flex flex-col gap-2">
+<span class="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-secondary">verified</span>
+            Verified Neural Competencies
+          </span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Kubernetes CKA</span>
+<span class="text-[10px] opacity-70">L5</span>
+</span>
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Docker Enterprise</span>
+<span class="text-[10px] opacity-70">L5</span>
+</span>
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>PostgreSQL Cluster</span>
+<span class="text-[10px] opacity-70">L4</span>
+</span>
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Kafka MirrorMaker</span>
+<span class="text-[10px] opacity-70">L4</span>
+</span>
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Terraform / HCL</span>
+<span class="text-[10px] opacity-70">L5</span>
+</span>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-2">
+<span class="text-[10px] font-mono uppercase tracking-widest text-tertiary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-tertiary">warning</span>
+            Requisition Skill Gaps
+          </span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-lowest text-tertiary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Spring Boot 3</span>
+<span class="text-[10px] opacity-60">Minor Gap</span>
+</span>
+<span class="bg-surface-container-lowest text-tertiary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>GraphQL Mesh</span>
+<span class="text-[10px] opacity-60">None</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Bottom Action Row -->
+<div class="flex flex-wrap items-center justify-between gap-4 mt-5 pt-3">
+<div class="flex items-center gap-2 text-xs font-mono text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-secondary">memory</span>
+<span>Matched against requisition:</span>
+<span class="text-on-surface font-semibold">REQ-8411 (Platform SRE Lead)</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-surface-container-low hover:bg-surface-container-highest text-on-surface px-4 py-2 rounded-full text-xs font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">code</span>
+<span>Inspect AST Resume</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-highest text-on-surface px-4 py-2 rounded-full text-xs font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">hub</span>
+<span>Match Requisitions</span>
+</button>
+<button class="bg-secondary text-on-secondary hover:bg-secondary-fixed text-xs font-semibold px-4 py-2 rounded-full transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">bookmark_add</span>
+<span>Shortlist Candidate</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Candidate Card 3: 88% Match -->
+<div class="candidate-card bg-surface-container rounded-2xl p-6 transition-all duration-200 hover:bg-surface-container-high shadow-md" data-avail="immediate" data-score="88" data-skills="springboot postgres kafka docker">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="relative w-14 h-14 rounded-2xl bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-inner">
+<span class="font-mono font-bold text-sm tracking-wider text-secondary">JA-88</span>
+<div class="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-secondary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+</div>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-mono text-xs font-semibold text-secondary">#CAND-6310-US</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="bg-surface-container-lowest text-on-surface-variant px-2.5 py-0.5 rounded-full text-[11px] font-mono">AST Tree Parsed</span>
+<span class="bg-surface-container-low text-secondary px-2.5 py-0.5 rounded-full text-[11px] font-mono flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">group</span>
+                Referral
+              </span>
+</div>
+<h2 class="text-xl font-headline font-semibold text-on-surface">Senior Java Architect</h2>
+<div class="flex flex-wrap items-center gap-3 text-xs text-on-surface-variant mt-0.5">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                Available: Immediately
+              </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                New York, USA (Eastern)
+              </span>
+<span>•</span>
+<span class="font-mono text-on-surface">14 yrs experience</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-lowest px-5 py-3 rounded-2xl self-start xl:self-auto shrink-0">
+<div class="relative w-14 h-14 flex items-center justify-center">
+<svg class="w-14 h-14 -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container-highest" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-secondary" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="15.07" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<span class="absolute text-xs font-mono font-bold text-on-surface">88%</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-mono uppercase text-on-surface-variant tracking-wider">ATS Resonance</span>
+<span class="text-xs font-bold text-secondary uppercase tracking-wide">High Fit</span>
+<span class="text-[10px] font-mono text-on-surface-variant">Embedding Cosine: 0.884</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-5 pt-5 bg-surface-container-low/40 p-4 rounded-xl">
+<div class="lg:col-span-8 flex flex-col gap-2">
+<span class="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-secondary">verified</span>
+            Verified Neural Competencies
+          </span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Java 21 / JVM Internals</span>
+<span class="text-[10px] opacity-70">L5</span>
+</span>
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Spring Boot 3 WebFlux</span>
+<span class="text-[10px] opacity-70">L5</span>
+</span>
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>PostgreSQL Partitioning</span>
+<span class="text-[10px] opacity-70">L4</span>
+</span>
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Kafka Producer tuning</span>
+<span class="text-[10px] opacity-70">L4</span>
+</span>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-2">
+<span class="text-[10px] font-mono uppercase tracking-widest text-tertiary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-tertiary">warning</span>
+            Requisition Skill Gaps
+          </span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-lowest text-tertiary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Kubernetes Helm</span>
+<span class="text-[10px] opacity-60">Delta</span>
+</span>
+<span class="bg-surface-container-lowest text-tertiary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Prometheus / Grafana</span>
+<span class="text-[10px] opacity-60">Basic</span>
+</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-4 mt-5 pt-3">
+<div class="flex items-center gap-2 text-xs font-mono text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-secondary">memory</span>
+<span>Matched against requisition:</span>
+<span class="text-on-surface font-semibold">REQ-9902 (Principal Core Backend)</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-surface-container-low hover:bg-surface-container-highest text-on-surface px-4 py-2 rounded-full text-xs font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">code</span>
+<span>Inspect AST Resume</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-highest text-on-surface px-4 py-2 rounded-full text-xs font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">hub</span>
+<span>Match Requisitions</span>
+</button>
+<button class="bg-secondary text-on-secondary hover:bg-secondary-fixed text-xs font-semibold px-4 py-2 rounded-full transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">bookmark_add</span>
+<span>Shortlist Candidate</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Candidate Card 4: 84% Match -->
+<div class="candidate-card bg-surface-container rounded-2xl p-6 transition-all duration-200 hover:bg-surface-container-high shadow-md" data-avail="passive" data-score="84" data-skills="docker kubernetes postgres">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="relative w-14 h-14 rounded-2xl bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-inner">
+<span class="font-mono font-bold text-sm tracking-wider text-secondary">DS-84</span>
+<div class="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-secondary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+</div>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-mono text-xs font-semibold text-secondary">#CAND-5021-APAC</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="bg-surface-container-lowest text-on-surface-variant px-2.5 py-0.5 rounded-full text-[11px] font-mono">AST Tree Parsed</span>
+<span class="bg-surface-container-low text-secondary px-2.5 py-0.5 rounded-full text-[11px] font-mono flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">replay</span>
+                ATS Re-Index
+              </span>
+</div>
+<h2 class="text-xl font-headline font-semibold text-on-surface">Data Infrastructure Engineer</h2>
+<div class="flex flex-wrap items-center gap-3 text-xs text-on-surface-variant mt-0.5">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                Available: Passive (Exploring)
+              </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                Singapore / Remote
+              </span>
+<span>•</span>
+<span class="font-mono text-on-surface">6 yrs experience</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-lowest px-5 py-3 rounded-2xl self-start xl:self-auto shrink-0">
+<div class="relative w-14 h-14 flex items-center justify-center">
+<svg class="w-14 h-14 -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container-highest" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-secondary" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="20.09" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<span class="absolute text-xs font-mono font-bold text-on-surface">84%</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-mono uppercase text-on-surface-variant tracking-wider">ATS Resonance</span>
+<span class="text-xs font-bold text-secondary uppercase tracking-wide">Target Fit</span>
+<span class="text-[10px] font-mono text-on-surface-variant">Embedding Cosine: 0.841</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-5 pt-5 bg-surface-container-low/40 p-4 rounded-xl">
+<div class="lg:col-span-8 flex flex-col gap-2">
+<span class="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-secondary">verified</span>
+            Verified Neural Competencies
+          </span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>PostgreSQL TimeScale</span>
+<span class="text-[10px] opacity-70">L5</span>
+</span>
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Docker Swarm / Compose</span>
+<span class="text-[10px] opacity-70">L4</span>
+</span>
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Kubernetes Operators</span>
+<span class="text-[10px] opacity-70">L3</span>
+</span>
+<span class="bg-surface-container-highest text-secondary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>ClickHouse DB</span>
+<span class="text-[10px] opacity-70">L4</span>
+</span>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-2">
+<span class="text-[10px] font-mono uppercase tracking-widest text-tertiary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-tertiary">warning</span>
+            Requisition Skill Gaps
+          </span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-lowest text-tertiary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>Kafka Streams</span>
+<span class="text-[10px] opacity-60">Delta</span>
+</span>
+<span class="bg-surface-container-lowest text-tertiary text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1">
+<span>AWS DynamoDB</span>
+<span class="text-[10px] opacity-60">None</span>
+</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-4 mt-5 pt-3">
+<div class="flex items-center gap-2 text-xs font-mono text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-secondary">memory</span>
+<span>Matched against requisition:</span>
+<span class="text-on-surface font-semibold">REQ-7128 (Distributed Pipeline Eng)</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-surface-container-low hover:bg-surface-container-highest text-on-surface px-4 py-2 rounded-full text-xs font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">code</span>
+<span>Inspect AST Resume</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-highest text-on-surface px-4 py-2 rounded-full text-xs font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">hub</span>
+<span>Match Requisitions</span>
+</button>
+<button class="bg-secondary text-on-secondary hover:bg-secondary-fixed text-xs font-semibold px-4 py-2 rounded-full transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">bookmark_add</span>
+<span>Shortlist Candidate</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / Cluster Status Footer -->
+<div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-surface-container-low p-4 rounded-2xl">
+<div class="flex items-center gap-2 text-xs font-mono text-on-surface-variant">
+<span>Vector Partition: 0x489F</span>
+<span class="text-outline-variant">|</span>
+<span>Total latency: 14.2ms</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-xs font-mono font-medium text-on-surface">Page 1 of 64</span>
+<button class="p-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const slider = document.getElementById('scoreSlider');
+    const scoreVal = document.getElementById('scoreValue');
+    const countDisplay = document.getElementById('candidateCount');
+    const cards = document.querySelectorAll('.candidate-card');
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const availBtns = document.querySelectorAll('.avail-btn');
+    const resetBtn = document.getElementById('clearFilters');
+    const searchInput = document.getElementById('vectorQuery');
+
+    let currentMinScore = 80;
+    let selectedTag = 'all';
+    let selectedAvail = 'all';
+
+    function applyFilters() {
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const score = parseInt(card.getAttribute('data-score'), 10);
+        const skills = card.getAttribute('data-skills') || '';
+        const avail = card.getAttribute('data-avail') || '';
+
+        const matchesScore = score >= currentMinScore;
+        const matchesTag = (selectedTag === 'all') || skills.includes(selectedTag);
+        const matchesAvail = (selectedAvail === 'all') || (avail === selectedAvail);
+
+        if (matchesScore && matchesTag && matchesAvail) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+      countDisplay.textContent = visibleCount + ' Profiles';
+    }
+
+    if (slider && scoreVal) {
+      slider.addEventListener('input', (e) => {
+        currentMinScore = parseInt(e.target.value, 10);
+        scoreVal.textContent = '≥ ' + currentMinScore + '%';
+        applyFilters();
+      });
+    }
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => {
+          p.classList.remove('bg-secondary', 'text-on-secondary');
+          p.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        });
+        pill.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+        pill.classList.add('bg-secondary', 'text-on-secondary');
+        selectedTag = pill.getAttribute('data-tag');
+        applyFilters();
+      });
+    });
+
+    availBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        availBtns.forEach(b => {
+          b.classList.remove('bg-surface-container-high', 'text-on-surface', 'font-medium');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('bg-surface-container-high', 'text-on-surface', 'font-medium');
+        btn.classList.remove('text-on-surface-variant');
+        selectedAvail = btn.getAttribute('data-avail');
+        applyFilters();
+      });
+    });
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (slider) {
+          slider.value = 80;
+          currentMinScore = 80;
+          scoreVal.textContent = '≥ 80%';
+        }
+        if (searchInput) searchInput.value = '';
+        selectedTag = 'all';
+        selectedAvail = 'all';
+
+        filterPills.forEach((p, idx) => {
+          if (idx === 0) {
+            p.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+            p.classList.add('bg-secondary', 'text-on-secondary');
+          } else {
+            p.classList.remove('bg-secondary', 'text-on-secondary');
+            p.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+          }
+        });
+
+        availBtns.forEach((b, idx) => {
+          if (idx === 0) {
+            b.classList.add('bg-surface-container-high', 'text-on-surface', 'font-medium');
+            b.classList.remove('text-on-surface-variant');
+          } else {
+            b.classList.remove('bg-surface-container-high', 'text-on-surface', 'font-medium');
+            b.classList.add('text-on-surface-variant');
+          }
+        });
+
+        applyFilters();
+      });
+    }
+  })();
+</script></main></div></body></html>

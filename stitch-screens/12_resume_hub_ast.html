@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-primary":"#5e5e5e","on-surface":"#eddcfe","on-secondary":"#1c1e89","surface-container-lowest":"#130921","tertiary":"#ffb4a8","secondary-fixed-dim":"#c0c1ff","on-primary-fixed":"#1b1b1b","inverse-on-surface":"#372b45","surface-variant":"#3b304a","secondary-container":"#3539a0","on-error":"#690005","secondary":"#c0c1ff","surface-dim":"#190e27","on-secondary-fixed-variant":"#3539a0","on-error-container":"#ffdad6","on-surface-variant":"#cfc4c5","surface-tint":"#c6c6c6","primary":"#c6c6c6","on-tertiary-fixed-variant":"#7c2c22","on-secondary-fixed":"#04006d","secondary-fixed":"#e1e0ff","background":"#190e27","on-primary-fixed-variant":"#474747","on-tertiary-container":"#b8594b","surface-container-low":"#21162f","outline":"#988e90","on-tertiary-fixed":"#400101","primary-fixed-dim":"#c6c6c6","on-background":"#eddcfe","surface-container":"#251b34","tertiary-fixed-dim":"#ffb4a8","on-primary-container":"#757575","error":"#ffb4ab","on-tertiary":"#5e160e","surface-container-highest":"#3b304a","on-primary":"#303030","surface":"#190e27","primary-container":"#000000","inverse-surface":"#eddcfe","on-secondary-container":"#abaeff","surface-bright":"#40344f","primary-fixed":"#e2e2e2","tertiary-container":"#000000","tertiary-fixed":"#ffdad4","outline-variant":"#4c4546","error-container":"#93000a","surface-container-high":"#30253f"},borderRadius:{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},spacing:{},fontFamily:{headline:["Inter"],display:["Inter"],body:["Inter"],label:["Inter"]},fontSize:{}}}}</script></head><body class="bg-background font-body text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between p-4 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-3 py-2"><div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-2xl">hub</span></div><div class="flex flex-col"><span class="font-headline font-semibold text-lg tracking-tight text-on-surface leading-tight">RoleMatch</span><span class="text-[10px] font-label uppercase tracking-widest text-outline">Workspace v2.4</span></div></div><nav class="flex flex-col gap-1.5" data-active-classes="bg-secondary-container text-on-surface font-semibold rounded-full"><a class="flex items-center gap-3.5 px-4 py-2.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-label" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a class="flex items-center gap-3.5 px-4 py-2.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-label" data-path="my-applications" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span>My Applications</span></a><a class="flex items-center gap-3.5 px-4 py-2.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-label" data-path="resume-hub-and-ast" href="#"><span class="material-symbols-outlined text-[20px]">document_scanner</span><span>Resume Hub &amp; AST</span></a><a class="flex items-center gap-3.5 px-4 py-2.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-label" data-path="job-board" href="#"><span class="material-symbols-outlined text-[20px]">travel_explore</span><span>Job Board</span></a><a class="flex items-center gap-3.5 px-4 py-2.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-label" data-path="job-intelligence" href="#"><span class="material-symbols-outlined text-[20px]">psychology</span><span>Job Intelligence</span></a><a class="flex items-center gap-3.5 px-4 py-2.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-label" data-path="portal-switch" href="#"><span class="material-symbols-outlined text-[20px]">sync_alt</span><span>Portal Switch</span></a></nav></div><div class="flex flex-col gap-2 pt-4"><div class="bg-surface-container-low rounded-DEFAULT p-3.5 flex flex-col gap-2"><div class="flex items-center justify-between"><span class="text-[11px] font-label text-outline uppercase tracking-wider">Cluster Instance</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></div><div class="flex items-center justify-between text-xs font-mono"><span class="text-on-surface-variant">us-east-core-04</span><span class="text-secondary font-medium">Healthy</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center self-end opacity-0 pointer-events-none"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-6"><div class="flex items-center gap-3"><div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-xs font-label"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="text-on-surface-variant">Spring Boot:</span><span class="text-on-surface font-medium">Active</span></div><div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-xs font-label"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="text-on-surface-variant">Gemini 1.5 Flash:</span><span class="text-on-surface font-medium">Online</span></div><div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-xs font-label"><span class="material-symbols-outlined text-secondary text-sm">sync</span><span class="text-on-surface-variant">Sync:</span><span class="text-on-surface font-medium">99.8%</span></div></div><div class="flex items-center gap-2"><button aria-label="Search workspace" class="h-9 px-3.5 rounded-full bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center gap-2 text-xs transition-colors" type="button"><span class="material-symbols-outlined text-base">search</span><span class="hidden md:inline font-label">Search nodes, jobs, telemetry...</span><kbd class="hidden md:inline px-1.5 py-0.5 text-[10px] rounded bg-surface-container-high text-on-surface-variant font-mono">Ctrl K</kbd></button><button aria-label="Telemetry metrics" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-lg">monitoring</span></button><button aria-label="System alerts" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-lg">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-6"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-8 pb-16">
+<!-- Header Section -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pt-4">
+<div class="flex flex-col gap-2 max-w-3xl">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-secondary text-xs font-mono font-medium tracking-wide uppercase">Parser Engine v3.11</span>
+<span class="text-xs font-mono text-outline">AST_HASH::7f8a92c4</span>
+</div>
+<h1 class="text-3xl lg:text-4xl font-headline font-semibold text-on-surface tracking-tight">Resume Intelligence &amp; AST Syntax Hub</h1>
+<p class="text-sm md:text-base text-on-surface-variant leading-relaxed">Deep Abstract Syntax Tree (AST) tokenization, keyword density telemetry, and Gemini 1.5 Pro ATS optimization directives.</p>
+</div>
+<!-- Quick Status Badges -->
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-low text-xs font-label">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-on-surface-variant font-mono">AST Tree:</span>
+<span class="text-on-surface font-semibold">Normalized (1,842 Tokens)</span>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-low text-xs font-label">
+<span class="material-symbols-outlined text-secondary text-sm">bolt</span>
+<span class="text-on-surface-variant font-mono">Latency:</span>
+<span class="text-on-surface font-semibold">142ms</span>
+</div>
+</div>
+</div>
+<!-- Top Ingestion & Version Switcher Card -->
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low p-6 lg:p-7 shadow-xl">
+<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-surface-bright/20 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-6">
+<!-- File Ingestion Meta & Drop Zone -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 flex-1">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-secondary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<div class="flex flex-col gap-1.5 flex-1 min-w-0">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="font-mono text-base font-semibold text-on-surface truncate">Sarah_Jenkins_Core_Backend_v4.2.pdf</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-secondary text-[11px] font-mono">Active Production</span>
+</div>
+<div class="flex items-center gap-4 text-xs font-label text-outline flex-wrap">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">history</span> Uploaded 2 hours ago</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">folder_zip</span> 2.4 MB</span>
+<span>•</span>
+<span class="text-secondary font-mono">MIME: application/pdf (PDF-1.7)</span>
+</div>
+</div>
+</div>
+<!-- Controls: Version selector & Action buttons -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+<!-- Version Switcher Dropdown -->
+<div class="relative">
+<select aria-label="Resume Version Selection" class="w-full sm:w-auto appearance-none bg-surface-container-high text-on-surface text-xs font-mono font-medium py-2.5 pl-4 pr-10 rounded-full cursor-pointer focus:outline-none focus:ring-1 focus:ring-secondary">
+<option selected="">v4.2 (Active Production)</option>
+<option>v4.1 (Archive - Q1 Deploy)</option>
+<option>v3.8 (General Fullstack Variant)</option>
+<option>v3.0 (Legacy Monolith Format)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none text-base">expand_more</span>
+</div>
+<!-- Buttons -->
+<div class="flex items-center gap-2 flex-wrap">
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-secondary text-on-secondary text-xs font-label font-semibold shadow-md hover:bg-secondary/90 transition-transform active:scale-95" id="reanalyze-btn">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+<span>Re-analyze with Gemini Pro</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-bright text-xs font-label font-medium transition-colors">
+<span class="material-symbols-outlined text-sm">upload_file</span>
+<span class="hidden md:inline">Upload New File</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-bright text-xs font-label font-medium transition-colors" title="Export ATS Plaintext AST">
+<span class="material-symbols-outlined text-sm">data_object</span>
+<span class="hidden lg:inline">Export AST</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Split Architecture (2 Columns) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN: AST Parser & Lexical Decomposition (7 Cols on XL) -->
+<div class="xl:col-span-7 flex flex-col gap-6">
+<!-- AST Visual Explorer Card -->
+<div class="rounded-lg bg-surface-container-low p-6 shadow-md flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-lg">account_tree</span>
+</div>
+<div>
+<h2 class="font-headline font-semibold text-base text-on-surface">Abstract Syntax Tree Decomposition</h2>
+<p class="text-xs font-label text-outline">Hierarchical token serialization &amp; ATS schema graph</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant text-[11px] font-mono">Status: Parsed 0 Errors</span>
+</div>
+</div>
+<!-- Interactive Tree View Structure -->
+<div class="rounded-DEFAULT bg-surface-container-lowest p-4 font-mono text-xs flex flex-col gap-2">
+<!-- Root Node -->
+<div class="flex items-center gap-2 text-secondary font-semibold">
+<span class="material-symbols-outlined text-base">folder_open</span>
+<span>Root: [CandidateProfile]</span>
+<span class="text-[10px] text-outline px-1.5 py-0.2 rounded bg-surface-container-high">Schema: ATS.v2</span>
+</div>
+<!-- Child 1: Identity & Contact -->
+<div class="ml-4 pl-3 flex flex-col gap-1.5 my-1">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-sm text-outline">dns</span>
+<span class="text-secondary font-medium">Node: [Identity &amp; Contact]</span>
+<span class="text-[10px] text-secondary bg-secondary-container/40 px-2 py-0.2 rounded-full">Passed Sanity Check</span>
+</div>
+<div class="ml-5 flex flex-wrap gap-2 text-[11px]">
+<span class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant">email: sarah.jenkins@dev-core.io</span>
+<span class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant">phone: +1 (415) 555-0192</span>
+<span class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant">loc: San Francisco, CA (Remote)</span>
+<span class="px-2 py-1 rounded bg-surface-container-low text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> github.com/sjenkins-eng
+                </span>
+</div>
+</div>
+<!-- Child 2: Core Tech Vectors -->
+<div class="ml-4 pl-3 flex flex-col gap-2 my-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-sm text-outline">memory</span>
+<span class="text-secondary font-medium">Node: [Core Tech Vectors]</span>
+<span class="text-[10px] text-outline">18 extracted lexical tokens</span>
+</div>
+<span class="text-[10px] font-mono text-secondary">Weight: 0.98</span>
+</div>
+<!-- Tokens Cloud -->
+<div class="ml-5 flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary text-[11px] font-medium">Java 21</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary text-[11px] font-medium">Spring Boot 3.3</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary text-[11px] font-medium">PostgreSQL 15</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary text-[11px] font-medium">Apache Kafka</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary text-[11px] font-medium">Docker</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary text-[11px] font-medium">Kubernetes</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary text-[11px] font-medium">AWS EKS</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary text-[11px] font-medium">Microservices</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary text-[11px] font-medium">JUnit 5</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary text-[11px] font-medium">gRPC</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary text-[11px] font-medium">Redis Cluster</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary text-[11px] font-medium">CI/CD GitHub Actions</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant text-[11px] font-medium">+6 more tokens...</span>
+</div>
+</div>
+<!-- Child 3: Experience Nodes -->
+<div class="ml-4 pl-3 flex flex-col gap-2 my-1">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-sm text-outline">work_outline</span>
+<span class="text-secondary font-medium">Node: [Experience Nodes]</span>
+<span class="text-[10px] text-outline">3 verified enterprise positions</span>
+</div>
+<div class="ml-5 flex flex-col gap-2 pt-1">
+<div class="p-2.5 rounded bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between text-[11px]">
+<span class="text-on-surface font-semibold">Staff Backend Engineer — CloudScale Systems</span>
+<span class="text-outline">2021 — PRESENT</span>
+</div>
+<div class="flex items-center gap-2 text-[10px] text-secondary">
+<span class="material-symbols-outlined text-[13px]">trending_up</span>
+<span>Quantified Impact Weight: +42% throughput latency reduction</span>
+</div>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between text-[11px]">
+<span class="text-on-surface font-semibold">Senior Java Developer — FinSecure Global</span>
+<span class="text-outline">2018 — 2021</span>
+</div>
+<div class="flex items-center gap-2 text-[10px] text-secondary">
+<span class="material-symbols-outlined text-[13px]">trending_up</span>
+<span>Quantified Impact Weight: Zero-downtime ledger migration (14M daily transactions)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Child 4: Education & Certifications -->
+<div class="ml-4 pl-3 flex flex-col gap-1.5 my-1">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-sm text-outline">school</span>
+<span class="text-secondary font-medium">Node: [Education &amp; Certifications]</span>
+</div>
+<div class="ml-5 flex flex-wrap gap-2 text-[11px]">
+<span class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-secondary">verified_user</span> AWS Certified Solutions Architect (Pro)
+                </span>
+<span class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant">B.S. in Computer Science — UC Berkeley (3.89 GPA)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Monospace Token Dump Window -->
+<div class="rounded-lg bg-surface-container-low p-6 shadow-md flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base">code</span>
+<span class="text-xs font-mono font-semibold text-on-surface tracking-wider uppercase">Live Lexical Stream Dump (JSON-AST)</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-bright text-[11px] font-mono text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">content_copy</span> Copy Raw
+              </button>
+</div>
+</div>
+<!-- Code Window -->
+<div class="rounded-DEFAULT bg-surface-container-lowest p-4 font-mono text-[11px] leading-relaxed overflow-x-auto text-on-surface-variant max-h-72">
+<pre class="space-y-0.5"><code><span class="text-outline">{</span>
+  <span class="text-secondary">"astVersion"</span>: <span class="text-tertiary">"3.11.0-RC"</span>,
+  <span class="text-secondary">"candidateId"</span>: <span class="text-tertiary">"CAND-8942-SJK"</span>,
+  <span class="text-secondary">"lexicalSummary"</span>: {
+    <span class="text-secondary">"tokenCount"</span>: <span class="text-tertiary">1842</span>,
+    <span class="text-secondary">"parseLatencyMs"</span>: <span class="text-tertiary">142</span>,
+    <span class="text-secondary">"grammarCheckPassed"</span>: <span class="text-secondary font-bold">true</span>,
+    <span class="text-secondary">"densityIndex"</span>: <span class="text-tertiary">0.88</span>
+  },
+  <span class="text-secondary">"entityTree"</span>: {
+    <span class="text-secondary">"domain"</span>: <span class="text-tertiary">"Backend Architecture &amp; Distributed Systems"</span>,
+    <span class="text-secondary">"verifiedStacks"</span>: [
+      { <span class="text-secondary">"id"</span>: <span class="text-tertiary">"JAVA_21"</span>, <span class="text-secondary">"weight"</span>: <span class="text-tertiary">0.99</span>, <span class="text-secondary">"category"</span>: <span class="text-tertiary">"LANGUAGE"</span> },
+      { <span class="text-secondary">"id"</span>: <span class="text-tertiary">"SPRING_BOOT_3"</span>, <span class="text-secondary">"weight"</span>: <span class="text-tertiary">0.96</span>, <span class="text-secondary">"category"</span>: <span class="text-tertiary">"FRAMEWORK"</span> },
+      { <span class="text-secondary">"id"</span>: <span class="text-tertiary">"APACHE_KAFKA"</span>, <span class="text-secondary">"weight"</span>: <span class="text-tertiary">0.91</span>, <span class="text-secondary">"category"</span>: <span class="text-tertiary">"EVENT_BUS"</span> },
+      { <span class="text-secondary">"id"</span>: <span class="text-tertiary">"POSTGRESQL"</span>, <span class="text-secondary">"weight"</span>: <span class="text-tertiary">0.94</span>, <span class="text-secondary">"category"</span>: <span class="text-tertiary">"STORAGE"</span> }
+    ],
+    <span class="text-secondary">"quantifiedAchievements"</span>: [
+      { <span class="text-secondary">"metric"</span>: <span class="text-tertiary">"latency_reduction"</span>, <span class="text-secondary">"delta"</span>: <span class="text-tertiary">"-42%"</span>, <span class="text-secondary">"context"</span>: <span class="text-tertiary">"Kafka stream partitioning"</span> },
+      { <span class="text-secondary">"metric"</span>: <span class="text-tertiary">"tps_capacity"</span>, <span class="text-secondary">"delta"</span>: <span class="text-tertiary">"14M_daily"</span>, <span class="text-secondary">"context"</span>: <span class="text-tertiary">"Zero-downtime distributed ledger"</span> }
+    ]
+  },
+  <span class="text-secondary">"geminiHeuristics"</span>: {
+    <span class="text-secondary">"atsConfidenceScore"</span>: <span class="text-tertiary">0.92</span>,
+    <span class="text-secondary">"recommendationDirectiveCount"</span>: <span class="text-tertiary">3</span>
+  }
+<span class="text-outline">}</span></code></pre>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: ATS Diagnostics & AI Optimization Directives (5 Cols on XL) -->
+<div class="xl:col-span-5 flex flex-col gap-6">
+<!-- 1. Circular Gauge ATS Index Widget -->
+<div class="rounded-lg bg-surface-container-low p-6 shadow-md flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono uppercase text-outline tracking-wider">Calibration Matrix</span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-secondary text-xs font-label font-medium">Top 5% Enterprise Calibration</span>
+</div>
+<!-- Main Radial Metric Area -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6 py-2">
+<!-- SVG Progress Gauge (under 2KB) -->
+<div class="relative w-36 h-36 flex items-center justify-center shrink-0">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 120 120">
+<circle class="text-surface-container-highest" cx="60" cy="60" fill="transparent" r="50" stroke="currentColor" stroke-width="10"></circle>
+<circle class="text-secondary" cx="60" cy="60" fill="transparent" r="50" stroke="currentColor" stroke-dasharray="314.159" stroke-dashoffset="25.13" stroke-linecap="round" stroke-width="10"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="font-headline font-bold text-3xl text-on-surface">92%</span>
+<span class="text-[9px] font-mono tracking-tight text-outline uppercase">Parseability</span>
+</div>
+</div>
+<!-- Sub Gauges Bars -->
+<div class="flex flex-col gap-3 w-full">
+<!-- Sub gauge 1 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-xs font-label">
+<span class="text-on-surface-variant">Keyword Density</span>
+<span class="font-mono text-secondary font-medium">88% (Optimal)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<!-- Sub gauge 2 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-xs font-label">
+<span class="text-on-surface-variant">Experience Resonance</span>
+<span class="font-mono text-secondary font-medium">94%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 94%"></div>
+</div>
+</div>
+<!-- Sub gauge 3 -->
+<div class="flex justify-between items-center text-xs font-label pt-1">
+<span class="text-on-surface-variant">Token Purity</span>
+<span class="font-mono text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">check_circle</span> 96% (Zero Errors)
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Gemini Skill Gap & Enhancement Directives -->
+<div class="rounded-lg bg-surface-container-low p-6 shadow-md flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">psychology</span>
+<h3 class="font-headline font-semibold text-sm text-on-surface">Gemini 1.5 Pro Optimization Directives</h3>
+</div>
+<span class="text-[11px] font-mono text-outline">3 Suggestions</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Directive 01 -->
+<div class="p-4 rounded-DEFAULT bg-surface-container-lowest flex flex-col gap-2 transition-all hover:bg-surface-container-high/60">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-mono text-secondary uppercase font-semibold">Directive 01 • Observability</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-secondary text-[10px] font-mono font-bold">+3.5 ATS Pts</span>
+</div>
+<h4 class="text-xs font-semibold text-on-surface">Inject Distributed Tracing Tokens</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">System identified microservices cluster design but detected 0 hits for distributed telemetry. Recommends explicit <span class="text-secondary font-mono">OpenTelemetry</span> and <span class="text-secondary font-mono">Jaeger</span> tokens.</p>
+<div class="pt-1 flex items-center justify-between">
+<span class="text-[10px] font-mono text-outline">Section: Core Experience #1</span>
+<button class="text-xs text-secondary font-label hover:underline flex items-center gap-1">Apply Suggestion <span class="material-symbols-outlined text-xs">arrow_forward</span></button>
+</div>
+</div>
+<!-- Directive 02 -->
+<div class="p-4 rounded-DEFAULT bg-surface-container-lowest flex flex-col gap-2 transition-all hover:bg-surface-container-high/60">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-mono text-secondary uppercase font-semibold">Directive 02 • Stream Mechanics</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-secondary text-[10px] font-mono font-bold">+4.2 ATS Pts</span>
+</div>
+<h4 class="text-xs font-semibold text-on-surface">Enhance Kafka Partitioning Metrics</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Replace vague token string <span class="text-tertiary font-mono line-through">"Kafka message handling"</span> with high-resonance syntax <span class="text-secondary font-mono">"Kafka partition rebalancing &amp; consumer lag tuning"</span>.</p>
+<div class="pt-1 flex items-center justify-between">
+<span class="text-[10px] font-mono text-outline">Section: Technical Highlights</span>
+<button class="text-xs text-secondary font-label hover:underline flex items-center gap-1">Apply Suggestion <span class="material-symbols-outlined text-xs">arrow_forward</span></button>
+</div>
+</div>
+<!-- Directive 03 -->
+<div class="p-4 rounded-DEFAULT bg-surface-container-lowest flex flex-col gap-2 transition-all hover:bg-surface-container-high/60">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-mono text-secondary uppercase font-semibold">Directive 03 • Query Optimization</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-secondary text-[10px] font-mono font-bold">+2.8 ATS Pts</span>
+</div>
+<h4 class="text-xs font-semibold text-on-surface">Harmonize Database Indexing Terminology</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Add explicit <span class="text-secondary font-mono">EXPLAIN ANALYZE</span> composite index phrasing to solidify database engineering credentials against FAANG ATS screening filters.</p>
+<div class="pt-1 flex items-center justify-between">
+<span class="text-[10px] font-mono text-outline">Section: Skills Vector</span>
+<button class="text-xs text-secondary font-label hover:underline flex items-center gap-1">Apply Suggestion <span class="material-symbols-outlined text-xs">arrow_forward</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Live Match Simulation against Active Requisitions -->
+<div class="rounded-lg bg-surface-container-low p-6 shadow-md flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">radar</span>
+<h3 class="font-headline font-semibold text-sm text-on-surface">Live Requisition Match Telemetry</h3>
+</div>
+<span class="text-[11px] font-mono text-secondary">3 Matches Active</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Job 1 -->
+<div class="p-3.5 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-between gap-3">
+<div class="flex flex-col min-w-0">
+<span class="text-xs font-semibold text-on-surface truncate">Lead Backend Architect</span>
+<span class="text-[11px] text-outline font-mono">Apex Distributed Systems</span>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-mono text-xs font-bold text-secondary">94% Fit</span>
+<span class="text-[9px] text-secondary font-mono">Tier-1 Requisition</span>
+</div>
+<span class="px-2 py-1 rounded-full bg-secondary-container text-secondary text-[10px] font-mono font-medium">High Fit</span>
+</div>
+</div>
+<!-- Job 2 -->
+<div class="p-3.5 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-between gap-3">
+<div class="flex flex-col min-w-0">
+<span class="text-xs font-semibold text-on-surface truncate">Distributed Systems Engineer</span>
+<span class="text-[11px] text-outline font-mono">Syntropic Cloud Tech</span>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-mono text-xs font-bold text-secondary">88% Fit</span>
+<span class="text-[9px] text-outline font-mono">Gap: OTel Syntax</span>
+</div>
+<span class="px-2 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-[10px] font-mono font-medium">Strong</span>
+</div>
+</div>
+<!-- Job 3 -->
+<div class="p-3.5 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-between gap-3">
+<div class="flex flex-col min-w-0">
+<span class="text-xs font-semibold text-on-surface truncate">Fullstack Java + React Architect</span>
+<span class="text-[11px] text-outline font-mono">FinStream Financial</span>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-mono text-xs font-bold text-on-surface">81% Fit</span>
+<span class="text-[9px] text-outline font-mono">Gap: Frontend UI Tokens</span>
+</div>
+<span class="px-2 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-[10px] font-mono font-medium">Good</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const btn = document.getElementById('reanalyze-btn');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<span class="material-symbols-outlined text-sm animate-spin">refresh</span><span>Tokenizing AST...</span>';
+        btn.classList.add('opacity-80', 'pointer-events-none');
+        setTimeout(() => {
+          btn.innerHTML = '<span class="material-symbols-outlined text-sm">done_all</span><span>AST Synced</span>';
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.classList.remove('opacity-80', 'pointer-events-none');
+          }, 1800);
+        }, 1200);
+      });
+    }
+  })();
+</script></main></div></body></html>

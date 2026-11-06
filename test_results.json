@@ -1,0 +1,892 @@
+[
+  {
+    "viewport": "320px — minimum supported phone width",
+    "width": 320,
+    "route": "/",
+    "passed": true,
+    "scrollW": 320,
+    "innerW": 320,
+    "overflowing": []
+  },
+  {
+    "viewport": "320px — minimum supported phone width",
+    "width": 320,
+    "route": "/jobs",
+    "passed": true,
+    "scrollW": 541,
+    "innerW": 541,
+    "overflowing": []
+  },
+  {
+    "viewport": "320px — minimum supported phone width",
+    "width": 320,
+    "route": "/jobs/1",
+    "passed": true,
+    "scrollW": 328,
+    "innerW": 328,
+    "overflowing": []
+  },
+  {
+    "viewport": "320px — minimum supported phone width",
+    "width": 320,
+    "route": "/login",
+    "passed": true,
+    "scrollW": 320,
+    "innerW": 320,
+    "overflowing": []
+  },
+  {
+    "viewport": "320px — minimum supported phone width",
+    "width": 320,
+    "route": "/register",
+    "passed": true,
+    "scrollW": 372,
+    "innerW": 372,
+    "overflowing": []
+  },
+  {
+    "viewport": "320px — minimum supported phone width",
+    "width": 320,
+    "route": "/seeker/dashboard",
+    "passed": true,
+    "scrollW": 320,
+    "innerW": 320,
+    "overflowing": []
+  },
+  {
+    "viewport": "320px — minimum supported phone width",
+    "width": 320,
+    "route": "/seeker/applications",
+    "passed": true,
+    "scrollW": 320,
+    "innerW": 320,
+    "overflowing": []
+  },
+  {
+    "viewport": "320px — minimum supported phone width",
+    "width": 320,
+    "route": "/seeker/resume",
+    "passed": true,
+    "scrollW": 320,
+    "innerW": 320,
+    "overflowing": []
+  },
+  {
+    "viewport": "320px — minimum supported phone width",
+    "width": 320,
+    "route": "/recruiter/dashboard",
+    "passed": true,
+    "scrollW": 320,
+    "innerW": 320,
+    "overflowing": []
+  },
+  {
+    "viewport": "320px — minimum supported phone width",
+    "width": 320,
+    "route": "/recruiter/applications",
+    "passed": true,
+    "scrollW": 320,
+    "innerW": 320,
+    "overflowing": []
+  },
+  {
+    "viewport": "320px — minimum supported phone width",
+    "width": 320,
+    "route": "/recruiter/candidates",
+    "passed": true,
+    "scrollW": 320,
+    "innerW": 320,
+    "overflowing": []
+  },
+  {
+    "viewport": "320px — minimum supported phone width",
+    "width": 320,
+    "route": "/recruiter/jobs",
+    "passed": true,
+    "scrollW": 320,
+    "innerW": 320,
+    "overflowing": []
+  },
+  {
+    "viewport": "320px — minimum supported phone width",
+    "width": 320,
+    "route": "/recruiter/jobs/new",
+    "passed": true,
+    "scrollW": 320,
+    "innerW": 320,
+    "overflowing": []
+  },
+  {
+    "viewport": "320px — minimum supported phone width",
+    "width": 320,
+    "route": "/recruiter/job-intelligence",
+    "passed": true,
+    "scrollW": 320,
+    "innerW": 320,
+    "overflowing": []
+  },
+  {
+    "viewport": "360px — compact Android phone",
+    "width": 360,
+    "route": "/",
+    "passed": true,
+    "scrollW": 360,
+    "innerW": 360,
+    "overflowing": []
+  },
+  {
+    "viewport": "360px — compact Android phone",
+    "width": 360,
+    "route": "/jobs",
+    "passed": true,
+    "scrollW": 379,
+    "innerW": 379,
+    "overflowing": []
+  },
+  {
+    "viewport": "360px — compact Android phone",
+    "width": 360,
+    "route": "/jobs/1",
+    "passed": true,
+    "scrollW": 360,
+    "innerW": 360,
+    "overflowing": []
+  },
+  {
+    "viewport": "360px — compact Android phone",
+    "width": 360,
+    "route": "/login",
+    "passed": true,
+    "scrollW": 360,
+    "innerW": 360,
+    "overflowing": []
+  },
+  {
+    "viewport": "360px — compact Android phone",
+    "width": 360,
+    "route": "/register",
+    "passed": true,
+    "scrollW": 412,
+    "innerW": 412,
+    "overflowing": []
+  },
+  {
+    "viewport": "360px — compact Android phone",
+    "width": 360,
+    "route": "/seeker/dashboard",
+    "passed": true,
+    "scrollW": 360,
+    "innerW": 360,
+    "overflowing": []
+  },
+  {
+    "viewport": "360px — compact Android phone",
+    "width": 360,
+    "route": "/seeker/applications",
+    "passed": true,
+    "scrollW": 360,
+    "innerW": 360,
+    "overflowing": []
+  },
+  {
+    "viewport": "360px — compact Android phone",
+    "width": 360,
+    "route": "/seeker/resume",
+    "passed": true,
+    "scrollW": 360,
+    "innerW": 360,
+    "overflowing": []
+  },
+  {
+    "viewport": "360px — compact Android phone",
+    "width": 360,
+    "route": "/recruiter/dashboard",
+    "passed": true,
+    "scrollW": 360,
+    "innerW": 360,
+    "overflowing": []
+  },
+  {
+    "viewport": "360px — compact Android phone",
+    "width": 360,
+    "route": "/recruiter/applications",
+    "passed": true,
+    "scrollW": 360,
+    "innerW": 360,
+    "overflowing": []
+  },
+  {
+    "viewport": "360px — compact Android phone",
+    "width": 360,
+    "route": "/recruiter/candidates",
+    "passed": true,
+    "scrollW": 360,
+    "innerW": 360,
+    "overflowing": []
+  },
+  {
+    "viewport": "360px — compact Android phone",
+    "width": 360,
+    "route": "/recruiter/jobs",
+    "passed": true,
+    "scrollW": 360,
+    "innerW": 360,
+    "overflowing": []
+  },
+  {
+    "viewport": "360px — compact Android phone",
+    "width": 360,
+    "route": "/recruiter/jobs/new",
+    "passed": true,
+    "scrollW": 360,
+    "innerW": 360,
+    "overflowing": []
+  },
+  {
+    "viewport": "360px — compact Android phone",
+    "width": 360,
+    "route": "/recruiter/job-intelligence",
+    "passed": true,
+    "scrollW": 360,
+    "innerW": 360,
+    "overflowing": []
+  },
+  {
+    "viewport": "390px — standard modern phone",
+    "width": 390,
+    "route": "/",
+    "passed": true,
+    "scrollW": 390,
+    "innerW": 390,
+    "overflowing": []
+  },
+  {
+    "viewport": "390px — standard modern phone",
+    "width": 390,
+    "route": "/jobs",
+    "passed": true,
+    "scrollW": 390,
+    "innerW": 390,
+    "overflowing": []
+  },
+  {
+    "viewport": "390px — standard modern phone",
+    "width": 390,
+    "route": "/jobs/1",
+    "passed": true,
+    "scrollW": 390,
+    "innerW": 390,
+    "overflowing": []
+  },
+  {
+    "viewport": "390px — standard modern phone",
+    "width": 390,
+    "route": "/login",
+    "passed": true,
+    "scrollW": 390,
+    "innerW": 390,
+    "overflowing": []
+  },
+  {
+    "viewport": "390px — standard modern phone",
+    "width": 390,
+    "route": "/register",
+    "passed": true,
+    "scrollW": 442,
+    "innerW": 442,
+    "overflowing": []
+  },
+  {
+    "viewport": "390px — standard modern phone",
+    "width": 390,
+    "route": "/seeker/dashboard",
+    "passed": true,
+    "scrollW": 390,
+    "innerW": 390,
+    "overflowing": []
+  },
+  {
+    "viewport": "390px — standard modern phone",
+    "width": 390,
+    "route": "/seeker/applications",
+    "passed": true,
+    "scrollW": 390,
+    "innerW": 390,
+    "overflowing": []
+  },
+  {
+    "viewport": "390px — standard modern phone",
+    "width": 390,
+    "route": "/seeker/resume",
+    "passed": true,
+    "scrollW": 390,
+    "innerW": 390,
+    "overflowing": []
+  },
+  {
+    "viewport": "390px — standard modern phone",
+    "width": 390,
+    "route": "/recruiter/dashboard",
+    "passed": true,
+    "scrollW": 390,
+    "innerW": 390,
+    "overflowing": []
+  },
+  {
+    "viewport": "390px — standard modern phone",
+    "width": 390,
+    "route": "/recruiter/applications",
+    "passed": true,
+    "scrollW": 390,
+    "innerW": 390,
+    "overflowing": []
+  },
+  {
+    "viewport": "390px — standard modern phone",
+    "width": 390,
+    "route": "/recruiter/candidates",
+    "passed": true,
+    "scrollW": 390,
+    "innerW": 390,
+    "overflowing": []
+  },
+  {
+    "viewport": "390px — standard modern phone",
+    "width": 390,
+    "route": "/recruiter/jobs",
+    "passed": true,
+    "scrollW": 390,
+    "innerW": 390,
+    "overflowing": []
+  },
+  {
+    "viewport": "390px — standard modern phone",
+    "width": 390,
+    "route": "/recruiter/jobs/new",
+    "passed": true,
+    "scrollW": 390,
+    "innerW": 390,
+    "overflowing": []
+  },
+  {
+    "viewport": "390px — standard modern phone",
+    "width": 390,
+    "route": "/recruiter/job-intelligence",
+    "passed": true,
+    "scrollW": 390,
+    "innerW": 390,
+    "overflowing": []
+  },
+  {
+    "viewport": "430px — large phone",
+    "width": 430,
+    "route": "/",
+    "passed": true,
+    "scrollW": 430,
+    "innerW": 430,
+    "overflowing": []
+  },
+  {
+    "viewport": "430px — large phone",
+    "width": 430,
+    "route": "/jobs",
+    "passed": true,
+    "scrollW": 430,
+    "innerW": 430,
+    "overflowing": []
+  },
+  {
+    "viewport": "430px — large phone",
+    "width": 430,
+    "route": "/jobs/1",
+    "passed": true,
+    "scrollW": 430,
+    "innerW": 430,
+    "overflowing": []
+  },
+  {
+    "viewport": "430px — large phone",
+    "width": 430,
+    "route": "/login",
+    "passed": true,
+    "scrollW": 430,
+    "innerW": 430,
+    "overflowing": []
+  },
+  {
+    "viewport": "430px — large phone",
+    "width": 430,
+    "route": "/register",
+    "passed": true,
+    "scrollW": 482,
+    "innerW": 482,
+    "overflowing": []
+  },
+  {
+    "viewport": "430px — large phone",
+    "width": 430,
+    "route": "/seeker/dashboard",
+    "passed": true,
+    "scrollW": 430,
+    "innerW": 430,
+    "overflowing": []
+  },
+  {
+    "viewport": "430px — large phone",
+    "width": 430,
+    "route": "/seeker/applications",
+    "passed": true,
+    "scrollW": 430,
+    "innerW": 430,
+    "overflowing": []
+  },
+  {
+    "viewport": "430px — large phone",
+    "width": 430,
+    "route": "/seeker/resume",
+    "passed": true,
+    "scrollW": 430,
+    "innerW": 430,
+    "overflowing": []
+  },
+  {
+    "viewport": "430px — large phone",
+    "width": 430,
+    "route": "/recruiter/dashboard",
+    "passed": true,
+    "scrollW": 430,
+    "innerW": 430,
+    "overflowing": []
+  },
+  {
+    "viewport": "430px — large phone",
+    "width": 430,
+    "route": "/recruiter/applications",
+    "passed": true,
+    "scrollW": 430,
+    "innerW": 430,
+    "overflowing": []
+  },
+  {
+    "viewport": "430px — large phone",
+    "width": 430,
+    "route": "/recruiter/candidates",
+    "passed": true,
+    "scrollW": 430,
+    "innerW": 430,
+    "overflowing": []
+  },
+  {
+    "viewport": "430px — large phone",
+    "width": 430,
+    "route": "/recruiter/jobs",
+    "passed": true,
+    "scrollW": 430,
+    "innerW": 430,
+    "overflowing": []
+  },
+  {
+    "viewport": "430px — large phone",
+    "width": 430,
+    "route": "/recruiter/jobs/new",
+    "passed": true,
+    "scrollW": 430,
+    "innerW": 430,
+    "overflowing": []
+  },
+  {
+    "viewport": "430px — large phone",
+    "width": 430,
+    "route": "/recruiter/job-intelligence",
+    "passed": true,
+    "scrollW": 430,
+    "innerW": 430,
+    "overflowing": []
+  },
+  {
+    "viewport": "768px — tablet",
+    "width": 768,
+    "route": "/",
+    "passed": true,
+    "scrollW": 768,
+    "innerW": 768,
+    "overflowing": []
+  },
+  {
+    "viewport": "768px — tablet",
+    "width": 768,
+    "route": "/jobs",
+    "passed": true,
+    "scrollW": 768,
+    "innerW": 768,
+    "overflowing": []
+  },
+  {
+    "viewport": "768px — tablet",
+    "width": 768,
+    "route": "/jobs/1",
+    "passed": true,
+    "scrollW": 768,
+    "innerW": 768,
+    "overflowing": []
+  },
+  {
+    "viewport": "768px — tablet",
+    "width": 768,
+    "route": "/login",
+    "passed": true,
+    "scrollW": 768,
+    "innerW": 768,
+    "overflowing": []
+  },
+  {
+    "viewport": "768px — tablet",
+    "width": 768,
+    "route": "/register",
+    "passed": false,
+    "scrollW": 784,
+    "innerW": 768,
+    "overflowing": [
+      {
+        "tag": "DIV",
+        "id": "",
+        "cls": "absolute -bottom-16 -right-16 w-80 h-80 bg-seconda",
+        "right": 784,
+        "width": 320
+      }
+    ]
+  },
+  {
+    "viewport": "768px — tablet",
+    "width": 768,
+    "route": "/seeker/dashboard",
+    "passed": true,
+    "scrollW": 768,
+    "innerW": 768,
+    "overflowing": []
+  },
+  {
+    "viewport": "768px — tablet",
+    "width": 768,
+    "route": "/seeker/applications",
+    "passed": true,
+    "scrollW": 768,
+    "innerW": 768,
+    "overflowing": []
+  },
+  {
+    "viewport": "768px — tablet",
+    "width": 768,
+    "route": "/seeker/resume",
+    "passed": true,
+    "scrollW": 768,
+    "innerW": 768,
+    "overflowing": []
+  },
+  {
+    "viewport": "768px — tablet",
+    "width": 768,
+    "route": "/recruiter/dashboard",
+    "passed": true,
+    "scrollW": 768,
+    "innerW": 768,
+    "overflowing": []
+  },
+  {
+    "viewport": "768px — tablet",
+    "width": 768,
+    "route": "/recruiter/applications",
+    "passed": true,
+    "scrollW": 768,
+    "innerW": 768,
+    "overflowing": []
+  },
+  {
+    "viewport": "768px — tablet",
+    "width": 768,
+    "route": "/recruiter/candidates",
+    "passed": true,
+    "scrollW": 768,
+    "innerW": 768,
+    "overflowing": []
+  },
+  {
+    "viewport": "768px — tablet",
+    "width": 768,
+    "route": "/recruiter/jobs",
+    "passed": true,
+    "scrollW": 768,
+    "innerW": 768,
+    "overflowing": []
+  },
+  {
+    "viewport": "768px — tablet",
+    "width": 768,
+    "route": "/recruiter/jobs/new",
+    "passed": true,
+    "scrollW": 768,
+    "innerW": 768,
+    "overflowing": []
+  },
+  {
+    "viewport": "768px — tablet",
+    "width": 768,
+    "route": "/recruiter/job-intelligence",
+    "passed": true,
+    "scrollW": 768,
+    "innerW": 768,
+    "overflowing": []
+  },
+  {
+    "viewport": "1024px — laptop/small desktop",
+    "width": 1024,
+    "route": "/",
+    "passed": true,
+    "scrollW": 1024,
+    "innerW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewport": "1024px — laptop/small desktop",
+    "width": 1024,
+    "route": "/jobs",
+    "passed": true,
+    "scrollW": 1024,
+    "innerW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewport": "1024px — laptop/small desktop",
+    "width": 1024,
+    "route": "/jobs/1",
+    "passed": true,
+    "scrollW": 1024,
+    "innerW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewport": "1024px — laptop/small desktop",
+    "width": 1024,
+    "route": "/login",
+    "passed": true,
+    "scrollW": 1024,
+    "innerW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewport": "1024px — laptop/small desktop",
+    "width": 1024,
+    "route": "/register",
+    "passed": true,
+    "scrollW": 1024,
+    "innerW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewport": "1024px — laptop/small desktop",
+    "width": 1024,
+    "route": "/seeker/dashboard",
+    "passed": true,
+    "scrollW": 1024,
+    "innerW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewport": "1024px — laptop/small desktop",
+    "width": 1024,
+    "route": "/seeker/applications",
+    "passed": true,
+    "scrollW": 1024,
+    "innerW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewport": "1024px — laptop/small desktop",
+    "width": 1024,
+    "route": "/seeker/resume",
+    "passed": true,
+    "scrollW": 1024,
+    "innerW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewport": "1024px — laptop/small desktop",
+    "width": 1024,
+    "route": "/recruiter/dashboard",
+    "passed": true,
+    "scrollW": 1024,
+    "innerW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewport": "1024px — laptop/small desktop",
+    "width": 1024,
+    "route": "/recruiter/applications",
+    "passed": true,
+    "scrollW": 1024,
+    "innerW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewport": "1024px — laptop/small desktop",
+    "width": 1024,
+    "route": "/recruiter/candidates",
+    "passed": true,
+    "scrollW": 1024,
+    "innerW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewport": "1024px — laptop/small desktop",
+    "width": 1024,
+    "route": "/recruiter/jobs",
+    "passed": true,
+    "scrollW": 1024,
+    "innerW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewport": "1024px — laptop/small desktop",
+    "width": 1024,
+    "route": "/recruiter/jobs/new",
+    "passed": true,
+    "scrollW": 1024,
+    "innerW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewport": "1024px — laptop/small desktop",
+    "width": 1024,
+    "route": "/recruiter/job-intelligence",
+    "passed": true,
+    "scrollW": 1024,
+    "innerW": 1024,
+    "overflowing": []
+  },
+  {
+    "viewport": "1440px — desktop",
+    "width": 1440,
+    "route": "/",
+    "passed": true,
+    "scrollW": 1440,
+    "innerW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewport": "1440px — desktop",
+    "width": 1440,
+    "route": "/jobs",
+    "passed": true,
+    "scrollW": 1440,
+    "innerW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewport": "1440px — desktop",
+    "width": 1440,
+    "route": "/jobs/1",
+    "passed": true,
+    "scrollW": 1440,
+    "innerW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewport": "1440px — desktop",
+    "width": 1440,
+    "route": "/login",
+    "passed": true,
+    "scrollW": 1440,
+    "innerW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewport": "1440px — desktop",
+    "width": 1440,
+    "route": "/register",
+    "passed": true,
+    "scrollW": 1440,
+    "innerW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewport": "1440px — desktop",
+    "width": 1440,
+    "route": "/seeker/dashboard",
+    "passed": true,
+    "scrollW": 1440,
+    "innerW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewport": "1440px — desktop",
+    "width": 1440,
+    "route": "/seeker/applications",
+    "passed": true,
+    "scrollW": 1440,
+    "innerW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewport": "1440px — desktop",
+    "width": 1440,
+    "route": "/seeker/resume",
+    "passed": true,
+    "scrollW": 1440,
+    "innerW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewport": "1440px — desktop",
+    "width": 1440,
+    "route": "/recruiter/dashboard",
+    "passed": true,
+    "scrollW": 1440,
+    "innerW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewport": "1440px — desktop",
+    "width": 1440,
+    "route": "/recruiter/applications",
+    "passed": true,
+    "scrollW": 1440,
+    "innerW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewport": "1440px — desktop",
+    "width": 1440,
+    "route": "/recruiter/candidates",
+    "passed": true,
+    "scrollW": 1440,
+    "innerW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewport": "1440px — desktop",
+    "width": 1440,
+    "route": "/recruiter/jobs",
+    "passed": true,
+    "scrollW": 1440,
+    "innerW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewport": "1440px — desktop",
+    "width": 1440,
+    "route": "/recruiter/jobs/new",
+    "passed": true,
+    "scrollW": 1440,
+    "innerW": 1440,
+    "overflowing": []
+  },
+  {
+    "viewport": "1440px — desktop",
+    "width": 1440,
+    "route": "/recruiter/job-intelligence",
+    "passed": true,
+    "scrollW": 1440,
+    "innerW": 1440,
+    "overflowing": []
+  }
+]

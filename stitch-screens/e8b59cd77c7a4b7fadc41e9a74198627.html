@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-variant":"#3b304a","inverse-primary":"#5e5e5e","primary":"#c6c6c6","on-secondary-container":"#abaeff","surface-container":"#251b34","on-tertiary-fixed-variant":"#7c2c22","on-surface":"#eddcfe","on-primary-fixed-variant":"#474747","primary-fixed-dim":"#c6c6c6","on-error-container":"#ffdad6","secondary-fixed-dim":"#c0c1ff","outline-variant":"#4c4546","primary-container":"#000000","surface-container-lowest":"#130921","on-tertiary-container":"#b8594b","on-secondary":"#1c1e89","on-tertiary":"#5e160e","on-tertiary-fixed":"#400101","on-primary":"#303030","surface-dim":"#190e27","background":"#190e27","inverse-surface":"#eddcfe","surface-container-high":"#30253f","on-surface-variant":"#cfc4c5","on-primary-fixed":"#1b1b1b","surface-container-low":"#21162f","on-error":"#690005","surface-container-highest":"#3b304a","on-secondary-fixed-variant":"#3539a0","error-container":"#93000a","surface-tint":"#c6c6c6","secondary-container":"#3539a0","tertiary-fixed-dim":"#ffb4a8","surface-bright":"#40344f","on-background":"#eddcfe","secondary-fixed":"#e1e0ff","outline":"#988e90","on-primary-container":"#757575","secondary":"#c0c1ff","primary-fixed":"#e2e2e2","surface":"#190e27","tertiary-container":"#000000","inverse-on-surface":"#372b45","tertiary-fixed":"#ffdad4","error":"#ffb4ab","on-secondary-fixed":"#04006d","tertiary":"#ffb4a8"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{},"fontFamily":{"headline":["Inter"],"display":["Inter"],"body":["Inter"],"label":["Inter"]},"fontSize":{}}}}</script></head><body class="bg-background font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-2xl">hub</span><div class="flex flex-col"><span class="font-headline font-bold text-base tracking-wider text-on-surface">ROLEMATCH</span><span class="text-[10px] font-mono tracking-widest text-on-surface-variant uppercase">Core Telemetry</span></div></div><div class="px-4 py-2"><div class="h-px bg-surface-container-low w-full mb-4"></div></div><nav class="px-3 flex flex-col gap-1.5" data-active-classes="bg-secondary-container text-on-secondary-container font-semibold rounded-lg"><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="applications" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span>Applications</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="candidates" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span>Candidates</span></a><a aria-current="page" class="flex items-center gap-3 px-3.5 py-2.5 transition-colors bg-secondary-container text-on-secondary-container font-semibold rounded-lg" data-path="manage-jobs" href="#"><span class="material-symbols-outlined text-[20px]">work</span><span>Manage Jobs</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="job-intelligence" href="#"><span class="material-symbols-outlined text-[20px]">psychology</span><span>Job Intelligence</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="portal-switch" href="#"><span class="material-symbols-outlined text-[20px]">swap_horiz</span><span>Portal Switch</span></a></nav></div><div class="p-4"><div class="bg-surface-container-low rounded-lg p-3 flex flex-col gap-2"><div class="flex items-center justify-between text-xs font-mono text-on-surface-variant"><span>CLUSTER INSTANCE</span><span class="text-secondary">us-east-01</span></div><div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="text-[11px] font-mono text-on-surface">SYS_STATUS: NOMINAL</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 px-8 flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-4 text-xs font-mono"><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="text-on-surface-variant">Spring Boot:</span><span class="text-secondary font-semibold">Active</span></div><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="text-on-surface-variant">Gemini 1.5 Flash:</span><span class="text-secondary font-semibold">Online</span></div></div><div class="flex items-center gap-4"><div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-xs font-mono text-on-surface-variant"><span class="material-symbols-outlined text-sm text-secondary">dns</span><span>99.98% Sync</span></div><button class="relative p-2 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-8"><div class="flex flex-col w-full pb-16 space-y-8">
+<!-- Top Command Ribbon -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pt-2">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-full text-[10px] font-mono tracking-widest bg-secondary-container text-on-secondary-container">
+          PIPELINE ORCHESTRATION
+        </span>
+<span class="text-xs font-mono text-outline">v2.4.8-telemetry</span>
+</div>
+<h1 class="text-3xl font-semibold tracking-tight text-on-surface font-headline">Manage Job Requisitions</h1>
+<p class="text-sm text-on-surface-variant font-body mt-1">Active job descriptions, algorithmic matching criteria, and candidate pipeline volume.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-xs font-mono transition-colors shadow-sm">
+<span class="material-symbols-outlined text-sm text-secondary">tune</span>
+<span>GLOBAL THRESHOLDS</span>
+</button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-secondary to-secondary-container text-on-secondary font-headline font-semibold text-xs tracking-wide shadow-lg hover:shadow-xl hover:opacity-95 transition-all">
+<span class="material-symbols-outlined text-base">add_circle</span>
+<span>+ CREATE NEW REQUISITION</span>
+</button>
+</div>
+</div>
+<!-- Requisition Summary Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Stat 1 -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-2xl p-5 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant">Active Roles</span>
+<span class="p-2 rounded-full bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-lg">cases</span>
+</span>
+</div>
+<div class="mt-4 flex items-baseline gap-3">
+<span class="text-3xl font-headline font-bold text-on-surface">8</span>
+<span class="text-xs font-mono text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">trending_up</span>+2 this wk
+        </span>
+</div>
+<div class="mt-3 w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-2xl p-5 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant">Total Applicants</span>
+<span class="p-2 rounded-full bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-lg">group_work</span>
+</span>
+</div>
+<div class="mt-4 flex items-baseline gap-3">
+<span class="text-3xl font-headline font-bold text-on-surface">1,428</span>
+<span class="text-xs font-mono text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">arrow_upward</span>+18.4%
+        </span>
+</div>
+<div class="mt-3 w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 62%"></div>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-2xl p-5 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant">Shortlisted</span>
+<span class="p-2 rounded-full bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-lg">verified</span>
+</span>
+</div>
+<div class="mt-4 flex items-baseline gap-3">
+<span class="text-3xl font-headline font-bold text-on-surface">89</span>
+<span class="text-xs font-mono text-on-surface-variant">6.2% conversion</span>
+</div>
+<div class="mt-3 w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 44%"></div>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-2xl p-5 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant">Avg Time-to-Fill</span>
+<span class="p-2 rounded-full bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-lg">schedule</span>
+</span>
+</div>
+<div class="mt-4 flex items-baseline gap-3">
+<span class="text-3xl font-headline font-bold text-on-surface">14 <span class="text-sm font-normal text-on-surface-variant">Days</span></span>
+<span class="text-xs font-mono text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">speed</span>-4d vs Q3
+        </span>
+</div>
+<div class="mt-3 w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+</div>
+<!-- Main Workflow Surface: Split Panel with Table & Precision Inspect Drawer -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
+<!-- Job Requisitions Table Column (8 Cols on XL) -->
+<div class="xl:col-span-8 flex flex-col space-y-4">
+<!-- Filters and Search Toolbar -->
+<div class="bg-surface-container-low rounded-2xl p-3 flex flex-wrap items-center justify-between gap-3 shadow-sm">
+<div class="flex items-center gap-2 flex-1 min-w-[240px]">
+<span class="material-symbols-outlined text-outline text-lg ml-2">search</span>
+<input class="w-full bg-transparent text-xs font-mono text-on-surface placeholder:text-outline focus:outline-none py-1" placeholder="Filter by position, tech stack, or requisition ID..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-xs font-mono text-on-surface-variant hover:text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">filter_alt</span> Status: All
+          </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-xs font-mono text-on-surface-variant hover:text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">swap_vert</span> Sort: Match Index
+          </button>
+</div>
+</div>
+<!-- Job List Cards Container -->
+<div class="space-y-3" id="requisition-list">
+<!-- Job Row 1 (Active Selected by Default) -->
+<div class="job-item group relative bg-surface-container rounded-2xl p-5 transition-all duration-200 hover:bg-surface-container-high cursor-pointer shadow-md" data-job="backend-architect">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="space-y-1.5">
+<div class="flex items-center gap-2.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase bg-surface-container-highest text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Active
+                </span>
+<span class="text-xs font-mono text-outline">REQ-2024-8841</span>
+<span class="text-xs font-mono text-on-secondary-container bg-surface-container-lowest px-2 py-0.5 rounded-full">Gemini Cosine: 94.2%</span>
+</div>
+<h2 class="text-lg font-headline font-semibold text-on-surface group-hover:text-secondary transition-colors">
+                Lead Backend Architect - Cloud Infrastructure
+              </h2>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-on-surface-variant font-mono">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">location_on</span> San Francisco / Remote</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">payments</span> $185k - $220k</span>
+<span>•</span>
+<span>Vector Seed: AWS / Distributed</span>
+</div>
+</div>
+<!-- Pipeline Metrics & Action Matrix -->
+<div class="flex items-center justify-between lg:justify-end gap-6 pt-2 lg:pt-0">
+<div class="flex items-center gap-4 text-right">
+<div class="flex flex-col">
+<span class="text-xs font-mono text-outline">Applicants</span>
+<span class="text-base font-headline font-bold text-on-surface">48</span>
+</div>
+<div class="h-7 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="text-xs font-mono text-secondary">Shortlisted</span>
+<span class="text-base font-headline font-bold text-secondary">12</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface hover:bg-secondary hover:text-on-secondary transition-colors" title="View Ranked Applicants">
+<span class="material-symbols-outlined text-base">person_search</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-colors" title="Re-index Gemini Vector">
+<span class="material-symbols-outlined text-base">sync</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-colors" title="Edit Job Spec">
+<span class="material-symbols-outlined text-base">edit_note</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-error transition-colors" title="Pause Requisition">
+<span class="material-symbols-outlined text-base">pause</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Job Row 2 -->
+<div class="job-item group relative bg-surface-container-low rounded-2xl p-5 transition-all duration-200 hover:bg-surface-container-high cursor-pointer shadow-sm" data-job="distributed-systems">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="space-y-1.5">
+<div class="flex items-center gap-2.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase bg-surface-container text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Active
+                </span>
+<span class="text-xs font-mono text-outline">REQ-2024-8845</span>
+<span class="text-xs font-mono text-on-secondary-container bg-surface-container-lowest px-2 py-0.5 rounded-full">Gemini Cosine: 91.8%</span>
+</div>
+<h2 class="text-lg font-headline font-semibold text-on-surface group-hover:text-secondary transition-colors">
+                Senior Distributed Systems Engineer
+              </h2>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-on-surface-variant font-mono">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">location_on</span> New York / Hybrid</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">payments</span> $170k - $205k</span>
+<span>•</span>
+<span>Vector Seed: Raft / Consensus</span>
+</div>
+</div>
+<!-- Pipeline Metrics & Action Matrix -->
+<div class="flex items-center justify-between lg:justify-end gap-6 pt-2 lg:pt-0">
+<div class="flex items-center gap-4 text-right">
+<div class="flex flex-col">
+<span class="text-xs font-mono text-outline">Applicants</span>
+<span class="text-base font-headline font-bold text-on-surface">34</span>
+</div>
+<div class="h-7 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="text-xs font-mono text-secondary">Shortlisted</span>
+<span class="text-base font-headline font-bold text-secondary">8</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface hover:bg-secondary hover:text-on-secondary transition-colors" title="View Ranked Applicants">
+<span class="material-symbols-outlined text-base">person_search</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-colors" title="Re-index Gemini Vector">
+<span class="material-symbols-outlined text-base">sync</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-colors" title="Edit Job Spec">
+<span class="material-symbols-outlined text-base">edit_note</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-error transition-colors" title="Pause Requisition">
+<span class="material-symbols-outlined text-base">pause</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Job Row 3 -->
+<div class="job-item group relative bg-surface-container-low rounded-2xl p-5 transition-all duration-200 hover:bg-surface-container-high cursor-pointer shadow-sm" data-job="fullstack-engineer">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="space-y-1.5">
+<div class="flex items-center gap-2.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase bg-surface-container text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Active
+                </span>
+<span class="text-xs font-mono text-outline">REQ-2024-8850</span>
+<span class="text-xs font-mono text-on-secondary-container bg-surface-container-lowest px-2 py-0.5 rounded-full">Gemini Cosine: 88.5%</span>
+</div>
+<h2 class="text-lg font-headline font-semibold text-on-surface group-hover:text-secondary transition-colors">
+                Full-Stack Software Engineer (Java + React)
+              </h2>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-on-surface-variant font-mono">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">location_on</span> Austin / Remote</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">payments</span> $150k - $180k</span>
+<span>•</span>
+<span>Vector Seed: Java / Vite / Tailwind</span>
+</div>
+</div>
+<!-- Pipeline Metrics & Action Matrix -->
+<div class="flex items-center justify-between lg:justify-end gap-6 pt-2 lg:pt-0">
+<div class="flex items-center gap-4 text-right">
+<div class="flex flex-col">
+<span class="text-xs font-mono text-outline">Applicants</span>
+<span class="text-base font-headline font-bold text-on-surface">62</span>
+</div>
+<div class="h-7 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="text-xs font-mono text-secondary">Shortlisted</span>
+<span class="text-base font-headline font-bold text-secondary">15</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface hover:bg-secondary hover:text-on-secondary transition-colors" title="View Ranked Applicants">
+<span class="material-symbols-outlined text-base">person_search</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-colors" title="Re-index Gemini Vector">
+<span class="material-symbols-outlined text-base">sync</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-colors" title="Edit Job Spec">
+<span class="material-symbols-outlined text-base">edit_note</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-error transition-colors" title="Pause Requisition">
+<span class="material-symbols-outlined text-base">pause</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Job Row 4 (Review Status) -->
+<div class="job-item group relative bg-surface-container-low rounded-2xl p-5 transition-all duration-200 hover:bg-surface-container-high cursor-pointer shadow-sm" data-job="staff-data">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="space-y-1.5">
+<div class="flex items-center gap-2.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase bg-surface-container text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Review
+                </span>
+<span class="text-xs font-mono text-outline">REQ-2024-8854</span>
+<span class="text-xs font-mono text-on-secondary-container bg-surface-container-lowest px-2 py-0.5 rounded-full">Gemini Cosine: 96.1%</span>
+</div>
+<h2 class="text-lg font-headline font-semibold text-on-surface group-hover:text-secondary transition-colors">
+                Staff Data Platform Engineer
+              </h2>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-on-surface-variant font-mono">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">location_on</span> Seattle / Remote</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">payments</span> $195k - $240k</span>
+<span>•</span>
+<span>Vector Seed: Spark / ClickHouse / Trino</span>
+</div>
+</div>
+<!-- Pipeline Metrics & Action Matrix -->
+<div class="flex items-center justify-between lg:justify-end gap-6 pt-2 lg:pt-0">
+<div class="flex items-center gap-4 text-right">
+<div class="flex flex-col">
+<span class="text-xs font-mono text-outline">Applicants</span>
+<span class="text-base font-headline font-bold text-on-surface">29</span>
+</div>
+<div class="h-7 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="text-xs font-mono text-secondary">Shortlisted</span>
+<span class="text-base font-headline font-bold text-secondary">5</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface hover:bg-secondary hover:text-on-secondary transition-colors" title="View Ranked Applicants">
+<span class="material-symbols-outlined text-base">person_search</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-colors" title="Re-index Gemini Vector">
+<span class="material-symbols-outlined text-base">sync</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-colors" title="Edit Job Spec">
+<span class="material-symbols-outlined text-base">edit_note</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-secondary transition-colors" title="Resume Requisition">
+<span class="material-symbols-outlined text-base">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bulk Actions / Secondary Footer Stats -->
+<div class="flex items-center justify-between px-4 py-3 bg-surface-container-lowest rounded-2xl text-xs font-mono text-outline">
+<span>Displaying 4 of 8 total requisitions</span>
+<div class="flex items-center gap-2">
+<button class="hover:text-on-surface transition-colors">Previous</button>
+<span class="text-secondary font-bold">1</span>
+<button class="hover:text-on-surface transition-colors">2</button>
+<button class="hover:text-on-surface transition-colors">Next</button>
+</div>
+</div>
+</div>
+<!-- Requisition Details Drawer & Real-Time Intelligence (4 Cols on XL) -->
+<div class="xl:col-span-4 bg-surface-container-low rounded-3xl p-6 flex flex-col space-y-6 shadow-xl sticky top-20">
+<!-- Drawer Header -->
+<div class="flex items-center justify-between pb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl">dataset</span>
+<span class="text-xs font-mono uppercase tracking-widest text-on-surface">Inspection Telemetry</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-[11px] font-mono text-secondary">
+          REQ-2024-8841
+        </span>
+</div>
+<!-- Target Spec Info -->
+<div class="space-y-1">
+<h3 class="text-base font-headline font-semibold text-on-surface">
+          Lead Backend Architect
+        </h3>
+<p class="text-xs text-on-surface-variant font-body">Cloud Infrastructure & High-Throughput Engines</p>
+</div>
+<!-- Algorithmic Match Threshold Control -->
+<div class="bg-surface-container rounded-2xl p-4 space-y-3">
+<div class="flex items-center justify-between text-xs font-mono">
+<span class="text-on-surface-variant">Min. Gemini Vector Match</span>
+<span class="text-secondary font-bold text-sm" id="threshold-val">85%</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-secondary" id="threshold-slider" max="98" min="70" type="range" value="85"/>
+<div class="flex justify-between text-[10px] font-mono text-outline">
+<span>70% (Broad Pipeline)</span>
+<span>98% (High Precision)</span>
+</div>
+</div>
+<!-- Required Skill Vector Weights -->
+<div class="space-y-3">
+<div class="flex items-center justify-between text-xs font-mono">
+<span class="text-on-surface">SKILL EMBEDDINGS</span>
+<span class="text-outline">Weight</span>
+</div>
+<div class="space-y-2">
+<!-- Skill 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-xs font-mono text-on-surface">Java 21</span>
+</div>
+<span class="text-xs font-mono text-secondary">1.0 (Critical)</span>
+</div>
+<!-- Skill 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-xs font-mono text-on-surface">Spring Boot 3.2</span>
+</div>
+<span class="text-xs font-mono text-secondary">0.95</span>
+</div>
+<!-- Skill 3 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-xs font-mono text-on-surface">Apache Kafka</span>
+</div>
+<span class="text-xs font-mono text-secondary">0.85</span>
+</div>
+<!-- Skill 4 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-xs font-mono text-on-surface">Kubernetes / EKS</span>
+</div>
+<span class="text-xs font-mono text-secondary">0.80</span>
+</div>
+</div>
+</div>
+<!-- Inline Vector Pipeline Signal SVG Chart -->
+<div class="bg-surface-container rounded-2xl p-4 space-y-2">
+<div class="flex items-center justify-between text-xs font-mono">
+<span class="text-on-surface">CANDIDATE DISTRIBUTION</span>
+<span class="text-secondary text-[11px]">89% Dense</span>
+</div>
+<div class="h-16 w-full pt-1">
+<svg class="w-full h-full text-secondary" fill="none" preserveaspectratio="none" viewbox="0 0 200 40">
+<path d="M0 38 Q 30 35, 50 25 T 90 10 T 130 18 T 170 8 T 200 32" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0 38 Q 30 35, 50 25 T 90 10 T 130 18 T 170 8 T 200 32 L 200 40 L 0 40 Z" fill="currentColor" fill-opacity="0.12"></path>
+</svg>
+</div>
+<div class="flex justify-between text-[10px] font-mono text-outline">
+<span>60% Similarity</span>
+<span>Mean: 86.4%</span>
+<span>99% Similarity</span>
+</div>
+</div>
+<!-- Quick Action Controls -->
+<div class="space-y-2 pt-2">
+<button class="w-full py-3 px-4 rounded-full bg-secondary text-on-secondary font-headline font-semibold text-xs tracking-wider uppercase transition-all shadow-md hover:bg-secondary-fixed">
+          Open Applicant Pipeline
+        </button>
+<button class="w-full py-2.5 px-4 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface text-xs font-mono transition-colors">
+          Export Requisition Telemetry (JSON)
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive sync for threshold slider
+  const slider = document.getElementById('threshold-slider');
+  const label = document.getElementById('threshold-val');
+  if (slider && label) {
+    slider.addEventListener('input', (e) => {
+      label.textContent = e.target.value + '%';
+    });
+  }
+
+  // Row selection interaction highlight
+  const rows = document.querySelectorAll('.job-item');
+  rows.forEach(row => {
+    row.addEventListener('click', () => {
+      rows.forEach(r => {
+        r.classList.remove('bg-surface-container');
+        r.classList.add('bg-surface-container-low');
+      });
+      row.classList.remove('bg-surface-container-low');
+      row.classList.add('bg-surface-container');
+    });
+  });
+</script></main></div></body></html>

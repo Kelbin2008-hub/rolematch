@@ -1,0 +1,557 @@
+<!DOCTYPE html><html class="dark" lang="en" style="" xmlns:th="http://www.thymeleaf.org"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{ margin:0; padding:0; width:100%; max-width:100%; overflow-x:hidden; box-sizing:border-box; }body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-container":"#000000","secondary":"#e4e4e7","on-tertiary":"#18181b","tertiary":"#d4d4d8","on-secondary-fixed":"#18181b","surface-container-low":"#111827","secondary-fixed-dim":"#e4e4e7","surface-tint":"#c6c6c6","secondary-fixed":"#e4e4e7","on-error":"#09090b","tertiary-fixed":"#e4e4e7","error":"#d4d4d8","on-primary-fixed":"#1b1b1b","on-tertiary-container":"#f4f4f5","on-error-container":"#f4f4f5","primary":"#c6c6c6","primary-fixed-dim":"#c6c6c6","surface-variant":"#27272a","error-container":"#27272a","background":"#0b0f19","surface-bright":"#3f3f46","on-secondary":"#18181b","on-surface":"#f4f4f5","surface-container-lowest":"#080c14","on-secondary-container":"#f4f4f5","on-tertiary-fixed":"#18181b","inverse-surface":"#f4f4f5","on-surface-variant":"#a1a1aa","surface-container-high":"#27272a","tertiary-container":"#000000","inverse-on-surface":"#18181b","tertiary-fixed-dim":"#d4d4d8","primary-fixed":"#e2e2e2","on-secondary-fixed-variant":"#27272a","on-background":"#f4f4f5","surface-dim":"#0b0f19","on-tertiary-fixed-variant":"#27272a","on-primary":"#303030","on-primary-fixed-variant":"#474747","surface":"#0b0f19","surface-container-highest":"#27272a","on-primary-container":"#757575","outline":"#71717a","surface-container":"#18181b","secondary-container":"#27272a","outline-variant":"#3f3f46","inverse-primary":"#5e5e5e"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{},"fontFamily":{"headline":["Inter"],"display":["Inter"],"body":["Inter"],"label":["Inter"]},"fontSize":{}}}}</script></head><body class="bg-background font-body text-on-surface overflow-x-hidden">
+<!-- Mobile Sidebar Backdrop Overlay -->
+<div id="sidebar-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 hidden lg:hidden transition-opacity" onclick="toggleAppSidebar()"></div>
+<aside id="app-sidebar" class="fixed inset-y-0 left-0 w-64 z-50 flex flex-col justify-between shadow-2xl transition-transform duration-300 transform -translate-x-full lg:translate-x-0 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-6 flex items-center gap-3 bg-surface-container-lowest"><span class="font-headline font-semibold text-lg text-on-surface tracking-tight">RoleMatch</span></div><nav class="flex flex-col gap-1.5 px-4 pt-4" data-active-classes="bg-secondary-container text-on-secondary-container font-semibold"><a aria-current="page" class="flex items-center gap-3 px-4 py-3 rounded-full transition-all bg-secondary-container text-on-secondary-container font-semibold" th:href="@{/seeker/dashboard}" href="/seeker/dashboard"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="text-sm font-label">Dashboard</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="applications" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span class="text-sm font-label">Applications</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="candidates" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="text-sm font-label">Candidates</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" th:href="@{/jobs}" href="/jobs"><span class="material-symbols-outlined text-[20px]">work</span><span class="text-sm font-label">Jobs</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="profile-settings" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span class="text-sm font-label">Profile Settings</span></a></nav></div><div class="p-4"><div class="flex items-center gap-3 p-3 rounded-full bg-surface-container-low"><button type="button" class="lg:hidden p-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors ml-auto" onclick="toggleAppSidebar()" aria-label="Close navigation menu"><span class="material-symbols-outlined text-[20px]">close</span></button><div class="flex flex-col min-w-0"><span class="text-sm font-label font-medium text-on-surface truncate">Kelbin Bijoy</span><span class="text-xs text-on-surface-variant truncate">Talent Acquisition</span></div></div></div></aside><div class="w-full lg:pl-64 min-w-0 flex flex-col min-h-screen"><header class="fixed top-0 left-0 lg:left-64 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl z-40 flex items-center justify-between px-8 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-3 w-80">
+<button type="button" class="lg:hidden p-2 rounded-lg bg-surface-container-high/90 border border-neutral-700 text-on-surface hover:text-white hover:bg-neutral-800 transition-colors shrink-0 mr-2" onclick="toggleAppSidebar()" aria-label="Open navigation menu"><span class="material-symbols-outlined text-[22px]">menu</span></button><div class="flex items-center gap-2 w-full px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">search</span><span class="text-sm">Search candidates, jobs...</span></div></div><div class="flex items-center gap-4"><button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">chat_bubble</span></button></div></header><main class="relative pt-16 bg-background w-full px-3 sm:px-4 md:px-6 lg:px-8 max-w-full overflow-x-hidden"><div class="flex flex-col w-full pb-16">
+<!-- Top Welcome Banner & Controls -->
+<section class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pt-6 pb-8">
+<div class="space-y-1">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium tracking-wide">
+          TALENT HUB ACTIVE
+        </span>
+<span class="text-xs text-on-surface-variant font-mono">AUTOSYNC 12:44 PM</span>
+</div>
+<h1 class="text-3xl lg:text-4xl font-semibold tracking-tight text-on-surface">
+        Welcome back, Kelbin Bijoy!
+      </h1>
+<p class="text-sm text-on-surface-variant">
+        Lead Recruiter &amp; Talent Acquisition Specialist • Overseeing 14 core hiring pipelines
+      </p>
+</div>
+<!-- Quick Action Bar -->
+<div class="flex flex-wrap items-center gap-3">
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface transition-all font-medium text-sm shadow-sm cursor-pointer active:scale-95" onclick="document.getElementById('edit-profile-modal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span class="">Edit Profile</span>
+</button>
+<button class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-secondary text-on-secondary hover:bg-secondary-fixed transition-all font-semibold text-sm shadow-md cursor-pointer active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span class="">Post New Job</span>
+</button>
+</div>
+</section>
+<!-- Key Metrics Bento -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-8">
+<!-- Metric 1: Active Pipelines -->
+<div class="p-5 rounded-2xl bg-surface-container shadow-sm flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="text-xs font-medium tracking-wider text-on-surface-variant uppercase">Active Pipelines</span>
+<span class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+</span>
+</div>
+<div class="mt-4 flex items-baseline justify-between">
+<div class="text-3xl font-bold tracking-tight text-on-surface">14</div>
+<span class="inline-flex items-center text-xs font-semibold px-2.5 py-0.5 rounded-full bg-surface-container-highest text-secondary">
+          +2 this week
+        </span>
+</div>
+<div class="mt-3 text-xs text-on-surface-variant flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="">Senior Backend &amp; ML roles prioritised</span>
+</div>
+</div>
+<!-- Metric 2: Total Applicants -->
+<div class="p-5 rounded-2xl bg-surface-container shadow-sm flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="text-xs font-medium tracking-wider text-on-surface-variant uppercase">Total Applicants</span>
+<span class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">person_search</span>
+</span>
+</div>
+<div class="mt-4 flex items-baseline justify-between">
+<div class="text-3xl font-bold tracking-tight text-on-surface">1,428</div>
+<span class="inline-flex items-center text-xs font-medium px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant">
+          184 AI parsed
+        </span>
+</div>
+<div class="mt-3 text-xs text-on-surface-variant flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="">Across 6 active engineering portals</span>
+</div>
+</div>
+<!-- Metric 3: Shortlisted -->
+<div class="p-5 rounded-2xl bg-surface-container shadow-sm flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="text-xs font-medium tracking-wider text-on-surface-variant uppercase">Shortlisted Candidates</span>
+<span class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">star</span>
+</span>
+</div>
+<div class="mt-4 flex items-baseline justify-between">
+<div class="text-3xl font-bold tracking-tight text-on-surface">89</div>
+<span class="inline-flex items-center text-xs font-semibold px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">
+          Top 90%+ ATS
+        </span>
+</div>
+<div class="mt-3 text-xs text-on-surface-variant flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="">Ready for first round technical screening</span>
+</div>
+</div>
+<!-- Metric 4: Average ATS Score -->
+<div class="p-5 rounded-2xl bg-surface-container shadow-sm flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="text-xs font-medium tracking-wider text-on-surface-variant uppercase">Average ATS Score</span>
+<span class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">auto_graph</span>
+</span>
+</div>
+<div class="mt-4 flex items-baseline justify-between">
+<div class="text-3xl font-bold tracking-tight text-on-surface">84.6%</div>
+<div class="w-16 h-4">
+<!-- Sparkline Mini SVG -->
+<svg class="w-full h-full overflow-visible" fill="none" viewBox="0 0 60 16">
+<path class="text-secondary" d="M0 12 L12 10 L24 13 L36 6 L48 8 L60 2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<div class="mt-3 text-xs text-on-surface-variant flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="">+4.2% higher benchmark this quarter</span>
+</div>
+</div>
+</section>
+<!-- Core Content Split: Candidate Table + ATS Detail Widget -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Left Column: Ranking Table (8 cols) -->
+<div class="lg:col-span-8 flex flex-col rounded-2xl bg-surface-container shadow-sm overflow-hidden">
+<!-- Section Header -->
+<div class="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-surface-container">
+<div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-mono text-secondary uppercase tracking-wider">Reference 5.8 Engine</span>
+<span class="w-1 h-1 rounded-full bg-on-surface-variant"></span>
+<span class="text-xs text-on-surface-variant">Live Sorting</span>
+</div>
+<h2 class="text-xl font-semibold text-on-surface mt-1">Candidate Ranking &amp; Shortlisting</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs text-on-surface-variant font-medium">Filter Role:</span>
+<span class="px-3 py-1 rounded-full text-xs font-medium bg-surface-container-high text-on-surface">
+            Senior Full-Stack (Java/React)
+          </span>
+</div>
+</div>
+<!-- Table Container -->
+<div class="w-full overflow-x-auto">
+<table class="w-full min-w-[640px] text-left text-sm border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-xs uppercase font-medium text-on-surface-variant tracking-wider">
+<th class="py-3 px-5">Rank</th>
+<th class="py-3 px-5">Candidate</th>
+<th class="py-3 px-5">ATS Match</th>
+<th class="py-3 px-5">Status</th>
+<th class="py-3 px-5 text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1: Priya S. -->
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="py-4 px-5">
+<span class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xs">
+                  #1
+                </span>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary font-semibold text-sm">
+                    PS
+                  </div>
+<div>
+<div class="font-semibold text-on-surface">Priya S.</div>
+<div class="text-xs text-on-surface-variant">priya.sharma@techdev.io</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">Java</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">Spring Boot</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">React</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface text-base">92%</span>
+<div class="w-16 h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 92%;"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Shortlisted
+                </span>
+</td>
+<td class="py-4 px-5 text-right">
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high hover:bg-secondary hover:text-on-secondary text-on-surface text-xs font-medium transition-colors" type="button">
+                  View Profile
+                </button>
+</td>
+</tr>
+<!-- Row 2: Rahul K. -->
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="py-4 px-5">
+<span class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-xs">
+                  #2
+                </span>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface font-semibold text-sm">
+                    RK
+                  </div>
+<div>
+<div class="font-semibold text-on-surface">Rahul K.</div>
+<div class="text-xs text-on-surface-variant">rahul.kumar@engnetwork.org</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">Spring</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">Microservices</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">MySQL</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface text-base">88%</span>
+<div class="w-16 h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Shortlisted
+                </span>
+</td>
+<td class="py-4 px-5 text-right">
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high hover:bg-secondary hover:text-on-secondary text-on-surface text-xs font-medium transition-colors" type="button">
+                  View Profile
+                </button>
+</td>
+</tr>
+<!-- Row 3: Sneha M. -->
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="py-4 px-5">
+<span class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-xs">
+                  #3
+                </span>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface font-semibold text-sm">
+                    SM
+                  </div>
+<div>
+<div class="font-semibold text-on-surface">Sneha M.</div>
+<div class="text-xs text-on-surface-variant">sneha.m@cloudlabs.in</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">React</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">TypeScript</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">Node.js</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface text-base">78%</span>
+<div class="w-16 h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="bg-secondary-fixed h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-surface-container-highest text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface-variant"></span>
+                  Review
+                </span>
+</td>
+<td class="py-4 px-5 text-right">
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high hover:bg-secondary hover:text-on-secondary text-on-surface text-xs font-medium transition-colors" type="button">
+                  View Profile
+                </button>
+</td>
+</tr>
+<!-- Row 4: Arjun P. -->
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="py-4 px-5">
+<span class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-xs">
+                  #4
+                </span>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface font-semibold text-sm">
+                    AP
+                  </div>
+<div>
+<div class="font-semibold text-on-surface">Arjun P.</div>
+<div class="text-xs text-on-surface-variant">arjun.p@kernelarch.com</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">Java</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">Kafka</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">AWS</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface text-base">74%</span>
+<div class="w-16 h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="bg-secondary-fixed h-full rounded-full" style="width: 74%;"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-surface-container-highest text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface-variant"></span>
+                  Under Review
+                </span>
+</td>
+<td class="py-4 px-5 text-right">
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high hover:bg-secondary hover:text-on-secondary text-on-surface text-xs font-medium transition-colors" type="button">
+                  View Profile
+                </button>
+</td>
+</tr>
+<!-- Row 5: Alex R. -->
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="py-4 px-5">
+<span class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-xs">
+                  #5
+                </span>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface font-semibold text-sm">
+                    AR
+                  </div>
+<div>
+<div class="font-semibold text-on-surface">Alex R.</div>
+<div class="text-xs text-on-surface-variant">alex.rodriguez@nextstack.io</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">PostgreSQL</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">Go</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface">Kubernetes</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface text-base">71%</span>
+<div class="w-16 h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="bg-secondary-fixed h-full rounded-full" style="width: 71%;"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-surface-container-highest text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface-variant"></span>
+                  Under Review
+                </span>
+</td>
+<td class="py-4 px-5 text-right">
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high hover:bg-secondary hover:text-on-secondary text-on-surface text-xs font-medium transition-colors" type="button">
+                  View Profile
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination Minimal -->
+<div class="p-4 bg-surface-container-low flex items-center justify-between text-xs text-on-surface-variant">
+<span class="">Showing 5 of 38 scored applicants</span>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface" type="button">Previous</button>
+<button class="px-3 py-1 rounded-full bg-secondary text-on-secondary font-semibold" type="button">1</button>
+<button class="px-3 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface" type="button">2</button>
+<button class="px-3 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface" type="button">Next</button>
+</div>
+</div>
+</div>
+<!-- Right Column: ATS Score & Skill Gap (Ref 5.7) -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<div class="p-6 rounded-2xl bg-surface-container shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-4">
+<div>
+<div class="text-xs font-mono text-secondary uppercase tracking-wider">Reference 5.7 Spec</div>
+<h3 class="text-lg font-semibold text-on-surface">ATS Score &amp; Skill Gap</h3>
+</div>
+<span class="material-symbols-outlined text-secondary">analytics</span>
+</div>
+<!-- Circular Score Dial -->
+<div class="flex flex-col items-center justify-center my-4 py-2">
+<div class="relative w-36 h-36 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+<!-- Background Circle -->
+<circle class="text-surface-container-lowest" cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-width="8"></circle>
+<!-- Progress Circle (78%) -->
+<circle class="text-secondary" cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="55.26" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-3xl font-bold tracking-tight text-on-surface">78%</span>
+<span class="text-[11px] font-medium text-on-surface-variant uppercase tracking-wide">Overall Match</span>
+</div>
+</div>
+<p class="text-xs text-on-surface-variant text-center mt-2">
+            Evaluated against <span class="text-on-surface font-semibold">Senior Java Full-Stack</span> JD
+          </p>
+</div>
+<!-- Skill Gap Analysis Breakdown -->
+<div class="space-y-4 pt-2">
+<!-- Matched Skills -->
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-semibold text-secondary uppercase tracking-wide flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                Matched Skills (5)
+              </span>
+<span class="text-[11px] text-on-surface-variant">Strong Alignment</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">check</span> Java
+              </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">check</span> Spring Boot
+              </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">check</span> React
+              </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">check</span> MySQL
+              </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">check</span> Git
+              </span>
+</div>
+</div>
+<!-- Missing Skills -->
+<div class="pt-2">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-semibold text-tertiary uppercase tracking-wide flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+                Missing Skills (3)
+              </span>
+<span class="text-[11px] text-tertiary">Action Needed</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-high text-tertiary text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">priority_high</span> Docker
+              </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-high text-tertiary text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">priority_high</span> Kubernetes
+              </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-high text-tertiary text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">priority_high</span> AWS
+              </span>
+</div>
+</div>
+</div>
+<!-- Recruiter Recommendation Button -->
+<button class="w-full mt-6 py-2.5 rounded-full bg-surface-container-highest hover:bg-surface-bright text-on-surface text-xs font-semibold tracking-wide transition-colors" type="button">
+          Download Complete Skill Gap PDF
+        </button>
+</div>
+<!-- Recruiter Spotlight Mini Card -->
+
+</div>
+</div>
+<!-- Instagram-Style 'Edit Profile' Showcase Modal -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-surface-container-lowest/80 backdrop-blur-md hidden transition-opacity" id="edit-profile-modal">
+<div class="relative w-full max-w-lg bg-surface-container rounded-2xl p-6 sm:p-8 shadow-2xl overflow-y-auto max-h-[942px]">
+<!-- Modal Header -->
+<div class="flex items-center justify-between pb-6">
+<div>
+<span class="text-[11px] font-mono tracking-wider text-secondary uppercase">Account Credentials</span>
+<h2 class="text-xl font-bold text-on-surface mt-0.5">Edit Profile</h2>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-bright flex items-center justify-center text-on-surface transition-colors cursor-pointer" onclick="document.getElementById('edit-profile-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Instagram Mobile Layout Aesthetics -->
+<div class="flex flex-col items-center text-center pb-6">
+<div class="relative">
+<div class="w-28 h-28 rounded-full bg-neutral-900 border border-neutral-700 flex items-center justify-center font-mono font-bold text-2xl text-white mx-auto shadow-md">KB</div>
+</div>
+<!-- Change Profile Photo Trigger -->
+<label class="mt-3 cursor-pointer" for="profile-photo-input">
+<span class="text-secondary font-semibold text-sm hover:underline block">Change profile photo</span>
+<input accept="image/*" class="hidden" id="profile-photo-input" onchange="if(this.files &amp;&amp; this.files[0]) { const reader = new FileReader(); reader.onload = (e) =&gt; { document.getElementById('modal-avatar-preview').src = e.target.result; }; reader.readAsDataURL(this.files[0]); }" type="file">
+</label>
+</div>
+<!-- Profile Form Fields -->
+<form class="space-y-4" onsubmit="event.preventDefault(); document.getElementById('edit-profile-modal').classList.add('hidden');">
+<!-- Name -->
+<div class="space-y-1">
+<label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Name</label>
+<input class="w-full px-4 py-2.5 rounded-full bg-surface-container-low text-on-surface text-sm focus:outline-none focus:bg-surface-container-high transition-colors" type="text" value="Kelbin Bijoy">
+</div>
+<!-- Username -->
+<div class="space-y-1">
+<label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Username</label>
+<input class="w-full px-4 py-2.5 rounded-full bg-surface-container-low text-on-surface text-sm focus:outline-none focus:bg-surface-container-high transition-colors" type="text" value="@kelbinbijoy">
+</div>
+<!-- Pronouns -->
+<div class="space-y-1">
+<label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Pronouns</label>
+<input class="w-full px-4 py-2.5 rounded-full bg-surface-container-low text-on-surface text-sm focus:outline-none focus:bg-surface-container-high transition-colors" type="text" value="He/Him">
+</div>
+<!-- Bio -->
+<div class="space-y-1">
+<label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Bio</label>
+<textarea class="w-full px-4 py-3 rounded-2xl bg-surface-container-low text-on-surface text-sm focus:outline-none focus:bg-surface-container-high transition-colors resize-none leading-relaxed" rows="3">Talent Acquisition Lead &amp; Full-Stack Tech Recruiter at RoleMatch. Specializing in Java, Spring Boot &amp; AI Engineering roles.</textarea>
+</div>
+<!-- Links / Portfolio -->
+<div class="space-y-1">
+<label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Links / Portfolio</label>
+<input class="w-full px-4 py-2.5 rounded-full bg-surface-container-low text-on-surface text-sm focus:outline-none focus:bg-surface-container-high transition-colors" type="url" value="https://rolematch.ai/recruiter/kelbin">
+</div>
+<!-- Gender / Role -->
+<div class="space-y-1">
+<label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Gender / Role</label>
+<input class="w-full px-4 py-2.5 rounded-full bg-surface-container-low text-on-surface text-sm focus:outline-none focus:bg-surface-container-high transition-colors" type="text" value="Recruiter / HR">
+</div>
+<!-- Modal Actions -->
+<div class="flex items-center justify-end gap-3 pt-4">
+<button class="px-5 py-2.5 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface font-medium text-sm transition-colors cursor-pointer" onclick="document.getElementById('edit-profile-modal').classList.add('hidden')" type="button">
+            Cancel
+          </button>
+<button class="px-6 py-2.5 rounded-full bg-secondary text-on-secondary hover:bg-secondary-fixed font-semibold text-sm shadow-md transition-all cursor-pointer active:scale-95" type="submit">
+            Save Changes
+          </button>
+</div>
+</form>
+</div>
+</div>
+</div></main></div>
+
+
+
+
+<script>
+  function toggleAppSidebar() {
+    const sidebar = document.getElementById('app-sidebar');
+    const backdrop = document.getElementById('sidebar-backdrop');
+    if (!sidebar) return;
+    const isClosed = sidebar.classList.contains('-translate-x-full');
+    if (isClosed) {
+      sidebar.classList.remove('-translate-x-full');
+      if (backdrop) backdrop.classList.remove('hidden');
+    } else {
+      sidebar.classList.add('-translate-x-full');
+      if (backdrop) backdrop.classList.add('hidden');
+    }
+  }
+</script>
+</body></html>

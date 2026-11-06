@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style="" xmlns:th="http://www.thymeleaf.org"><head>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen relative selection:bg-neutral-200-container selection:text-neutral-900-fixed overflow-x-hidden"><svg aria-hidden="true" class="inline-defs-container" style="position:absolute;width:0;height:0;overflow:hidden"></svg><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{ margin:0; padding:0; width:100%; max-width:100%; overflow-x:hidden; box-sizing:border-box; }body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes aurora-1{0%{transform:translate3d(0,0,0) scale(1);}50%{transform:translate3d(80px,40px,0) scale(1.15);}100%{transform:translate3d(0,0,0) scale(1);}}@keyframes aurora-2{0%{transform:translate3d(0,0,0) scale(1.1);}50%{transform:translate3d(-70px,-40px,0) scale(0.9);}100%{transform:translate3d(0,0,0) scale(1.1);}}@keyframes aurora-3{0%{transform:translate3d(0,0,0) scale(0.95);}50%{transform:translate3d(50px,-50px,0) scale(1.2);}100%{transform:translate3d(0,0,0) scale(0.95);}}@media (prefers-reduced-motion: reduce){.aurora-orb{animation:none!important;}}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-error": "#09090b", "on-surface": "#f4f4f5", "secondary-fixed": "#e4e4e7", "surface-bright": "#3f3f46", "inverse-on-surface": "#18181b", "surface-variant": "#27272a", surface: "#0b0f19", "primary-fixed-dim": "#c6c6c6", "tertiary-fixed-dim": "#d4d4d8", "on-secondary-fixed": "#18181b", error: "#d4d4d8", "primary-fixed": "#e2e2e2", "on-primary-container": "#757575", secondary: "#e4e4e7", "secondary-fixed-dim": "#e4e4e7", "secondary-container": "#27272a", "on-secondary": "#18181b", "outline-variant": "#3f3f46", outline: "#71717a", "on-tertiary-container": "#f4f4f5", primary: "#c6c6c6", "error-container": "#27272a", tertiary: "#d4d4d8", "tertiary-fixed": "#e4e4e7", "on-primary-fixed-variant": "#474747", "inverse-surface": "#f4f4f5", "surface-container-highest": "#27272a", "on-secondary-fixed-variant": "#27272a", "surface-dim": "#0b0f19", "on-primary-fixed": "#1b1b1b", "on-primary": "#303030", "inverse-primary": "#5e5e5e", "on-tertiary-fixed-variant": "#27272a", "primary-container": "#000000", "on-surface-variant": "#a1a1aa", background: "#0b0f19", "surface-container-lowest": "#080c14", "surface-container-high": "#27272a", "on-secondary-container": "#f4f4f5", "on-tertiary": "#18181b", "tertiary-container": "#000000", "on-background": "#f4f4f5", "surface-tint": "#c6c6c6", "on-error-container": "#f4f4f5", "on-tertiary-fixed": "#18181b", "surface-container": "#18181b", "surface-container-low": "#111827"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}, spacing: {"space-sm": "0.5rem", margin: "1.5rem", gutter: "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-md": "1rem", "space-lg": "1.5rem"}, fontFamily: {"headline-lg": ["Inter", "sans-serif"], "body-md": ["Inter", "sans-serif"], "label-sm": ["Inter", "sans-serif"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"headline-lg": ["32px", {lineHeight: "40px", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}]}}}};</script><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" style="contain: paint; clip-path: inset(0);"><div class="aurora-orb absolute -top-32 left-1/4 w-[38rem] h-[38rem] rounded-full bg-white/[0.03] blur-[140px] will-change-transform" style="animation: aurora-1 26s ease-in-out infinite alternate;"></div><div class="aurora-orb absolute top-1/3 right-10 w-[32rem] h-[32rem] rounded-full bg-white/[0.02] blur-[140px] will-change-transform" style="animation: aurora-2 28s ease-in-out infinite alternate;"></div><div class="aurora-orb absolute -bottom-24 left-16 w-[34rem] h-[34rem] rounded-full bg-surface-container-highest/40 blur-[130px] will-change-transform" style="animation: aurora-3 30s ease-in-out infinite alternate;"></div><svg class="absolute inset-0 w-full h-full opacity-5 mix-blend-soft-light pointer-events-none" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilterDash"><feturbulence basefrequency="0.8" numoctaves="3" stitchtiles="stitch" type="fractalNoise"></feturbulence></filter><rect filter="url(#noiseFilterDash)" height="100%" width="100%"></rect></svg></div>
+<!-- Mobile Sidebar Backdrop Overlay -->
+<div id="sidebar-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 hidden lg:hidden transition-opacity" onclick="toggleAppSidebar()"></div>
+<aside id="app-sidebar" class="fixed inset-y-0 left-0 w-64 z-50 flex flex-col justify-between shadow-2xl transition-transform duration-300 transform -translate-x-full lg:translate-x-0 bg-surface-container-lowest/85 backdrop-blur-2xl border-r border-surface-bright/20 z-50 flex flex-col justify-between py-space-lg shadow-2xl"><div class="px-space-lg"><div class="flex items-center gap-space-sm mb-space-xl"><button type="button" class="lg:hidden p-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors ml-auto" onclick="toggleAppSidebar()" aria-label="Close navigation menu"><span class="material-symbols-outlined text-[20px]">close</span></button><div class="flex flex-col"><span class="font-headline-lg text-lg text-on-surface font-semibold tracking-tight leading-none">RoleMatch</span><span class="font-label-sm text-[11px] text-secondary tracking-widest uppercase mt-space-xs font-semibold">Neural Suite</span></div></div><div class="mb-space-sm px-space-sm text-outline font-label-sm text-label-sm tracking-wider uppercase">Telemetry Workspaces</div><nav class="space-y-space-xs"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 font-medium text-sm transition-all" th:href="@{/recruiter/dashboard}" href="/recruiter/dashboard"><span class="material-symbols-outlined text-[20px] text-secondary">hub</span>Recruiter Portal</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 font-medium text-sm transition-all" th:href="@{/jobs}" href="/jobs"><span class="material-symbols-outlined text-[20px]">work</span>Job Intelligence</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 font-medium text-sm transition-all" th:href="@{/}" href="/"><span class="material-symbols-outlined text-[20px]">arrow_back</span>Public Portal</a></nav></div><div class="px-space-lg space-y-space-md"><div class="p-space-md rounded-2xl bg-surface-container/70 border border-surface-bright/30 space-y-space-xs shadow-lg"><div class="flex items-center justify-between text-on-surface font-label-sm text-xs font-medium"><span class="">Gemini Parsing</span><span class="text-secondary font-semibold">Online</span></div><div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden"><div class="bg-gradient-to-r from-secondary-container to-secondary h-full w-4/5 rounded-full"></div></div><p class="font-label-sm text-[11px] text-on-surface-variant">PostgreSQL sync latency: 12ms</p></div></div></aside><div class="w-full lg:pl-64 min-w-0 flex flex-col min-h-screen"><header class="fixed top-0 left-0 lg:left-64 right-0 h-20 bg-surface-container-lowest/80 backdrop-blur-2xl border-b border-surface-bright/20 z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md">
+<button type="button" class="lg:hidden p-2 rounded-lg bg-surface-container-high/90 border border-neutral-700 text-on-surface hover:text-white hover:bg-neutral-800 transition-colors shrink-0 mr-2" onclick="toggleAppSidebar()" aria-label="Open navigation menu"><span class="material-symbols-outlined text-[22px]">menu</span></button><div class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-surface-container-low border border-surface-bright/40 shadow-sm"><span class="w-2 h-2 rounded-full bg-secondary shadow-sm shadow-secondary"></span><span class="font-label-sm text-xs font-medium text-on-surface-variant uppercase tracking-wider">Node: Spring Boot Master</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/70 transition-all"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/70 transition-all"><span class="material-symbols-outlined text-[20px]">tune</span></button></div></div></header><main class="relative z-10 w-full pt-20 px-3 sm:px-4 md:px-6 lg:px-8 max-w-full overflow-x-hidden py-space-xl bg-transparent min-h-[calc(100vh-6rem)]"><div class="flex flex-col w-full">
+<!-- Top Level Command Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg mb-space-xl">
+<div class="space-y-space-xs">
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container-high text-secondary text-label-sm font-medium tracking-wide uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+        Neural Requisition Engine • v4.2
+      </div>
+<h1 class="text-3xl font-semibold tracking-tight text-on-surface">Job Requisition Creator &amp; Vector Calibrator</h1>
+<p class="text-sm text-on-surface-variant max-w-2xl">
+        Author job requisitions with automated Gemini AST skill weighting, salary benchmarks, and ATS resonance thresholds.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-5 py-2.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-all duration-200 text-sm font-medium shadow-sm flex items-center gap-space-xs" id="saveDraftBtn">
+<span class="material-symbols-outlined text-base text-secondary">bookmark_border</span>
+        Save Draft
+      </button>
+<button type="button" onclick="document.getElementById('createJobForm').submit()" class="px-6 py-2.5 rounded-full bg-secondary-container text-on-secondary-container hover:bg-secondary-container/90 transition-all duration-200 text-sm font-semibold shadow-md flex items-center gap-space-xs" id="publishBtn">
+<span class="material-symbols-outlined text-base">rocket_launch</span>
+        Publish Requisition to Neural Board
+      </button>
+</div>
+</div>
+<!-- Primary Workspace: 2-Column Split (60% Form / 40% Live Telemetry) -->
+<form id="createJobForm" th:action="@{/recruiter/jobs/create}" method="post">
+<input type="hidden" name="company" th:value="${newJob.company()}" />
+<input type="hidden" name="skills" value="Java 21,Spring Boot 3,Apache Kafka,PostgreSQL,Docker,Kubernetes" id="skillsHiddenInput"/>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT COLUMN (60%): Interactive Requisition Form -->
+<div class="lg:col-span-7 space-y-space-xl">
+<!-- STEP 1: Core Meta -->
+<section class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-surface-container-highest text-secondary text-xs font-semibold flex items-center justify-center">01</span>
+<div>
+<h2 class="text-base font-semibold text-on-surface">Requisition Core Meta</h2>
+<p class="text-xs text-on-surface-variant">Primary archetype classification and spatial node routing</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-outline text-[11px] font-medium tracking-wider uppercase">Stage 1/4</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Job Title with Quick Pills -->
+<div class="md:col-span-2 space-y-1.5">
+<label class="text-xs font-medium text-on-surface-variant flex items-center justify-between">
+<span>Job Title Designation</span>
+<span class="text-[11px] text-secondary">Gemini Autocomplete Active</span>
+</label>
+<div class="relative">
+<input class="w-full bg-surface-container px-4 py-3 rounded-full text-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-highest transition-all duration-150" id="jobTitleInput" name="title" required placeholder="e.g. Principal Vector Engineer" type="text" th:value="${newJob.title()}"/>
+<span class="material-symbols-outlined absolute right-4 top-3 text-secondary text-lg">bolt</span>
+</div>
+<!-- Suggestion Badges -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<button class="preset-pill text-[11px] px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface hover:bg-surface-bright transition-all" type="button">Principal Distributed Architect</button>
+<button class="preset-pill text-[11px] px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface hover:bg-surface-bright transition-all" type="button">Core Platform Engineer (L6)</button>
+<button class="preset-pill text-[11px] px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface hover:bg-surface-bright transition-all" type="button">Staff Storage Architect</button>
+</div>
+</div>
+<!-- Department -->
+<div class="space-y-1.5">
+<label class="text-xs font-medium text-on-surface-variant">Department / Pod</label>
+<div class="relative">
+<select name="department" class="w-full appearance-none bg-surface-container px-4 py-3 rounded-full text-sm text-on-surface focus:outline-none focus:bg-surface-container-highest transition-all pr-10">
+<option selected="" value="infra">Infrastructure &amp; Scalability</option>
+<option value="platform">Core Platform Foundations</option>
+<option value="aiml">AI / Vector Retrieval</option>
+<option value="data">Data Mesh &amp; Telemetry</option>
+</select>
+<span class="material-symbols-outlined absolute right-3.5 top-3.5 text-on-surface-variant pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+<!-- Employment Type -->
+<div class="space-y-1.5">
+<label class="text-xs font-medium text-on-surface-variant">Operational Cadence</label>
+<div class="relative">
+<select name="department" class="w-full appearance-none bg-surface-container px-4 py-3 rounded-full text-sm text-on-surface focus:outline-none focus:bg-surface-container-highest transition-all pr-10">
+<option selected="" value="remote">Remote Node (Global Epoch)</option>
+<option value="hybrid">Hybrid Hub (SF / NYC Bay)</option>
+<option value="onsite">On-Premises Dedicated</option>
+<option value="contract">Specialized Contract Node</option>
+</select>
+<span class="material-symbols-outlined absolute right-3.5 top-3.5 text-on-surface-variant pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+<!-- Compensation Inputs -->
+<div class="md:col-span-2 space-y-2">
+<div class="flex items-center justify-between text-xs font-medium">
+<span class="text-on-surface-variant">Annual Compensation Band (USD)</span>
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">finance</span>
+                Market Benchmark: $170k - $210k median (SF/Remote)
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="relative">
+<span class="absolute left-4 top-3 text-xs text-outline font-semibold">$</span>
+<input class="w-full bg-surface-container pl-8 pr-4 py-3 rounded-full text-sm text-on-surface focus:outline-none focus:bg-surface-container-highest transition-all" id="salaryMin" name="minSalary" required placeholder="Min" type="number" th:value="${newJob.minSalary()}"/>
+</div>
+<div class="relative">
+<span class="absolute left-4 top-3 text-xs text-outline font-semibold">$</span>
+<input class="w-full bg-surface-container pl-8 pr-4 py-3 rounded-full text-sm text-on-surface focus:outline-none focus:bg-surface-container-highest transition-all" id="salaryMax" name="maxSalary" required placeholder="Max" type="number" th:value="${newJob.maxSalary()}"/>
+</div>
+</div>
+<!-- Range visualization bar -->
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden mt-1 relative">
+<div class="absolute left-[35%] w-[45%] h-full bg-secondary-container rounded-full"></div>
+<div class="absolute left-[40%] w-[35%] h-full bg-secondary rounded-full opacity-60"></div>
+</div>
+<div class="flex justify-between text-[11px] text-outline px-1">
+<span>P25 ($155k)</span>
+<span class="text-secondary font-medium">Selected Band: $185k - $225k (Competitive P75-P90)</span>
+<span>P90 ($230k)</span>
+</div>
+</div>
+<!-- Location Node -->
+<div class="md:col-span-2 space-y-1.5">
+<label class="text-xs font-medium text-on-surface-variant">Cluster &amp; Primary Node</label>
+<div class="relative">
+<input class="w-full bg-surface-container px-4 py-3 rounded-full text-sm text-on-surface focus:outline-none focus:bg-surface-container-highest transition-all" name="location" type="text" th:value="${newJob.location()}"/>
+<span class="material-symbols-outlined absolute right-4 top-3 text-on-surface-variant text-lg">public</span>
+</div>
+</div>
+</div>
+</section>
+<!-- STEP 2: Role Narrative & Description -->
+<section class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-surface-container-highest text-secondary text-xs font-semibold flex items-center justify-center">02</span>
+<div>
+<h2 class="text-base font-semibold text-on-surface">Role Narrative &amp; Semantic Scope</h2>
+<p class="text-xs text-on-surface-variant">Markdown specification parsed directly into AST embeddings</p>
+</div>
+</div>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-highest text-secondary hover:bg-surface-bright transition-all text-xs font-semibold flex items-center gap-1.5 shadow-sm" id="geminiAutoSpecBtn">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+<span>✦ Auto-generate requirements with Gemini 1.5 Pro</span>
+</button>
+</div>
+<div class="space-y-2">
+<!-- Editor formatting bar mock -->
+<div class="flex items-center gap-1 bg-surface-container px-3 py-1.5 rounded-full text-outline text-xs">
+<button class="p-1 hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-sm">format_bold</span></button>
+<button class="p-1 hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-sm">format_italic</span></button>
+<button class="p-1 hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-sm">code</span></button>
+<span class="h-3 w-px bg-surface-bright mx-1"></span>
+<button class="p-1 hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-sm">format_list_bulleted</span></button>
+<button class="p-1 hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-sm">data_object</span></button>
+<span class="ml-auto text-[11px] text-secondary font-mono">AST Tree: 32 Nodes</span>
+</div>
+<textarea class="w-full bg-surface-container p-4 rounded-2xl text-xs leading-relaxed text-on-surface font-mono resize-none focus:outline-none focus:bg-surface-container-highest transition-all selection:bg-neutral-200-container" id="jobNarrativeArea" name="description" rows="9" th:text="${newJob.description()}"></textarea>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-1">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Parsed for semantic tokens: 492 unique vectors mapped
+          </span>
+<span class="text-outline">Char count: 986 / ~1,200 optimal</span>
+</div>
+</section>
+<!-- STEP 3: Required Core Competencies & Weights (Interactive Tag Matrix) -->
+<section class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-surface-container-highest text-secondary text-xs font-semibold flex items-center justify-center">03</span>
+<div>
+<h2 class="text-base font-semibold text-on-surface">Required Core Competencies &amp; Weights</h2>
+<p class="text-xs text-on-surface-variant">Calibrate vector gravity: Must-Have (1.0 - 0.8) vs Nice-to-Have (0.7 - 0.4)</p>
+</div>
+</div>
+<span class="text-xs text-secondary font-mono" id="activeSkillCount">6 Active Calibrations</span>
+</div>
+<!-- Add Skill Input Line -->
+<div class="flex gap-2">
+<div class="relative flex-1">
+<input class="w-full bg-surface-container px-4 py-2.5 rounded-full text-xs text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-highest transition-all" id="newSkillInput" placeholder="Add custom skill (e.g. gRPC, Redis, Rust)..." type="text"/>
+</div>
+<select class="bg-surface-container px-3 py-2.5 rounded-full text-xs text-on-surface focus:outline-none focus:bg-surface-container-highest" id="newSkillType">
+<option value="must">Must-Have (1.0)</option>
+<option value="high">Must-Have (0.8)</option>
+<option value="nice">Nice-to-Have (0.5)</option>
+</select>
+<button class="px-4 py-2.5 rounded-full bg-surface-container-highest text-secondary hover:bg-surface-bright text-xs font-semibold flex items-center gap-1 transition-all" id="addSkillBtn">
+<span class="material-symbols-outlined text-sm">add</span> Add
+          </button>
+</div>
+<!-- Interactive Tag Matrix -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm pt-space-xs" id="skillsMatrix">
+<!-- Skill 1 -->
+<div class="skill-item flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all" data-weight="1.0">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-on-surface">Java 21</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-mono">1.0 Gravity</span>
+</div>
+<p class="text-[11px] text-outline">Loom concurrency &amp; core runtime syntax</p>
+</div>
+<div class="flex items-center gap-1">
+<button class="toggle-tier-btn text-[11px] px-2 py-1 rounded-full bg-surface-container-highest text-secondary hover:bg-surface-bright font-medium">Must-Have</button>
+<button class="remove-skill-btn text-outline hover:text-error transition-colors p-1"><span class="material-symbols-outlined text-base">close</span></button>
+</div>
+</div>
+<!-- Skill 2 -->
+<div class="skill-item flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all" data-weight="1.0">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-on-surface">Spring Boot 3</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-mono">1.0 Gravity</span>
+</div>
+<p class="text-[11px] text-outline">Native GraalVM, Spring Cloud &amp; Security</p>
+</div>
+<div class="flex items-center gap-1">
+<button class="toggle-tier-btn text-[11px] px-2 py-1 rounded-full bg-surface-container-highest text-secondary hover:bg-surface-bright font-medium">Must-Have</button>
+<button class="remove-skill-btn text-outline hover:text-error transition-colors p-1"><span class="material-symbols-outlined text-base">close</span></button>
+</div>
+</div>
+<!-- Skill 3 -->
+<div class="skill-item flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all" data-weight="0.9">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-on-surface">Apache Kafka</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-mono">0.9 Gravity</span>
+</div>
+<p class="text-[11px] text-outline">Partition rebalancing &amp; stream processing</p>
+</div>
+<div class="flex items-center gap-1">
+<button class="toggle-tier-btn text-[11px] px-2 py-1 rounded-full bg-surface-container-highest text-secondary hover:bg-surface-bright font-medium">Must-Have</button>
+<button class="remove-skill-btn text-outline hover:text-error transition-colors p-1"><span class="material-symbols-outlined text-base">close</span></button>
+</div>
+</div>
+<!-- Skill 4 -->
+<div class="skill-item flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all" data-weight="0.8">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-on-surface">PostgreSQL</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-mono">0.8 Gravity</span>
+</div>
+<p class="text-[11px] text-outline">Query optimization &amp; connection pools</p>
+</div>
+<div class="flex items-center gap-1">
+<button class="toggle-tier-btn text-[11px] px-2 py-1 rounded-full bg-surface-container-highest text-secondary hover:bg-surface-bright font-medium">Must-Have</button>
+<button class="remove-skill-btn text-outline hover:text-error transition-colors p-1"><span class="material-symbols-outlined text-base">close</span></button>
+</div>
+</div>
+<!-- Skill 5 -->
+<div class="skill-item flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all" data-weight="0.6">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-on-surface">Kubernetes</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-mono">0.6 Gravity</span>
+</div>
+<p class="text-[11px] text-outline">Cluster autoscaling &amp; deployment charts</p>
+</div>
+<div class="flex items-center gap-1">
+<button class="toggle-tier-btn text-[11px] px-2 py-1 rounded-full bg-surface-container text-outline hover:bg-surface-bright font-medium">Nice-to-Have</button>
+<button class="remove-skill-btn text-outline hover:text-error transition-colors p-1"><span class="material-symbols-outlined text-base">close</span></button>
+</div>
+</div>
+<!-- Skill 6 -->
+<div class="skill-item flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all" data-weight="0.5">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-on-surface">AWS EKS</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-mono">0.5 Gravity</span>
+</div>
+<p class="text-[11px] text-outline">IAM integration &amp; VPC CNI routing</p>
+</div>
+<div class="flex items-center gap-1">
+<button class="toggle-tier-btn text-[11px] px-2 py-1 rounded-full bg-surface-container text-outline hover:bg-surface-bright font-medium">Nice-to-Have</button>
+<button class="remove-skill-btn text-outline hover:text-error transition-colors p-1"><span class="material-symbols-outlined text-base">close</span></button>
+</div>
+</div>
+</div>
+</section>
+<!-- STEP 4: Pipeline Routing & ATS Thresholds -->
+<section class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-surface-container-highest text-secondary text-xs font-semibold flex items-center justify-center">04</span>
+<div>
+<h2 class="text-base font-semibold text-on-surface">Pipeline Routing &amp; ATS Thresholds</h2>
+<p class="text-xs text-on-surface-variant">Automated candidate intake gating and telemetry webhook hooks</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-outline text-[11px] font-medium tracking-wider uppercase">Auto-Gating</span>
+</div>
+<!-- Slider Section -->
+<div class="bg-surface-container p-space-md rounded-2xl space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<span class="text-xs font-semibold text-on-surface">Minimum Vector ATS Match Score</span>
+<p class="text-[11px] text-on-surface-variant">Resumes scoring above threshold route directly to technical review stage</p>
+</div>
+<span class="text-lg font-mono font-bold text-secondary" id="sliderValue">80%</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-secondary" id="atsSlider" name="atsThreshold" max="95" min="50" type="range" th:value="${newJob.atsThreshold()}"/>
+<div class="flex justify-between text-[11px] text-outline font-mono">
+<span>50% (Permissive / Broad)</span>
+<span class="text-secondary">Balanced Shortlist Target</span>
+<span>95% (Extreme Precision)</span>
+</div>
+</div>
+<!-- Notification Webhook Toggles -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<label class="flex items-center justify-between p-3 rounded-xl bg-surface-container cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-lg">forum</span>
+<div>
+<div class="text-xs font-medium text-on-surface">Slack Instant Dispatch</div>
+<div class="text-[11px] text-outline">Post 90%+ vectors to #recruiting-eng</div>
+</div>
+</div>
+<input checked="" class="rounded-full w-4 h-4 bg-surface-container-highest text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-3 rounded-xl bg-surface-container cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-lg">mail</span>
+<div>
+<div class="text-xs font-medium text-on-surface">Digest Rollup</div>
+<div class="text-[11px] text-outline">Send nightly candidate telemetry PDF</div>
+</div>
+</div>
+<input checked="" class="rounded-full w-4 h-4 bg-surface-container-highest text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+</label>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN (40%): Live Gemini Calibration & Market Simulator Panel -->
+<div class="lg:col-span-5 space-y-space-lg">
+<!-- Live Calibration Telemetry Card -->
+<div class="bg-surface-container-low rounded-2xl p-space-lg shadow-md space-y-space-md sticky top-24">
+<!-- Header -->
+<div class="flex items-center justify-between border-b border-transparent pb-1">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<h3 class="text-sm font-semibold tracking-wide uppercase text-on-surface">Live Calibration Telemetry</h3>
+</div>
+<span class="text-[11px] px-2.5 py-0.5 rounded-full bg-surface-container text-secondary font-mono">Gemini 1.5 Pro</span>
+</div>
+<!-- Metric 1: Quality Score & Gauge -->
+<div class="bg-surface-container p-space-md rounded-2xl flex items-center justify-between">
+<div class="space-y-1">
+<div class="text-[11px] uppercase tracking-wider text-outline font-medium">Requisition Health</div>
+<div class="text-2xl font-bold font-mono text-on-surface flex items-baseline gap-1">
+<span id="qualityScoreVal">94</span><span class="text-xs text-outline">/100</span>
+</div>
+<p class="text-xs text-secondary font-medium">Optimal Clarity &amp; Zero Bias</p>
+</div>
+<!-- Circular SVG Gauge -->
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" id="gaugePath" stroke="currentColor" stroke-dasharray="94, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="material-symbols-outlined absolute text-secondary text-lg">verified</span>
+</div>
+</div>
+<!-- Telemetry Data Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Talent Pool Reach -->
+<div class="p-3 rounded-xl bg-surface-container space-y-1">
+<div class="flex items-center justify-between text-outline">
+<span class="text-[11px]">Talent Pool Reach</span>
+<span class="material-symbols-outlined text-xs">groups</span>
+</div>
+<div class="text-lg font-bold font-mono text-on-surface" id="poolReachVal">1,420</div>
+<div class="text-[11px] text-outline">Qualified in talent network</div>
+</div>
+<!-- Inbound Velocity -->
+<div class="p-3 rounded-xl bg-surface-container space-y-1">
+<div class="flex items-center justify-between text-outline">
+<span class="text-[11px]">Expected Velocity</span>
+<span class="material-symbols-outlined text-xs">speed</span>
+</div>
+<div class="text-lg font-bold font-mono text-on-surface" id="velocityVal">~42 / wk</div>
+<div class="text-[11px] text-secondary">High applicant resonance</div>
+</div>
+</div>
+<!-- Market Scarcity Index -->
+<div class="bg-surface-container p-space-md rounded-2xl space-y-2">
+<div class="flex items-center justify-between text-xs">
+<span class="font-medium text-on-surface">Market Scarcity Index</span>
+<span class="text-tertiary font-mono font-medium">Top 8% Demand</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">
+            High competition for <span class="text-secondary font-mono">Kafka + Spring Boot 3</span> stack. Median tenure in target tier is 2.3 years.
+          </p>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden flex">
+<div class="bg-secondary w-1/3 h-full"></div>
+<div class="bg-secondary-container w-1/2 h-full"></div>
+<div class="bg-tertiary w-1/6 h-full"></div>
+</div>
+<div class="flex justify-between text-[10px] text-outline font-mono">
+<span>Abundant</span>
+<span>Balanced</span>
+<span class="text-tertiary font-semibold">Critical Scarcity</span>
+</div>
+</div>
+<!-- Suggested Keyword Enhancements -->
+<div class="bg-surface-container p-space-md rounded-2xl space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-on-surface">Suggested Vector Enhancements</span>
+<span class="text-[11px] text-secondary font-mono">+18% match lift</span>
+</div>
+<p class="text-[11px] text-on-surface-variant">Gemini recommends inserting these keys into narrative to attract senior architects:</p>
+<div class="flex flex-wrap gap-1.5" id="suggestedTagsContainer">
+<button class="add-suggestion-chip px-3 py-1.5 rounded-full bg-surface-container-highest hover:bg-surface-bright text-xs text-on-surface flex items-center gap-1.5 transition-all" type="button">
+<span class="text-secondary font-bold">+</span> Distributed Caching (Redis)
+            </button>
+<button class="add-suggestion-chip px-3 py-1.5 rounded-full bg-surface-container-highest hover:bg-surface-bright text-xs text-on-surface flex items-center gap-1.5 transition-all" type="button">
+<span class="text-secondary font-bold">+</span> OpenTelemetry
+            </button>
+<button class="add-suggestion-chip px-3 py-1.5 rounded-full bg-surface-container-highest hover:bg-surface-bright text-xs text-on-surface flex items-center gap-1.5 transition-all" type="button">
+<span class="text-secondary font-bold">+</span> Raft Consensus
+            </button>
+</div>
+</div>
+<!-- Test Match Simulator (Dropzone) -->
+<div class="bg-surface-container p-space-md rounded-2xl space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-on-surface">Test Match Simulator</span>
+<span class="text-[11px] text-outline">Real-time Dry Run</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all flex flex-col items-center justify-center text-center cursor-pointer space-y-2" id="dropzone">
+<span class="material-symbols-outlined text-secondary text-2xl">upload_file</span>
+<div class="space-y-0.5">
+<p class="text-xs font-medium text-on-surface">Drop sample resume PDF or JSON</p>
+<p class="text-[10px] text-outline">Parses AST &amp; scores against current weights instantly</p>
+</div>
+<button class="mt-1 px-3 py-1 rounded-full bg-surface-container-highest text-secondary hover:bg-surface-bright text-[11px] font-medium transition-all" id="simulateSampleBtn" type="button">
+              Or Run Sample Resume Benchmark
+            </button>
+</div>
+<!-- Simulation Result Display Area -->
+<div class="hidden p-3 rounded-xl bg-surface-container-low space-y-2 transition-all" id="simResult">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">analytics</span>
+                Simulation Output: Alex Mercer
+              </span>
+<span class="text-xs font-bold font-mono px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container" id="simScoreBadge">88% Match</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" id="simScoreBar" style="width: 88%"></div>
+</div>
+<div class="text-[11px] text-on-surface-variant flex justify-between">
+<span>Kafka (1.0), Java 21 (1.0) matched</span>
+<span class="text-secondary font-medium">Auto-Shortlist: PASS</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Toast Notification System -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none px-4 py-3 rounded-full bg-surface-bright text-on-surface shadow-2xl flex items-center gap-2 text-xs font-medium" id="toast">
+<span class="material-symbols-outlined text-secondary text-base" id="toastIcon">check_circle</span>
+<span id="toastMsg">Action processed successfully</span>
+</div>
+</div>
+<script>
+  // Micro-interactions and interactive telemetry binding
+  document.addEventListener('DOMContentLoaded', () => {
+    const atsSlider = document.getElementById('atsSlider');
+    const sliderValue = document.getElementById('sliderValue');
+    const poolReachVal = document.getElementById('poolReachVal');
+    const velocityVal = document.getElementById('velocityVal');
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
+    const toastIcon = document.getElementById('toastIcon');
+
+    function showToast(message, icon = 'check_circle') {
+      toastMsg.textContent = message;
+      toastIcon.textContent = icon;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3200);
+    }
+
+    // Dynamic slider updates
+    if (atsSlider && sliderValue) {
+      atsSlider.addEventListener('input', (e) => {
+        const val = parseInt(e.target.value, 10);
+        sliderValue.textContent = `${val}%`;
+
+        // Telemetry shifts dynamically based on gating stringency
+        if (val >= 90) {
+          poolReachVal.textContent = '340';
+          velocityVal.textContent = '~12 / wk';
+        } else if (val >= 80) {
+          poolReachVal.textContent = '1,420';
+          velocityVal.textContent = '~42 / wk';
+        } else if (val >= 70) {
+          poolReachVal.textContent = '3,890';
+          velocityVal.textContent = '~85 / wk';
+        } else {
+          poolReachVal.textContent = '7,150';
+          velocityVal.textContent = '~140 / wk';
+        }
+      });
+    }
+
+    // Title preset pill clicks
+    document.querySelectorAll('.preset-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const titleInput = document.getElementById('jobTitleInput');
+        if (titleInput) {
+          titleInput.value = btn.textContent.trim();
+          showToast(`Applied preset archetype: "${titleInput.value}"`, 'auto_awesome');
+        }
+      });
+    });
+
+    // Gemini Auto Spec Generation
+    const geminiBtn = document.getElementById('geminiAutoSpecBtn');
+    if (geminiBtn) {
+      geminiBtn.addEventListener('click', () => {
+        geminiBtn.classList.add('opacity-50', 'pointer-events-none');
+        geminiBtn.innerHTML = '<span class="material-symbols-outlined text-sm animate-spin">refresh</span> Synthesizing AST...';
+        
+        setTimeout(() => {
+          const narrativeArea = document.getElementById('jobNarrativeArea');
+          if (narrativeArea) {
+            narrativeArea.value = `### Executive Summary
+RoleMatch is deploying ultra-low latency distributed matching engines handling petabyte-scale graph traversals. We are seeking an elite Senior Distributed Systems Engineer to spearhead our reactive event backbone and low-garbage memory pipelines.
+
+### Architectural Responsibilities
+- Architect high-throughput event buses handling >120,000 req/sec utilizing Kafka 3.6+ and zero-copy buffers.
+- Modernize platform microservices to Java 21 LTS leveraging Project Loom virtual threads for non-blocking I/O.
+- Scale multi-region Postgres partitioned datasets, fine-tuning MVCC indices and vector similarity embeddings.
+- Lead chaos reliability drills with automated rollback policies on Kubernetes/EKS.
+
+### Core Engineering Standards
+- Mastery of distributed consensus (Raft, Paxos) and idempotency across event-driven topologies.
+- Rigorous OpenTelemetry distributed instrumentation, proactive alerting, and sub-second failover recovery.`;
+          }
+          geminiBtn.classList.remove('opacity-50', 'pointer-events-none');
+          geminiBtn.innerHTML = '<span class="material-symbols-outlined text-sm">auto_awesome</span> ✦ Auto-generate requirements with Gemini 1.5 Pro';
+          showToast('Job narrative enhanced with Gemini 1.5 Pro AST specification', 'auto_awesome');
+        }, 850);
+      });
+    }
+
+    // Interactive Skill Tag Matrix Addition & Removal
+    const addSkillBtn = document.getElementById('addSkillBtn');
+    const newSkillInput = document.getElementById('newSkillInput');
+    const newSkillType = document.getElementById('newSkillType');
+    const skillsMatrix = document.getElementById('skillsMatrix');
+    const activeSkillCount = document.getElementById('activeSkillCount');
+
+    function updateSkillCount() {
+      const count = skillsMatrix ? skillsMatrix.querySelectorAll('.skill-item').length : 0;
+      if (activeSkillCount) activeSkillCount.textContent = `${count} Active Calibrations`;
+    }
+
+    if (addSkillBtn && newSkillInput && skillsMatrix) {
+      addSkillBtn.addEventListener('click', () => {
+        const name = newSkillInput.value.trim();
+        if (!name) return;
+
+        const isMust = newSkillType.value === 'must';
+        const isHigh = newSkillType.value === 'high';
+        const weight = isMust ? '1.0' : (isHigh ? '0.8' : '0.5');
+        const badgeLabel = isMust || isHigh ? 'Must-Have' : 'Nice-to-Have';
+        const gravityBadge = isMust || isHigh ? 'bg-secondary-container text-on-secondary-container' : 'bg-surface-container-highest text-on-surface-variant';
+        const tierBadge = isMust || isHigh ? 'bg-surface-container-highest text-secondary' : 'bg-surface-container text-outline';
+
+        const item = document.createElement('div');
+        item.className = 'skill-item flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all';
+        item.setAttribute('data-weight', weight);
+        item.innerHTML = `
+          <div class="space-y-0.5">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-semibold text-on-surface">${name}</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full ${gravityBadge} font-mono">${weight} Gravity</span>
+            </div>
+            <p class="text-[11px] text-outline">Custom calibrated semantic vector</p>
+          </div>
+          <div class="flex items-center gap-1">
+            <button class="toggle-tier-btn text-[11px] px-2 py-1 rounded-full ${tierBadge} font-medium">${badgeLabel}</button>
+            <button class="remove-skill-btn text-outline hover:text-error transition-colors p-1"><span class="material-symbols-outlined text-base">close</span></button>
+          </div>
+        `;
+
+        skillsMatrix.appendChild(item);
+        newSkillInput.value = '';
+        updateSkillCount();
+        attachSkillEvents(item);
+        showToast(`Added ${name} [${weight} Gravity] to scoring AST`);
+      });
+
+      newSkillInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') addSkillBtn.click();
+      });
+    }
+
+    function attachSkillEvents(element) {
+      const removeBtn = element.querySelector('.remove-skill-btn');
+      const toggleBtn = element.querySelector('.toggle-tier-btn');
+
+      if (removeBtn) {
+        removeBtn.addEventListener('click', () => {
+          element.remove();
+          updateSkillCount();
+          showToast('Removed skill parameter from AST matrix');
+        });
+      }
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          const currentWeight = element.getAttribute('data-weight');
+          const isMust = currentWeight >= 0.8;
+          const newWeight = isMust ? '0.5' : '1.0';
+          element.setAttribute('data-weight', newWeight);
+
+          const badge = element.querySelector('.font-mono');
+          if (badge) {
+            badge.textContent = `${newWeight} Gravity`;
+            badge.className = `text-[10px] px-2 py-0.5 rounded-full ${newWeight >= 0.8 ? 'bg-secondary-container text-on-secondary-container' : 'bg-surface-container-highest text-on-surface-variant'} font-mono`;
+          }
+
+          toggleBtn.textContent = newWeight >= 0.8 ? 'Must-Have' : 'Nice-to-Have';
+          toggleBtn.className = `toggle-tier-btn text-[11px] px-2 py-1 rounded-full ${newWeight >= 0.8 ? 'bg-surface-container-highest text-secondary hover:bg-surface-bright' : 'bg-surface-container text-outline hover:bg-surface-bright'} font-medium`;
+          showToast(`Updated weight: ${newWeight} Gravity`);
+        });
+      }
+    }
+
+    document.querySelectorAll('.skill-item').forEach(attachSkillEvents);
+
+    // Suggested Tag Click to Add
+    document.querySelectorAll('.add-suggestion-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const text = chip.textContent.replace('+', '').trim();
+        newSkillInput.value = text;
+        addSkillBtn.click();
+        chip.remove();
+      });
+    });
+
+    // Test Simulator Action
+    const simulateSampleBtn = document.getElementById('simulateSampleBtn');
+    const simResult = document.getElementById('simResult');
+    if (simulateSampleBtn && simResult) {
+      simulateSampleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        simulateSampleBtn.textContent = 'Parsing Resume AST...';
+        setTimeout(() => {
+          simResult.classList.remove('hidden');
+          simulateSampleBtn.textContent = 'Run Another Sample Benchmark';
+          showToast('Simulated resume test matched at 88% resonance!', 'verified');
+        }, 600);
+      });
+    }
+
+    // Top CTA Actions
+    const saveDraftBtn = document.getElementById('saveDraftBtn');
+    const publishBtn = document.getElementById('publishBtn');
+
+    if (saveDraftBtn) {
+      saveDraftBtn.addEventListener('click', () => {
+        showToast('Requisition draft saved to local Postgres node.', 'bookmark_added');
+      });
+    }
+
+    if (publishBtn) {
+      publishBtn.addEventListener('click', () => {
+        publishBtn.innerHTML = '<span class="material-symbols-outlined text-base animate-spin">refresh</span> Broadcasting...';
+        setTimeout(() => {
+          publishBtn.innerHTML = '<span class="material-symbols-outlined text-base">task_alt</span> Requisition Active';
+          showToast('Published to Neural Board! Vector pipeline is listening.', 'rocket_launch');
+        }, 900);
+      });
+    }
+  });
+</script></main><footer class="relative z-10 border-t border-surface-bright/20 bg-surface-container-lowest/80 backdrop-blur-md px-space-xl py-space-md"><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-xs"><span class="">RoleMatch Algorithmic Recruiter © 2025</span><div class="flex items-center gap-space-md"><span class="text-outline">Gemini 1.5 Pro Enabled</span><span class="text-outline">Spring Security Active</span></div></div></footer></div>
+
+<script>
+  function toggleAppSidebar() {
+    const sidebar = document.getElementById('app-sidebar');
+    const backdrop = document.getElementById('sidebar-backdrop');
+    if (!sidebar) return;
+    const isClosed = sidebar.classList.contains('-translate-x-full');
+    if (isClosed) {
+      sidebar.classList.remove('-translate-x-full');
+      if (backdrop) backdrop.classList.remove('hidden');
+    } else {
+      sidebar.classList.add('-translate-x-full');
+      if (backdrop) backdrop.classList.add('hidden');
+    }
+  }
+</script>
+</body></html>

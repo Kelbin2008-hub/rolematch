@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" xmlns:th="http://www.thymeleaf.org"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{ margin:0; padding:0; width:100%; max-width:100%; overflow-x:hidden; box-sizing:border-box; }body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-primary":"#5e5e5e","on-surface":"#f4f4f5","on-secondary":"#18181b","surface-container-lowest":"#080c14","tertiary":"#d4d4d8","secondary-fixed-dim":"#e4e4e7","on-primary-fixed":"#1b1b1b","inverse-on-surface":"#18181b","surface-variant":"#27272a","secondary-container":"#27272a","on-error":"#09090b","secondary":"#e4e4e7","surface-dim":"#0b0f19","on-secondary-fixed-variant":"#27272a","on-error-container":"#f4f4f5","on-surface-variant":"#a1a1aa","surface-tint":"#c6c6c6","primary":"#c6c6c6","on-tertiary-fixed-variant":"#27272a","on-secondary-fixed":"#18181b","secondary-fixed":"#e4e4e7","background":"#0b0f19","on-primary-fixed-variant":"#474747","on-tertiary-container":"#f4f4f5","surface-container-low":"#111827","outline":"#71717a","on-tertiary-fixed":"#18181b","primary-fixed-dim":"#c6c6c6","on-background":"#f4f4f5","surface-container":"#18181b","tertiary-fixed-dim":"#d4d4d8","on-primary-container":"#757575","error":"#d4d4d8","on-tertiary":"#18181b","surface-container-highest":"#27272a","on-primary":"#303030","surface":"#0b0f19","primary-container":"#000000","inverse-surface":"#f4f4f5","on-secondary-container":"#f4f4f5","surface-bright":"#3f3f46","primary-fixed":"#e2e2e2","tertiary-container":"#000000","tertiary-fixed":"#e4e4e7","outline-variant":"#3f3f46","error-container":"#27272a","surface-container-high":"#27272a"},borderRadius:{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},spacing:{},fontFamily:{headline:["Inter"],display:["Inter"],body:["Inter"],label:["Inter"]},fontSize:{}}}}</script></head><body class="bg-background font-body text-on-surface antialiased overflow-x-hidden">
+<!-- Mobile Sidebar Backdrop Overlay -->
+<div id="sidebar-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 hidden lg:hidden transition-opacity" onclick="toggleAppSidebar()"></div>
+<aside id="app-sidebar" class="fixed inset-y-0 left-0 w-64 z-50 flex flex-col justify-between shadow-2xl transition-transform duration-300 transform -translate-x-full lg:translate-x-0 bg-surface-container-lowest z-50 flex flex-col justify-between p-4 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-3 py-2"><div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-secondary"><button type="button" class="lg:hidden p-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors ml-auto" onclick="toggleAppSidebar()" aria-label="Close navigation menu"><span class="material-symbols-outlined text-[20px]">close</span></button><span class="material-symbols-outlined text-2xl">hub</span></div><div class="flex flex-col"><span class="font-headline font-semibold text-lg tracking-tight text-on-surface leading-tight">RoleMatch</span><span class="text-[10px] font-label uppercase tracking-widest text-outline">Workspace v2.4</span></div></div><nav class="flex flex-col gap-1.5" data-active-classes="bg-secondary-container text-on-surface font-semibold rounded-full"><a class="flex items-center gap-3.5 px-4 py-2.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-label" th:href="@{/seeker/dashboard}" href="/seeker/dashboard"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a aria-current="page" class="flex items-center gap-3.5 px-4 py-2.5 transition-all bg-secondary-container text-on-surface font-semibold rounded-full" th:href="@{/seeker/applications}" href="/seeker/applications"><span class="material-symbols-outlined text-[20px]">assignment</span><span>My Applications</span></a><a class="flex items-center gap-3.5 px-4 py-2.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-label" th:href="@{/seeker/resume}" href="/seeker/resume"><span class="material-symbols-outlined text-[20px]">document_scanner</span><span>Resume Hub &amp; AST</span></a><a class="flex items-center gap-3.5 px-4 py-2.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-label" th:href="@{/jobs}" href="/jobs"><span class="material-symbols-outlined text-[20px]">travel_explore</span><span>Job Board</span></a><a class="flex items-center gap-3.5 px-4 py-2.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-label" th:href="@{/recruiter/job-intelligence}" href="/recruiter/job-intelligence"><span class="material-symbols-outlined text-[20px]">psychology</span><span>Job Intelligence</span></a><a class="flex items-center gap-3.5 px-4 py-2.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-label" th:href="@{/recruiter/dashboard}" href="/recruiter/dashboard"><span class="material-symbols-outlined text-[20px]">sync_alt</span><span>Portal Switch</span></a>
+<a class="flex items-center gap-3.5 px-4 py-2.5 rounded-full text-neutral-400 hover:bg-neutral-800 hover:text-white transition-all text-sm font-label mt-2 border border-neutral-700/50" th:href="@{/logout}" href="/logout"><span class="material-symbols-outlined text-[20px]">logout</span><span>Sign Out</span></a></nav></div><div class="flex flex-col gap-2 pt-4"><div class="bg-surface-container-low rounded-DEFAULT p-3.5 flex flex-col gap-2"><div class="flex items-center justify-between"><span class="text-[11px] font-label text-outline uppercase tracking-wider">Cluster Instance</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></div><div class="flex items-center justify-between text-xs font-mono"><span class="text-on-surface-variant">us-east-core-04</span><span class="text-secondary font-medium">Healthy</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center self-end opacity-0 pointer-events-none"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></aside><div class="w-full lg:pl-64 min-w-0 flex flex-col min-h-screen"><header class="fixed top-0 left-0 lg:left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-6"><div class="flex items-center gap-3">
+<button type="button" class="lg:hidden p-2 rounded-lg bg-surface-container-high/90 border border-neutral-700 text-on-surface hover:text-white hover:bg-neutral-800 transition-colors shrink-0 mr-2" onclick="toggleAppSidebar()" aria-label="Open navigation menu"><span class="material-symbols-outlined text-[22px]">menu</span></button><div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-xs font-label"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="text-on-surface-variant">Spring Boot:</span><span class="text-on-surface font-medium">Active</span></div><div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-xs font-label"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="text-on-surface-variant">Gemini 1.5 Flash:</span><span class="text-on-surface font-medium">Online</span></div><div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-xs font-label"><span class="material-symbols-outlined text-secondary text-sm">sync</span><span class="text-on-surface-variant">Sync:</span><span class="text-on-surface font-medium">99.8%</span></div></div><div class="flex items-center gap-2"><button aria-label="Search workspace" class="h-9 px-3.5 rounded-full bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center gap-2 text-xs transition-colors" type="button"><span class="material-symbols-outlined text-base">search</span><span class="hidden md:inline font-label">Search nodes, jobs, telemetry...</span><kbd class="hidden md:inline px-1.5 py-0.5 text-[10px] rounded bg-surface-container-high text-on-surface-variant font-mono">Ctrl K</kbd></button><button aria-label="Telemetry metrics" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-lg">monitoring</span></button><button aria-label="System alerts" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container hover:text-on-surface text-on-surface-variant flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-lg">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-6"><div class="flex flex-col w-full pb-16">
+<!-- Feedback Flash Messages -->
+    <div th:if="${successMessage}" class="mb-4 flex items-center gap-2 p-4 rounded-2xl bg-[#1b4332]/80 border border-[#52b788]/50 text-[#e4e4e7] shadow-lg backdrop-blur-xl">
+      <span class="material-symbols-outlined text-lg">check_circle</span>
+      <span class="text-sm font-medium" th:text="${successMessage}">Success message</span>
+    </div>
+    <div th:if="${eventNotification}" class="mb-4 flex items-center gap-2 p-4 rounded-2xl bg-secondary-container/60 border border-secondary/50 text-secondary-fixed shadow-lg backdrop-blur-xl">
+      <span class="material-symbols-outlined text-lg text-secondary">mark_email_read</span>
+      <span class="text-sm font-medium" th:text="${eventNotification}">Notification message</span>
+    </div>
+    <div th:if="${errorMessage}" class="mb-4 flex items-center gap-2 p-4 rounded-2xl bg-error-container/80 border border-error/50 text-error shadow-lg backdrop-blur-xl">
+      <span class="material-symbols-outlined text-lg">error</span>
+      <span class="text-sm font-medium" th:text="${errorMessage}">Error message</span>
+    </div>
+<!-- Top Background Ambient Glow Layer -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-10 right-10 w-80 h-80 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Header Section -->
+<div class="relative flex flex-col md:flex-row md:items-end justify-between gap-6 py-6">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-secondary text-xs font-label uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            RoleMatch Candidate Portal
+          </span>
+<span class="text-xs font-mono text-outline">v2.4.9 Telemetry</span>
+</div>
+<h1 class="text-3xl lg:text-4xl font-headline font-semibold text-on-surface tracking-tight">
+          Application Tracker &amp; Pipeline Telemetry
+        </h1>
+<p class="text-sm md:text-base font-body text-on-surface-variant max-w-3xl leading-relaxed">
+          Track active submissions, real-time Gemini ATS resonance audits, recruiter review stages, and upcoming interview schedules across synchronized enterprise nodes.
+        </p>
+</div>
+<div class="flex items-center gap-3 self-start md:self-auto">
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-bright text-xs font-label transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-base text-secondary">tune</span>
+          Telemetry Config
+        </button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-secondary text-on-secondary hover:bg-secondary-fixed transition-all text-xs font-label font-semibold shadow-md" type="button">
+<span class="material-symbols-outlined text-base">cloud_sync</span>
+          Sync ATS Queue
+        </button>
+</div>
+</div>
+<!-- Quick Stat Cards Row (4 cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-2 mb-8">
+<!-- Stat 1 -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-DEFAULT p-5 flex flex-col justify-between shadow-sm group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="text-xs font-label text-outline uppercase tracking-wider">Active Applications</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-base">outgoing_mail</span>
+</div>
+</div>
+<div class="flex items-baseline gap-3 my-3">
+<span class="text-4xl font-headline font-bold text-on-surface tracking-tight" th:text="${applications != null ? applications.size() : 0}">7</span>
+<span class="inline-flex items-center gap-1 text-xs font-label text-secondary font-medium">
+<span class="material-symbols-outlined text-sm">trending_up</span> +2 this week
+          </span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 70%;"></div>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-DEFAULT p-5 flex flex-col justify-between shadow-sm group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="text-xs font-label text-outline uppercase tracking-wider">Avg ATS Resonance</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-base">psychology</span>
+</div>
+</div>
+<div class="flex items-baseline gap-3 my-3">
+<span class="text-4xl font-headline font-bold text-on-surface tracking-tight">86.4%</span>
+<span class="inline-flex items-center gap-1 text-xs font-label text-secondary font-medium">
+<span class="material-symbols-outlined text-sm">workspace_premium</span> Top 8% percentile
+          </span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 86.4%;"></div>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-DEFAULT p-5 flex flex-col justify-between shadow-sm group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="text-xs font-label text-outline uppercase tracking-wider">Interviews Active</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-base">video_camera_front</span>
+</div>
+</div>
+<div class="flex items-baseline gap-3 my-3">
+<span class="text-4xl font-headline font-bold text-on-surface tracking-tight">2</span>
+<span class="inline-flex items-center gap-1 text-xs font-label text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-sm text-secondary">event</span> Next in 3 days
+          </span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 50%;"></div>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-DEFAULT p-5 flex flex-col justify-between shadow-sm group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="text-xs font-label text-outline uppercase tracking-wider">Response Rate</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-base">speed</span>
+</div>
+</div>
+<div class="flex items-baseline gap-3 my-3">
+<span class="text-4xl font-headline font-bold text-on-surface tracking-tight">57.1%</span>
+<span class="inline-flex items-center gap-1 text-xs font-label text-secondary font-medium">
+<span class="material-symbols-outlined text-sm">arrow_upward</span> +35.1% vs market (22%)
+          </span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 57.1%;"></div>
+</div>
+</div>
+</div>
+<!-- Filters, Search & View Controls -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 bg-surface-container-low p-3 rounded-DEFAULT mb-8 shadow-sm">
+<!-- Search input -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container text-on-surface placeholder:text-outline text-xs rounded-full focus:outline-none focus:bg-surface-container-high transition-colors" id="search-input" placeholder="Search company, role, requisition ID..." type="text"/>
+</div>
+<!-- Stage Pills -->
+<div class="flex items-center gap-1.5 overflow-x-auto py-1 scrollbar-none">
+<button class="filter-btn active-tab px-3.5 py-1.5 rounded-full text-xs font-label bg-secondary text-on-secondary font-medium whitespace-nowrap transition-colors" type="button">
+          All Applications (7)
+        </button>
+<button class="filter-btn px-3.5 py-1.5 rounded-full text-xs font-label bg-surface-container hover:bg-surface-container-high text-on-surface-variant whitespace-nowrap transition-colors" type="button">
+          Under Review (3)
+        </button>
+<button class="filter-btn px-3.5 py-1.5 rounded-full text-xs font-label bg-surface-container hover:bg-surface-container-high text-on-surface-variant whitespace-nowrap transition-colors" type="button">
+          Interview Scheduled (2)
+        </button>
+<button class="filter-btn px-3.5 py-1.5 rounded-full text-xs font-label bg-surface-container hover:bg-surface-container-high text-on-surface-variant whitespace-nowrap transition-colors" type="button">
+          ATS Parsed (1)
+        </button>
+<button class="filter-btn px-3.5 py-1.5 rounded-full text-xs font-label bg-surface-container hover:bg-surface-container-high text-on-surface-variant whitespace-nowrap transition-colors" type="button">
+          Archived (1)
+        </button>
+</div>
+<!-- Sort Selection -->
+<div class="flex items-center gap-2 self-end lg:self-auto">
+<span class="text-xs font-label text-outline whitespace-nowrap">Sort:</span>
+<div class="relative">
+<select class="appearance-none bg-surface-container text-on-surface text-xs font-label py-2 pl-3 pr-8 rounded-full focus:outline-none cursor-pointer">
+<option>Latest Submission</option>
+<option>Highest ATS Match</option>
+<option>Upcoming Interview</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline text-sm pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Applications List Container -->
+<div class="flex flex-col gap-6">
+  <div th:if="${#lists.isEmpty(applications)}" class="p-8 rounded-2xl bg-surface-container-low text-center text-outline font-mono text-sm">
+    <span class="material-symbols-outlined text-4xl text-outline mb-2 block">inbox</span>
+    <p class="font-medium text-on-surface">No applications submitted yet.</p>
+    <p class="text-xs text-on-surface-variant mt-1">Explore available opportunities and submit your profile in 1-Click.</p>
+    <a th:href="@{/jobs}" class="mt-4 inline-flex items-center gap-2 bg-secondary text-on-secondary px-5 py-2.5 rounded-full text-xs font-semibold shadow-sm hover:opacity-90 transition-opacity">
+      <span class="material-symbols-outlined text-sm">search</span>
+      Browse Open Requisitions
+    </a>
+  </div>
+
+  <div th:each="app : ${applications}" class="bg-surface-container-low rounded-DEFAULT p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col gap-6">
+    <div class="absolute top-0 right-0 w-72 h-72 bg-secondary/5 rounded-full blur-2xl pointer-events-none"></div>
+    <!-- Top Header Row -->
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-DEFAULT bg-surface-container-high flex items-center justify-center text-secondary flex-shrink-0 shadow-sm">
+          <span class="material-symbols-outlined text-2xl">work</span>
+        </div>
+        <div class="flex flex-col min-w-0">
+          <div class="flex flex-wrap items-center gap-2.5">
+            <h2 class="text-xl font-headline font-semibold text-on-surface" th:text="${app.jobTitle()}">Job Title</h2>
+            <span class="px-3 py-1 rounded-full font-label text-xs font-medium tracking-wide flex items-center gap-1.5 shadow-sm"
+                  th:classappend="${app.status().name() == 'SHORTLISTED' ? 'bg-[#1b4332] text-[#e4e4e7]' : (app.status().name() == 'REJECTED' ? 'bg-error-container text-error' : 'bg-secondary-container text-on-secondary-container')}">
+              <span class="w-2 h-2 rounded-full bg-secondary"></span>
+              <span th:text="${app.status()}">APPLIED</span>
+            </span>
+          </div>
+          <div class="flex flex-wrap items-center gap-y-1 gap-x-3 text-xs font-mono text-outline mt-1.5">
+            <span class="text-on-surface font-medium" th:text="${app.company()}">Company</span>
+            <span>•</span>
+            <span th:text="'APP-' + ${app.id()}">APP-101</span>
+            <span>•</span>
+            <span class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-xs">calendar_today</span>
+              <span th:text="'Applied: ' + ${#temporals.format(app.appliedAt(), 'MMM dd, yyyy')}">Applied Date</span>
+            </span>
+            <span>•</span>
+            <span class="flex items-center gap-1" th:if="${app.resumeFileName()}">
+              <span class="material-symbols-outlined text-xs">description</span>
+              <span th:text="${app.resumeFileName()}">resume.pdf</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- ATS Score Gauge Ring -->
+      <div class="flex items-center gap-3 self-start lg:self-center bg-surface-container px-4 py-2 rounded-full">
+        <div class="relative w-10 h-10 flex items-center justify-center">
+          <span class="font-headline text-xs font-bold text-on-surface" th:text="${app.matchScore()} + '%'">94%</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[11px] font-label uppercase text-outline">ATS Match</span>
+          <span class="text-xs font-label text-secondary font-semibold"
+                th:text="${app.matchScore() >= 80 ? 'Optimal Fit' : (app.matchScore() >= 60 ? 'Strong Fit' : 'Moderate Match')}">Optimal Fit</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Summary -->
+    <div class="flex flex-wrap items-center gap-2" th:if="${not #lists.isEmpty(app.matchedSkills())}">
+      <span class="text-xs font-label text-outline mr-1">Matched Skills:</span>
+      <span th:each="sk : ${app.matchedSkills()}"
+            class="px-2.5 py-1 rounded-full bg-surface-container text-xs font-mono text-on-surface"
+            th:text="${sk}">Java 21</span>
+    </div>
+
+    <!-- Actions -->
+    <div class="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-surface-container-high/40">
+      <div class="flex items-center gap-2">
+        <a th:href="@{/jobs/{id}(id=${app.jobId()})}"
+           class="px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-label font-medium transition-colors inline-flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-sm">visibility</span>
+          View Requisition Details
+        </a>
+      </div>
+      <span class="text-xs font-mono text-outline" th:text="'Resume Version #' + ${app.resumeId()}">Resume Version</span>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Workspace Diagnostic Telemetry Bar -->
+<div class="mt-10 p-4 rounded-DEFAULT bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-outline">
+<div class="flex items-center gap-3">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span>Gemini 1.5 Flash Parser: <strong class="text-on-surface">Pipeline Sync Active</strong></span>
+<span>•</span>
+<span>Token Latency: <strong class="text-secondary">42ms</strong></span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-on-surface-variant">Requisition Telemetry Node: <strong class="text-on-surface">cluster-us-east-4a</strong></span>
+<button class="text-secondary hover:underline flex items-center gap-1" type="button">
+        Refresh ATS Queue <span class="material-symbols-outlined text-xs">refresh</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple client-side micro-interaction for stage tabs and search filter
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.filter-btn');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('bg-secondary', 'text-on-secondary');
+          t.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        tab.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        tab.classList.add('bg-secondary', 'text-on-secondary');
+      });
+    });
+
+    const searchInput = document.getElementById('search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        const cards = document.querySelectorAll('.bg-surface-container-low.p-6');
+        cards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          if (text.includes(query)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    }
+  });
+</script></main></div>
+<script>
+  function toggleAppSidebar() {
+    const sidebar = document.getElementById('app-sidebar');
+    const backdrop = document.getElementById('sidebar-backdrop');
+    if (!sidebar) return;
+    const isClosed = sidebar.classList.contains('-translate-x-full');
+    if (isClosed) {
+      sidebar.classList.remove('-translate-x-full');
+      if (backdrop) backdrop.classList.remove('hidden');
+    } else {
+      sidebar.classList.add('-translate-x-full');
+      if (backdrop) backdrop.classList.add('hidden');
+    }
+  }
+</script>
+</body></html>

@@ -1,0 +1,608 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    @keyframes aurora-1 {
+      0% { transform: translate3d(0, 0, 0) scale(1); }
+      50% { transform: translate3d(120px, 60px, 0) scale(1.18); }
+      100% { transform: translate3d(0, 0, 0) scale(1); }
+    }
+    @keyframes aurora-2 {
+      0% { transform: translate3d(0, 0, 0) scale(1.1); }
+      50% { transform: translate3d(-90px, -50px, 0) scale(0.92); }
+      100% { transform: translate3d(0, 0, 0) scale(1.1); }
+    }
+    @keyframes aurora-3 {
+      0% { transform: translate3d(0, 0, 0) scale(0.95); }
+      50% { transform: translate3d(70px, -80px, 0) scale(1.22); }
+      100% { transform: translate3d(0, 0, 0) scale(0.95); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .aurora-orb { animation: none !important; }
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-error": "#690005", "on-surface": "#eddcfe", "secondary-fixed": "#e1e0ff", "surface-bright": "#40344f", "inverse-on-surface": "#372b45", "surface-variant": "#3b304a", surface: "#190e27", "primary-fixed-dim": "#c6c6c6", "tertiary-fixed-dim": "#ffb4a8", "on-secondary-fixed": "#04006d", error: "#ffb4ab", "primary-fixed": "#e2e2e2", "on-primary-container": "#757575", secondary: "#c0c1ff", "secondary-fixed-dim": "#c0c1ff", "secondary-container": "#3539a0", "on-secondary": "#1c1e89", "outline-variant": "#4c4546", outline: "#988e90", "on-tertiary-container": "#b8594b", primary: "#c6c6c6", "error-container": "#93000a", tertiary: "#ffb4a8", "tertiary-fixed": "#ffdad4", "on-primary-fixed-variant": "#474747", "inverse-surface": "#eddcfe", "surface-container-highest": "#3b304a", "on-secondary-fixed-variant": "#3539a0", "surface-dim": "#190e27", "on-primary-fixed": "#1b1b1b", "on-primary": "#303030", "inverse-primary": "#5e5e5e", "on-tertiary-fixed-variant": "#7c2c22", "primary-container": "#000000", "on-surface-variant": "#cfc4c5", background: "#190e27", "surface-container-lowest": "#130921", "surface-container-high": "#30253f", "on-secondary-container": "#abaeff", "on-tertiary": "#5e160e", "tertiary-container": "#000000", "on-background": "#eddcfe", "surface-tint": "#c6c6c6", "on-error-container": "#ffdad6", "on-tertiary-fixed": "#400101", "surface-container": "#251b34", "surface-container-low": "#21162f"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}, spacing: {"space-sm": "0.5rem", margin: "1.5rem", gutter: "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-md": "1rem", "space-lg": "1.5rem"}, fontFamily: {"headline-lg": ["Inter", "sans-serif"], "body-md": ["Inter", "sans-serif"], "label-sm": ["Inter", "sans-serif"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"headline-lg": ["32px", {lineHeight: "40px", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}]}}}};</script>
+</head>
+<body class="bg-surface font-body-md text-on-surface min-h-screen relative overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Ambient Amethyst / Violet / Magenta Mesh Orbs -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="aurora-orb absolute -top-40 -left-20 w-[42rem] h-[42rem] rounded-full bg-[#5d2b90]/30 blur-[130px] will-change-transform" style="animation: aurora-1 30s ease-in-out infinite alternate;"></div>
+<div class="aurora-orb absolute top-1/3 -right-20 w-[38rem] h-[38rem] rounded-full bg-[#8739e5]/25 blur-[140px] will-change-transform" style="animation: aurora-2 32s ease-in-out infinite alternate;"></div>
+<div class="aurora-orb absolute -bottom-24 left-1/4 w-[40rem] h-[40rem] rounded-full bg-[#c0c1ff]/15 blur-[130px] will-change-transform" style="animation: aurora-3 28s ease-in-out infinite alternate;"></div>
+<div class="aurora-orb absolute top-2/3 right-1/4 w-[28rem] h-[28rem] rounded-full bg-[#d946ef]/15 blur-[120px] will-change-transform pointer-events-none"></div>
+<svg class="absolute inset-0 w-full h-full opacity-5 mix-blend-soft-light pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<filter id="noiseFilterStandard">
+<feTurbulence baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" type="fractalNoise"></feTurbulence>
+</filter>
+<rect filter="url(#noiseFilterStandard)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- Header Navigation -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-2xl border-b border-white/[0.08]">
+<div class="h-20 w-full px-margin flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-lg">
+<a class="flex items-center gap-space-sm group" data-path="landing" href="#">
+
+<span class="text-xl font-bold text-on-surface tracking-tight bg-gradient-to-r from-on-surface via-secondary to-tertiary bg-clip-text text-transparent">RoleMatch</span>
+</a>
+<nav class="hidden lg:flex items-center gap-2" data-active-classes="bg-surface-container-high text-on-surface font-semibold">
+<a class="px-4 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high text-sm font-medium transition-colors" data-path="landing" href="#">Home</a>
+<a aria-current="page" class="px-4 py-2 rounded-full transition-all bg-secondary-container/60 text-secondary-fixed border border-secondary/30 font-semibold text-sm shadow-[0_0_16px_rgba(192,193,255,0.2)]" data-path="jobs" href="#">Find Jobs</a>
+<a class="px-4 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high text-sm font-medium transition-colors" data-path="seeker-dashboard" href="#"><br></a>
+
+</nav>
+</div>
+<div class="flex items-center gap-space-md">
+<a class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 text-sm font-medium transition-colors" data-path="auth-login" href="#">Sign In</a>
+<a class="inline-flex items-center justify-center px-5 py-2 rounded-full bg-gradient-to-r from-secondary-container via-[#6332a6] to-[#8739e5] text-on-surface text-sm font-semibold border border-white/20 shadow-[0_0_24px_-2px_rgba(135,57,229,0.5)] hover:shadow-[0_0_30px_rgba(192,193,255,0.65)] hover:scale-[1.02] active:scale-[0.98] transition-all" data-path="auth-register" href="#">Get Started</a>
+
+</div>
+</div>
+</header>
+<main class="relative z-10 w-full pt-20 bg-transparent min-h-[calc(100vh-14rem)]">
+<div class="flex flex-col w-full">
+<!-- Macro Container -->
+<div class="w-full px-4 md:px-8 lg:px-margin py-space-xl max-w-7xl mx-auto">
+<!-- Hero / Diagnostic Header Section -->
+<div class="relative mb-space-xl overflow-hidden rounded-2xl bg-surface-container-low/80 backdrop-blur-2xl p-space-lg lg:p-space-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.45)]">
+<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-[#8739e5]/25 blur-[90px] pointer-events-none"></div>
+<div class="absolute right-1/4 -bottom-24 w-72 h-72 rounded-full bg-[#3539a0]/30 blur-[90px] pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-surface-container-high/90 text-secondary border border-secondary/30 mb-space-sm shadow-[0_0_14px_rgba(192,193,255,0.2)]">
+<span class="w-2 h-2 rounded-full bg-[#38ef7d] animate-pulse"></span>
+<span class="text-xs font-semibold tracking-wider uppercase">Live Telemetry • Indexing 4,812 Enterprise Nodes</span>
+</div>
+<h1 class="text-3xl lg:text-4xl font-extrabold text-on-surface tracking-tight mb-space-xs">
+                Explore Tech Roles
+              </h1>
+<p class="text-base text-on-surface-variant max-w-2xl leading-relaxed">
+                Browse positions calibrated with Gemini AI semantic match indexing, high-affinity vector weighting, and verified candidate profile telemetry.
+              </p>
+</div>
+<!-- Quick AI Calibration Metric Pill -->
+<div class="flex items-center gap-space-md p-4 rounded-full bg-surface-container-high/85 border border-white/10 shadow-lg shrink-0 backdrop-blur-xl">
+<div class="relative w-12 h-12 flex items-center justify-center shrink-0">
+<svg class="w-12 h-12 -rotate-90" viewBox="0 0 36 36">
+<path class="text-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-[#38ef7d] transition-all duration-1000 ease-out" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="92, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-bold text-sm text-[#38ef7d]">92</span>
+</div>
+<div class="min-w-0 pr-2">
+<div class="text-xs uppercase tracking-wider text-on-surface-variant font-medium">Candidate Affinity Profile</div>
+<div class="text-sm font-semibold text-on-surface truncate">Senior Backend / Cloud</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2-Column Responsive Workspace Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT SIDEBAR: Deep Violet Glass Filter Architecture -->
+<aside class="lg:col-span-4 xl:col-span-3.5 w-full shrink-0">
+<div class="sticky top-24 rounded-2xl bg-surface-container-low/85 backdrop-blur-xl p-space-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] flex flex-col gap-space-lg">
+<!-- Filter Header -->
+<div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary">tune</span>
+<span class="font-bold text-lg text-on-surface">Calibrate Filter</span>
+</div>
+<a class="text-xs font-semibold text-secondary hover:text-white px-3 py-1 rounded-full bg-surface-container-high/80 hover:bg-secondary-container/40 transition-all border border-secondary/20" href="/jobs">Reset All</a>
+</div>
+<!-- Search Form -->
+<form action="/jobs" class="flex flex-col gap-space-lg" method="get">
+<!-- Keyword Search Input -->
+<div class="flex flex-col gap-space-xs">
+<label class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant" for="keyword">Semantic Vector Search</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline pointer-events-none text-xl">search</span>
+<input class="w-full bg-surface-container-lowest/80 text-on-surface placeholder:text-outline/70 pl-11 pr-4 py-2.5 rounded-full text-sm border border-white/10 focus:border-secondary focus:bg-surface-container-highest focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-inner transition-all" id="keyword" name="keyword" placeholder="Title, tech stack, or system..." type="text" value="Spring Boot">
+</div>
+</div>
+<!-- Job Types Group -->
+<div class="flex flex-col gap-space-sm">
+<span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Deployment Mode</span>
+<div class="space-y-1.5">
+<label class="flex items-center justify-between p-2 px-3 rounded-full hover:bg-surface-container-high/70 transition-colors cursor-pointer group border border-transparent hover:border-white/5">
+<div class="flex items-center gap-space-sm">
+<input checked="" class="w-4 h-4 rounded-full bg-surface-container-highest accent-secondary text-secondary focus:ring-0 cursor-pointer" name="type" type="checkbox" value="FULL_TIME">
+<span class="text-sm text-on-surface group-hover:text-secondary transition-colors">Full-time</span>
+</div>
+<span class="text-xs px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono">142</span>
+</label>
+<label class="flex items-center justify-between p-2 px-3 rounded-full hover:bg-surface-container-high/70 transition-colors cursor-pointer group border border-transparent hover:border-white/5">
+<div class="flex items-center gap-space-sm">
+<input checked="" class="w-4 h-4 rounded-full bg-surface-container-highest accent-secondary text-secondary focus:ring-0 cursor-pointer" name="type" type="checkbox" value="REMOTE">
+<span class="text-sm text-on-surface group-hover:text-secondary transition-colors">Remote Node</span>
+</div>
+<span class="text-xs px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono">89</span>
+</label>
+<label class="flex items-center justify-between p-2 px-3 rounded-full hover:bg-surface-container-high/70 transition-colors cursor-pointer group border border-transparent hover:border-white/5">
+<div class="flex items-center gap-space-sm">
+<input class="w-4 h-4 rounded-full bg-surface-container-highest accent-secondary text-secondary focus:ring-0 cursor-pointer" name="type" type="checkbox" value="HYBRID">
+<span class="text-sm text-on-surface group-hover:text-secondary transition-colors">Hybrid Hub</span>
+</div>
+<span class="text-xs px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono">64</span>
+</label>
+<label class="flex items-center justify-between p-2 px-3 rounded-full hover:bg-surface-container-high/70 transition-colors cursor-pointer group border border-transparent hover:border-white/5">
+<div class="flex items-center gap-space-sm">
+<input class="w-4 h-4 rounded-full bg-surface-container-highest accent-secondary text-secondary focus:ring-0 cursor-pointer" name="type" type="checkbox" value="CONTRACT">
+<span class="text-sm text-on-surface group-hover:text-secondary transition-colors">Contract / Advisory</span>
+</div>
+<span class="text-xs px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono">38</span>
+</label>
+</div>
+</div>
+<!-- Minimum ATS Match Threshold (Segmented Pill) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Min ATS Affinity</span>
+<span class="text-sm font-bold text-secondary" id="match-value">80%+</span>
+</div>
+<div class="grid grid-cols-3 gap-1.5 p-1 rounded-full bg-surface-container-lowest/80 border border-white/5">
+<button class="py-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 text-xs font-medium transition-all text-center" type="button">≥ 70%</button>
+<button class="py-1.5 rounded-full bg-gradient-to-r from-secondary-container to-[#6332a6] text-secondary-fixed border border-secondary/40 text-xs font-bold shadow-[0_0_12px_rgba(192,193,255,0.3)] text-center" type="button">≥ 80%</button>
+<button class="py-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/60 text-xs font-medium transition-all text-center" type="button">≥ 90%</button>
+</div>
+</div>
+<!-- Seniority Radios -->
+<div class="flex flex-col gap-space-sm">
+<span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Seniority Orbit</span>
+<div class="space-y-1.5">
+<label class="flex items-center gap-space-sm p-2 px-3 rounded-full hover:bg-surface-container-high/70 transition-colors cursor-pointer border border-transparent hover:border-white/5">
+<input checked="" class="w-4 h-4 bg-surface-container-highest accent-secondary text-secondary focus:ring-0 cursor-pointer" name="experience" type="radio" value="STAFF">
+<span class="text-sm text-on-surface">Staff / Lead (8+ yrs)</span>
+</label>
+<label class="flex items-center gap-space-sm p-2 px-3 rounded-full hover:bg-surface-container-high/70 transition-colors cursor-pointer border border-transparent hover:border-white/5">
+<input class="w-4 h-4 bg-surface-container-highest accent-secondary text-secondary focus:ring-0 cursor-pointer" name="experience" type="radio" value="SENIOR">
+<span class="text-sm text-on-surface">Senior Architect (5-8 yrs)</span>
+</label>
+<label class="flex items-center gap-space-sm p-2 px-3 rounded-full hover:bg-surface-container-high/70 transition-colors cursor-pointer border border-transparent hover:border-white/5">
+<input class="w-4 h-4 bg-surface-container-highest accent-secondary text-secondary focus:ring-0 cursor-pointer" name="experience" type="radio" value="MID">
+<span class="text-sm text-on-surface">Mid-Level (3-5 yrs)</span>
+</label>
+<label class="flex items-center gap-space-sm p-2 px-3 rounded-full hover:bg-surface-container-high/70 transition-colors cursor-pointer border border-transparent hover:border-white/5">
+<input class="w-4 h-4 bg-surface-container-highest accent-secondary text-secondary focus:ring-0 cursor-pointer" name="experience" type="radio" value="ENTRY">
+<span class="text-sm text-on-surface">Core / Entry (0-2 yrs)</span>
+</label>
+</div>
+</div>
+<!-- Tech Stack Core Tags -->
+<div class="flex flex-col gap-space-sm">
+<span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Tech Stack Signals</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-3 py-1 rounded-full bg-secondary-container/30 text-secondary border border-secondary/25 text-xs font-medium cursor-pointer hover:bg-secondary-container/50 hover:border-secondary/50 transition-all">Java 21</span>
+<span class="px-3 py-1 rounded-full bg-secondary-container/30 text-secondary border border-secondary/25 text-xs font-medium cursor-pointer hover:bg-secondary-container/50 hover:border-secondary/50 transition-all">Spring Boot 3</span>
+<span class="px-3 py-1 rounded-full bg-secondary-container/30 text-secondary border border-secondary/25 text-xs font-medium cursor-pointer hover:bg-secondary-container/50 hover:border-secondary/50 transition-all">Kubernetes</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant border border-white/5 text-xs font-medium cursor-pointer hover:text-on-surface hover:bg-surface-bright transition-colors">+ Kafka</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant border border-white/5 text-xs font-medium cursor-pointer hover:text-on-surface hover:bg-surface-bright transition-colors">+ AWS</span>
+</div>
+</div>
+<!-- Action Trigger -->
+<button class="w-full mt-2 py-3 px-space-md rounded-full bg-gradient-to-r from-secondary-container via-[#6332a6] to-[#8739e5] text-on-surface text-sm font-bold border border-white/20 shadow-[0_0_24px_rgba(135,57,229,0.45)] hover:shadow-[0_0_32px_rgba(192,193,255,0.6)] hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-space-xs" type="submit">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+                  Recompute Matches
+                </button>
+</form>
+</div>
+</aside>
+<!-- RIGHT FEED: Amethyst Glass Job Cards -->
+<main class="lg:col-span-8 xl:col-span-8.5 w-full flex flex-col gap-space-lg">
+<!-- Filter Summary Bar & Sorting Dropdown -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md p-3.5 px-space-lg rounded-2xl bg-surface-container-low/75 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.35)]">
+<div class="flex items-center gap-space-sm">
+<div class="w-2.5 h-2.5 rounded-full bg-[#38ef7d] shadow-[0_0_8px_#38ef7d]"></div>
+<span class="font-bold text-base text-on-surface">Showing 48 Verified AI Matches</span>
+<span class="hidden md:inline text-xs text-on-surface-variant">ranked by Gemini multi-vector affinity</span>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<span class="text-xs font-medium text-on-surface-variant">Sort by:</span>
+<div class="relative">
+<select class="appearance-none bg-surface-container-high/90 text-on-surface text-xs font-medium pl-3 pr-8 py-1.5 rounded-full border border-white/10 focus:outline-none focus:ring-1 focus:ring-secondary focus:border-secondary cursor-pointer shadow-sm">
+<option>Highest Match Score</option>
+<option>Most Recent Calibration</option>
+<option>Compensation: High to Low</option>
+<option>System Resonance Tier</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+</div>
+<!-- JOB CARD 1: Ultra High Match Tier (94%) -->
+<article class="group relative rounded-2xl bg-surface-container-low/85 backdrop-blur-xl p-space-lg lg:p-space-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-all duration-300 hover:bg-surface-container/90 hover:border-secondary/40 hover:shadow-[0_12px_36px_rgba(135,57,229,0.35)]">
+<div class="flex flex-col gap-space-md">
+<!-- Meta & ATS Indicator Row -->
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest/80 flex items-center justify-center shrink-0 border border-white/10 p-2 shadow-inner">
+<span class="material-symbols-outlined text-secondary text-3xl">cloud_sync</span>
+</div>
+<div class="min-w-0">
+<div class="flex flex-wrap items-center gap-x-space-sm gap-y-1 text-on-surface-variant text-xs mb-1">
+<span class="text-on-surface font-bold">Apex Core Cloud</span>
+<span class="">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> San Francisco, CA (Remote)</span>
+<span class="">•</span>
+<span class="text-[#38ef7d] font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">payments</span> $185,000 - $220,000</span>
+</div>
+<h2 class="text-xl lg:text-2xl font-bold text-on-surface group-hover:text-secondary transition-colors tracking-tight">
+                        Lead Backend Architect - Cloud Infrastructure
+                      </h2>
+</div>
+</div>
+<!-- Match Pill (Glowing Emerald Pill) -->
+<div class="flex md:flex-col items-center md:items-end gap-1 shrink-0 self-start">
+<div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#1b4332]/50 text-[#52b788] border border-[#52b788]/40 shadow-[0_0_16px_rgba(82,183,136,0.3)]">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span class="text-xs font-bold">94% ATS Match</span>
+</div>
+<span class="text-[11px] font-semibold text-[#52b788] px-2">High Resonance</span>
+</div>
+</div>
+<!-- Excerpt -->
+<p class="text-sm text-on-surface-variant line-clamp-2 leading-relaxed">
+                  Spearhead high-volume payment routing microservices serving 10M+ daily transactions. Lead migration to cloud-native orchestrations, architect fault-tolerant distributed systems, and implement robust event streaming workflows.
+                </p>
+<!-- Skill Tag Grid (Color Coded Affinity) -->
+<div class="flex flex-col gap-space-xs">
+<span class="text-[11px] font-semibold text-outline uppercase tracking-wider">Semantic Match Diagnostic:</span>
+<div class="flex flex-wrap items-center gap-1.5">
+<!-- Matched Chips -->
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#1b4332]/40 text-[#74c69d] border border-[#74c69d]/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">check</span> Java 21
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#1b4332]/40 text-[#74c69d] border border-[#74c69d]/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">check</span> Spring Cloud
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#1b4332]/40 text-[#74c69d] border border-[#74c69d]/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">check</span> PostgreSQL
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#1b4332]/40 text-[#74c69d] border border-[#74c69d]/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">check</span> Kubernetes
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#1b4332]/40 text-[#74c69d] border border-[#74c69d]/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">check</span> Kafka
+                    </span>
+<!-- Missing Chip (Rose) -->
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-error-container/40 text-error border border-error/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">close</span> Terraform
+                    </span>
+</div>
+</div>
+<!-- Action Dock -->
+<div class="flex items-center justify-between pt-space-sm border-t border-white/5">
+<div class="flex items-center gap-space-sm text-on-surface-variant text-xs">
+<span class="flex items-center gap-1 text-secondary font-medium">
+<span class="material-symbols-outlined text-base">psychology</span>
+                      Gemini Evaluated 4m ago
+                    </span>
+<span class="hidden sm:inline">•</span>
+<span class="hidden sm:inline font-mono">ID: APX-9042</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="w-9 h-9 rounded-full bg-surface-container-high/80 text-on-surface-variant hover:text-on-surface hover:bg-surface-bright flex items-center justify-center transition-colors border border-white/5 shadow-sm">
+<span class="material-symbols-outlined text-lg">bookmark</span>
+</button>
+<button class="px-5 py-2 rounded-full bg-gradient-to-r from-secondary-container via-[#6332a6] to-[#8739e5] text-on-surface text-xs font-bold border border-white/20 shadow-[0_0_20px_rgba(135,57,229,0.4)] hover:shadow-[0_0_28px_rgba(192,193,255,0.65)] hover:-translate-y-0.5 active:translate-y-0 transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">bolt</span>
+                      Quick Apply with AI Resume
+                    </button>
+</div>
+</div>
+</div>
+</article>
+<!-- JOB CARD 2: High Match Tier (88%) -->
+<article class="group relative rounded-2xl bg-surface-container-low/85 backdrop-blur-xl p-space-lg lg:p-space-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-all duration-300 hover:bg-surface-container/90 hover:border-secondary/40 hover:shadow-[0_12px_36px_rgba(135,57,229,0.35)]">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest/80 flex items-center justify-center shrink-0 border border-white/10 p-2 shadow-inner">
+<span class="material-symbols-outlined text-secondary text-3xl">hub</span>
+</div>
+<div class="min-w-0">
+<div class="flex flex-wrap items-center gap-x-space-sm gap-y-1 text-on-surface-variant text-xs mb-1">
+<span class="text-on-surface font-bold">Syntropic AI</span>
+<span class="">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> New York, NY (Hybrid)</span>
+<span class="">•</span>
+<span class="text-[#38ef7d] font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">payments</span> $170,000 - $205,000</span>
+</div>
+<h2 class="text-xl lg:text-2xl font-bold text-on-surface group-hover:text-secondary transition-colors tracking-tight">
+                        Senior Distributed Systems Engineer
+                      </h2>
+</div>
+</div>
+<div class="flex md:flex-col items-center md:items-end gap-1 shrink-0 self-start">
+<div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-secondary-container/40 text-secondary-fixed border border-secondary/40 shadow-[0_0_16px_rgba(192,193,255,0.3)]">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span class="text-xs font-bold">88% ATS Match</span>
+</div>
+<span class="text-[11px] font-semibold text-secondary px-2">Strong Affinity</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2 leading-relaxed">
+                  Scale enterprise LLM inference pipelines using Java asynchronous engines and Kafka event buses. Deploy containerized inference orchestrations with low latency guarantees across multi-zone regions.
+                </p>
+<div class="flex flex-col gap-space-xs">
+<span class="text-[11px] font-semibold text-outline uppercase tracking-wider">Semantic Match Diagnostic:</span>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#1b4332]/40 text-[#74c69d] border border-[#74c69d]/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">check</span> Spring Boot
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#1b4332]/40 text-[#74c69d] border border-[#74c69d]/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">check</span> Kafka Streams
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#1b4332]/40 text-[#74c69d] border border-[#74c69d]/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">check</span> Docker
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#1b4332]/40 text-[#74c69d] border border-[#74c69d]/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">check</span> AWS
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-container/30 text-secondary border border-secondary/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">insights</span> Distributed Caching
+                    </span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-white/5">
+<div class="flex items-center gap-space-sm text-on-surface-variant text-xs">
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-base">schedule</span>
+                      Posted 1d ago
+                    </span>
+<span class="">•</span>
+<span class="font-mono">ID: SYN-4100</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-4 py-2 rounded-full bg-surface-container-high/80 text-on-surface text-xs font-semibold hover:bg-surface-bright transition-colors border border-white/5">
+                      View Role
+                    </button>
+<button class="px-5 py-2 rounded-full bg-gradient-to-r from-secondary-container via-[#6332a6] to-[#8739e5] text-on-surface text-xs font-bold border border-white/20 shadow-[0_0_20px_rgba(135,57,229,0.4)] hover:shadow-[0_0_28px_rgba(192,193,255,0.65)] hover:-translate-y-0.5 active:translate-y-0 transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">bolt</span>
+                      Quick Apply
+                    </button>
+</div>
+</div>
+</div>
+</article>
+<!-- JOB CARD 3: Mid-High Tier (81%) -->
+<article class="group relative rounded-2xl bg-surface-container-low/85 backdrop-blur-xl p-space-lg lg:p-space-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-all duration-300 hover:bg-surface-container/90 hover:border-secondary/40 hover:shadow-[0_12px_36px_rgba(135,57,229,0.35)]">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest/80 flex items-center justify-center shrink-0 border border-white/10 p-2 shadow-inner">
+<span class="material-symbols-outlined text-secondary text-3xl">terminal</span>
+</div>
+<div class="min-w-0">
+<div class="flex flex-wrap items-center gap-x-space-sm gap-y-1 text-on-surface-variant text-xs mb-1">
+<span class="text-on-surface font-bold">FinStream Capital</span>
+<span class="">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Austin, TX (Remote)</span>
+<span class="">•</span>
+<span class="text-[#38ef7d] font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">payments</span> $150,000 - $180,000</span>
+</div>
+<h2 class="text-xl lg:text-2xl font-bold text-on-surface group-hover:text-secondary transition-colors tracking-tight">
+                        Full-Stack Software Engineer (Java + React)
+                      </h2>
+</div>
+</div>
+<div class="flex md:flex-col items-center md:items-end gap-1 shrink-0 self-start">
+<div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#4a2875]/40 text-[#d8b4fe] border border-[#d8b4fe]/40 shadow-[0_0_16px_rgba(216,180,254,0.25)]">
+<span class="material-symbols-outlined text-sm">tune</span>
+<span class="text-xs font-bold">81% ATS Match</span>
+</div>
+<span class="text-[11px] font-semibold text-[#d8b4fe] px-2">Balanced Matrix</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2 leading-relaxed">
+                  Deliver low-latency treasury execution dashboards and resilient backend settlement integrations using Java 21, Spring Boot microservices, and reactive WebSockets for high-frequency algorithmic trade monitoring.
+                </p>
+<div class="flex flex-col gap-space-xs">
+<span class="text-[11px] font-semibold text-outline uppercase tracking-wider">Semantic Match Diagnostic:</span>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#1b4332]/40 text-[#74c69d] border border-[#74c69d]/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">check</span> Java
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#1b4332]/40 text-[#74c69d] border border-[#74c69d]/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">check</span> Spring Boot 3
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#1b4332]/40 text-[#74c69d] border border-[#74c69d]/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">check</span> React
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#1b4332]/40 text-[#74c69d] border border-[#74c69d]/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">check</span> PostgreSQL
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-container/30 text-secondary border border-secondary/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">insights</span> Tailwind CSS
+                    </span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-white/5">
+<div class="flex items-center gap-space-sm text-on-surface-variant text-xs">
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-base">schedule</span>
+                      Posted 3d ago
+                    </span>
+<span class="">•</span>
+<span class="font-mono">ID: FSC-0921</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="w-9 h-9 rounded-full bg-surface-container-high/80 text-on-surface-variant hover:text-on-surface hover:bg-surface-bright flex items-center justify-center transition-colors border border-white/5 shadow-sm">
+<span class="material-symbols-outlined text-lg">bookmark</span>
+</button>
+<button class="px-5 py-2 rounded-full bg-gradient-to-r from-secondary-container via-[#6332a6] to-[#8739e5] text-on-surface text-xs font-bold border border-white/20 shadow-[0_0_20px_rgba(135,57,229,0.4)] hover:shadow-[0_0_28px_rgba(192,193,255,0.65)] hover:-translate-y-0.5 active:translate-y-0 transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">bolt</span>
+                      Quick Apply
+                    </button>
+</div>
+</div>
+</div>
+</article>
+<!-- JOB CARD 4: Target Gap Tier (72%) -->
+<article class="group relative rounded-2xl bg-surface-container-low/85 backdrop-blur-xl p-space-lg lg:p-space-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-all duration-300 hover:bg-surface-container/90 hover:border-secondary/40 hover:shadow-[0_12px_36px_rgba(135,57,229,0.35)]">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest/80 flex items-center justify-center shrink-0 border border-white/10 p-2 shadow-inner">
+<span class="material-symbols-outlined text-outline text-3xl">database</span>
+</div>
+<div class="min-w-0">
+<div class="flex flex-wrap items-center gap-x-space-sm gap-y-1 text-on-surface-variant text-xs mb-1">
+<span class="text-on-surface font-bold">DataSphere Labs</span>
+<span class="">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Seattle, WA (Remote)</span>
+<span class="">•</span>
+<span class="text-[#38ef7d] font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">payments</span> $195,000 - $240,000</span>
+</div>
+<h2 class="text-xl lg:text-2xl font-bold text-on-surface group-hover:text-secondary transition-colors tracking-tight">
+                        Staff Data Platform Engineer
+                      </h2>
+</div>
+</div>
+<div class="flex md:flex-col items-center md:items-end gap-1 shrink-0 self-start">
+<div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-highest/90 text-on-surface-variant border border-white/10 shadow-sm">
+<span class="material-symbols-outlined text-sm text-tertiary">warning</span>
+<span class="text-xs font-bold">72% ATS Match</span>
+</div>
+<span class="text-[11px] font-semibold text-tertiary px-2">Gap in Kafka</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2 leading-relaxed">
+                  Construct high-throughput telemetry pipelines digesting 50TB+ per day into analytical data lakes. Optimize Spark compute tasks and federate real-time analytical queries over distributed snowflake clusters.
+                </p>
+<div class="flex flex-col gap-space-xs">
+<span class="text-[11px] font-semibold text-outline uppercase tracking-wider">Semantic Match Diagnostic:</span>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#1b4332]/40 text-[#74c69d] border border-[#74c69d]/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">check</span> Python
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#1b4332]/40 text-[#74c69d] border border-[#74c69d]/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">check</span> Java
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-error-container/40 text-error border border-error/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">close</span> Spark
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant border border-white/5 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">remove</span> Snowflake
+                    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-error-container/40 text-error border border-error/30 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">close</span> Kafka
+                    </span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-white/5">
+<div class="flex items-center gap-space-sm text-on-surface-variant text-xs">
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-base">schedule</span>
+                      Posted 5d ago
+                    </span>
+<span class="">•</span>
+<span class="font-mono">ID: DSL-1088</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="w-9 h-9 rounded-full bg-surface-container-high/80 text-on-surface-variant hover:text-on-surface hover:bg-surface-bright flex items-center justify-center transition-colors border border-white/5 shadow-sm">
+<span class="material-symbols-outlined text-lg">bookmark</span>
+</button>
+<button class="px-5 py-2 rounded-full bg-gradient-to-r from-secondary-container via-[#6332a6] to-[#8739e5] text-on-surface text-xs font-bold border border-white/20 shadow-[0_0_20px_rgba(135,57,229,0.4)] hover:shadow-[0_0_28px_rgba(192,193,255,0.65)] hover:-translate-y-0.5 active:translate-y-0 transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">bolt</span>
+                      Quick Apply
+                    </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Pagination Section (Pill Shaped) -->
+<div class="mt-2 flex flex-col sm:flex-row items-center justify-between gap-space-md p-3.5 px-space-lg rounded-2xl bg-surface-container-low/75 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.35)]">
+<span class="text-xs text-on-surface-variant">
+                Showing <span class="text-on-surface font-semibold">1-4</span> of <span class="text-on-surface font-semibold">48</span> roles calibrated
+              </span>
+<div class="flex items-center gap-1.5">
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-high/40 text-outline cursor-not-allowed text-xs font-medium flex items-center gap-1 border border-white/5" disabled="">
+<span class="material-symbols-outlined text-sm">chevron_left</span> Previous
+                </button>
+<button class="w-8 h-8 rounded-full bg-gradient-to-r from-secondary-container to-[#8739e5] text-on-surface font-bold text-xs flex items-center justify-center shadow-[0_0_12px_rgba(192,193,255,0.35)] border border-secondary/40">1</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-high/70 text-on-surface hover:bg-surface-bright text-xs font-medium flex items-center justify-center transition-colors border border-white/5">2</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-high/70 text-on-surface hover:bg-surface-bright text-xs font-medium flex items-center justify-center transition-colors border border-white/5">3</button>
+<span class="text-outline px-1 font-mono text-xs">...</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-high/70 text-on-surface hover:bg-surface-bright text-xs font-medium flex items-center justify-center transition-colors border border-white/5">12</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-high/80 text-on-surface hover:bg-surface-bright text-xs font-medium flex items-center gap-1 transition-colors border border-white/5 shadow-sm">
+                  Next <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</main>
+<!-- Deep Violet Midnight Footer -->
+<footer class="relative z-10 w-full border-t border-white/10 bg-surface-container-lowest/90 backdrop-blur-2xl py-space-xl">
+<div class="w-full px-4 md:px-8 lg:px-margin max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-lg mb-space-lg">
+<div class="flex items-center gap-space-sm">
+
+<span class="text-base font-bold text-on-surface tracking-tight bg-gradient-to-r from-on-surface via-secondary to-tertiary bg-clip-text text-transparent">RoleMatch</span>
+<span class="text-outline text-xs ml-space-xs font-normal">© 2025 Algorithmic Recruitment Engine</span>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/80 border border-white/10">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse shadow-[0_0_8px_rgba(192,193,255,0.6)]"></span>
+<span class="text-xs text-on-surface-variant font-medium">Gemini AI Parsed</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/80 border border-white/10">
+<span class="w-2 h-2 rounded-full bg-[#38ef7d]"></span>
+<span class="text-xs text-on-surface-variant font-medium">Spring Boot 3.3 Active</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/80 border border-white/10">
+<span class="w-2 h-2 rounded-full bg-[#c0c1ff]"></span>
+<span class="text-xs text-on-surface-variant font-medium">PostgreSQL Ready</span>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<p class="text-on-surface-variant text-xs">Neural affinity scoring and cognitive match telemetry compliant with enterprise talent governance.</p>
+<div class="flex items-center gap-space-md text-xs text-on-surface-variant">
+<a class="hover:text-on-surface transition-colors" href="#">Security Protocol</a>
+<a class="hover:text-on-surface transition-colors" href="#">API Telemetry</a>
+<a class="hover:text-on-surface transition-colors" href="#">Privacy Framework</a>
+</div>
+</div>
+</div>
+</footer>
+
+
+
+
+</body></html>
