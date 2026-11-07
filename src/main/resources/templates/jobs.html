@@ -8,12 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
     @layer base {
-      html, body { margin:0; padding:0; width:100%; max-width:100%; overflow-x:hidden; box-sizing:border-box; }
-      body { overscroll-behavior: none; }
+      html{margin:0;padding:0;width:100%;max-width:100%;overflow-x:hidden;overflow-y:auto;box-sizing:border-box;scroll-behavior:smooth;}body{margin:0;padding:0;width:100%;max-width:100%;overflow-x:hidden;overflow-y:auto;box-sizing:border-box;}
+      
       main > :first-child { margin-top: 0 !important; }
       main > :last-child { margin-bottom: 0 !important; }
     }
-    ::-webkit-scrollbar { display: none; }
+    ::-webkit-scrollbar{width:10px;height:10px;}::-webkit-scrollbar-track{background:#0b0f19;}::-webkit-scrollbar-thumb{background:#27272a;border-radius:9999px;border:2px solid #0b0f19;}::-webkit-scrollbar-thumb:hover{background:#3f3f46;}*{scrollbar-width:thin;scrollbar-color:#27272a #0b0f19;}
     @keyframes aurora-1 {
       0% { transform: translate3d(0, 0, 0) scale(1); }
       50% { transform: translate3d(120px, 60px, 0) scale(1.18); }
